@@ -1,0 +1,5 @@
+government = republic
+technology_group = western
+primary_culture = russian_american
+religion = orthodox
+capital = 2613	# Novoarkhangelsk

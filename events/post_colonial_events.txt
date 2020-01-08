@@ -1,0 +1,190 @@
+namespace = post_colonial
+#adding cores to colonial nations venuzalala
+country_event = {
+    id = post_colonial.1 
+    title = "colonial_nationalism.EVTNAME1"
+    desc = "colonial_nationalism.EVTDESC1"
+    trigger = {
+        any_owned_province = {
+            colonial_region = colonial_venezuela
+            owner = {
+                is_former_colonial_nation = yes
+                is_at_war = no
+            }
+            NOT = {
+                is_core = VNZ 
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+    option = {
+        name = "colonial_nationalism.EVTOPT1" 
+        every_owned_province = {
+            limit = {
+                OR = {
+                    colonial_region = colonial_venezuela
+                    colonial_region = colonial_guyana
+                }
+            }
+            add_core = VNZ 
+        }
+    }
+}
+#adding cores to colonial nations ecuador 
+#colombia
+country_event = {
+    id = post_colonial.2 
+    title = "colonial_nationalism.EVTNAME2"
+    desc = "colonial_nationalism.EVTDESC1"
+    trigger = {
+        any_owned_province = {
+            colonial_region = colonial_quito
+            owner = {
+                is_former_colonial_nation = yes
+                is_at_war = no
+            }
+            NOT = {
+                is_core = ECU 
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+    option = {
+        name = "colonial_nationalism.EVTOPT2" 
+        every_owned_province = {
+            limit = {
+                colonial_region = colonial_quito
+            }
+            add_core = ECU 
+        }
+    }
+}
+#colombia
+country_event = {
+    id = post_colonial.3 
+    title = "colonial_nationalism.EVTNAME3"
+    desc = "colonial_nationalism.EVTDESC1"
+    trigger = {
+        any_owned_province = {
+            colonial_region = colonial_colombia
+            owner = {
+                is_former_colonial_nation = yes
+                is_at_war = no
+            }
+            NOT = {
+                is_core = COL 
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+    option = {
+        name = "colonial_nationalism.EVTOPT3" 
+        every_owned_province = {
+            limit = {
+                colonial_region = colonial_colombia
+            }
+            add_core = COL 
+        }
+    }
+}
+
+#peru
+country_event = {
+    id = post_colonial.4 
+    title = "colonial_nationalism.EVTNAME4"
+    desc = "colonial_nationalism.EVTDESC1"
+
+    trigger = {
+        any_owned_province = {
+            colonial_region = colonial_peru
+            owner = {
+                is_former_colonial_nation = yes
+                is_at_war = no
+            }
+            NOT = {
+                is_core = PEU 
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+    option = {
+        name = "colonial_nationalism.EVTOPT4" 
+        every_owned_province = {
+            limit = {
+                colonial_region = colonial_peru
+            }
+            add_core = PEU 
+        }
+    }
+}
+#bolivia
+country_event = {
+    id = post_colonial.5 
+    title = "colonial_nationalism.EVTNAME5"
+    desc = "colonial_nationalism.EVTDESC1"
+
+    trigger = {
+        any_owned_province = {
+            colonial_region = colonial_upper_peru
+            owner = {
+                is_former_colonial_nation = yes
+                is_at_war = no
+            }
+            NOT = {
+                is_core = BLV 
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+    option = {
+        name = "colonial_nationalism.EVTOPT5" 
+        every_owned_province = {
+            limit = {
+                colonial_region = colonial_upper_peru
+            }
+            add_core = BLV 
+        }
+    }
+}
+#chile
+country_event = {
+    id = post_colonial.6 
+    title = "colonial_nationalism.EVTNAME6"
+    desc = "colonial_nationalism.EVTDESC1"
+
+    trigger = {
+        any_owned_province = {
+            colonial_region = colonial_chile
+            owner = {
+                is_former_colonial_nation = yes
+                is_at_war = no
+            }
+            NOT = {
+                is_core = CHL 
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+    option = {
+        name = "colonial_nationalism.EVTOPT6" 
+        every_owned_province = {
+            limit = {
+                colonial_region = colonial_chile
+            }
+            add_core = CHL 
+        }
+    }
+}
+

@@ -1,0 +1,87 @@
+country_decisions = {
+
+	antillean_confederation_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			
+			colonial_hispaniola = {
+				owned_by = ROOT
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_subject = no
+			is_at_war = no
+			capital_scope = {
+				OR = {
+				colonial_region = colonial_hispaniola
+				colonial_region = colonial_cuba
+				}
+				is_core = ROOT
+			}
+			NOT = { exists = ATC }
+			owns_or_vassal_of = 490
+			owns_or_vassal_of = 484
+			
+		}
+		effect = {
+			colonial_hispaniola = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			colonial_cuba = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			every_country = {
+				limit = {
+					vassal_of = ROOT
+					capital_scope = {
+						region = caribbean_sea_region
+					}
+				}
+				ROOT = {
+					inherit = PREV
+				}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+		}
+		change_tag = ATC
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

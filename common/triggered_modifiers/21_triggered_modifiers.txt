@@ -1,0 +1,1039 @@
+# countries that are former colonies that have other former colonies
+# get free diplo slot for those vassals
+# this is only within a certain region, AKA event vassals
+
+# America
+
+state_of_maine = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_maine
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_newhampshire = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_newhampshire
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_pennsylvania = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_pennsylvania
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_newjersey = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_jersey
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_newyork = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_newyork
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_massachusetts = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_massachusetts
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_rhodeisland = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_rhodeisland
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_connecticut = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_connecticut
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_delaware = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_delaware
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_maryland = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_maryland
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_virginia = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_virginia
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_ncarolina = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_northcarolina
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_scarolina = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_southcarolina
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_georgia = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_georgia
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_florida = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_florida
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_louisiana = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_louisiana
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_ohio = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_ohio
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+# Canada
+
+state_of_uppercanada = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = canadian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_uppercanada
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_lowercanada = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = canadian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_lowercanada
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_ruperts_land = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = canadian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_ruperts_land
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+# mexico
+
+state_of_texas = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = mexican_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_texas
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_mexico = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = mexican_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_mexico
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_guatemala = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = mexican_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_guatemala
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_newgalicia = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = mexican_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_newgalicia
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_newnavarra = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = mexican_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_newnavarra
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_newbiscay = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = mexican_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_newbiscay
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_nueva_extremadura = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = mexican_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_nueva_extremadura
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_nuevo_santander = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = mexican_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_nuevo_santander
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_nuevo_leon = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = mexican_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_nuevo_leon
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_yucatan = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = mexican_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_yucatan
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_california = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = mexican_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_california
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+# Colombia
+
+province_of_colombia = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = gran_colombian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_colombia
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+province_of_quito = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = gran_colombian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_quito
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+province_of_venezuela = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = gran_colombian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_venezuela
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+# Peru
+
+state_of_upper_peru = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = peruvian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_upper_peru
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_peru = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = peruvian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_peru
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+# brazil
+
+state_of_graopara = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = brazilian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_graopara
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_maranhao = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = brazilian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_maranhao
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_pernambuco = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = brazilian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_pernambuco
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_bahia = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = brazilian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_bahia
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_goyaz = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = brazilian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_goyaz
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_matogrosso = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = brazilian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_matogrosso
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_sao_paulo = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = brazilian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_sao_paulo
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_rio = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = brazilian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_rio
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_espirito_santo = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = brazilian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_espirito_santo
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_riograndedosul = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = brazilian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_riograndedosul
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+state_of_minasgerais = {
+	potential = {
+		is_former_colonial_nation = yes
+		capital_scope = {
+			province_group = brazilian_territory
+		}	
+	}
+
+	trigger = {
+		is_former_colonial_nation = yes
+		any_country = {
+			vassal_of = ROOT
+			is_former_colonial_nation = yes
+			capital_scope = {
+				colonial_region = colonial_minasgerais
+			}
+		}	
+	}
+	diplomatic_upkeep = 1
+}
+
+#Cuba Colony - merchant
+
+cubamerchant = {
+	potential = {
+		any_country = {
+			is_colonial_nation = yes
+			is_colonial_nation_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_cuba
+			}
+			owns = 484
+			owns = 485
+			owns = 2656
+			owns = 2655
+			owns = 2654
+			owns = 486
+		}	
+	}
+
+	trigger = {
+		any_country = {
+			is_colonial_nation = yes
+			is_colonial_nation_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_cuba
+			}
+			owns = 484
+			owns = 485
+			owns = 2656
+			owns = 2655
+			owns = 2654
+			owns = 486
+		}	
+	}
+	merchants = 1
+}

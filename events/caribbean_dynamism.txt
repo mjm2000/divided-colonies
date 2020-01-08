@@ -1,0 +1,57 @@
+namespace =  caribbeandynamism
+
+province_event = {
+	id =  caribbeandynamism.1
+	title = "caribbeandynamism.EVTNAME1"
+	desc = "caribbeandynamism.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	trigger = {
+		region = carribeans_region
+		NOT = { colonial_region = colonial_cuba }
+		NOT = { colonial_region = colonial_hispaniola }
+		NOT = { controlled_by = REB }
+	}
+
+	option = {
+		name = "caribbeandynamism.EVTOPT1"
+		random_list = {
+			50 = {
+				province_event = { id = caribbeandynamism.2 }
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+province_event = {
+	id =  caribbeandynamism.2
+	title = "caribbeandynamism.EVTNAME2"
+	desc = "caribbeandynamism.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "caribbeandynamism.EVTOPT2"
+		cede_province = controller
+		owner = { country_event = { id = caribbeandynamism.3 } }
+	}
+}
+
+province_event = {
+	id =  caribbeandynamism.3
+	title = "caribbeandynamism.EVTNAME3"
+	desc = "caribbeandynamism.EVTDESC3"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "caribbeandynamism.EVTOPT3"
+	}
+}

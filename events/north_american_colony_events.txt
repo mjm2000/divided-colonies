@@ -1,0 +1,91 @@
+namespace = colonialnorthamericaborders
+
+# french absorb upper canada
+country_event = {
+	id = colonialnorthamericaborders.6
+	title = "north_american_colony.EVTNAME4"
+	desc = "north_american_colony.EVTDESC4"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "north_american_colony.EVTOPT1"
+		every_province = {
+			limit = {
+				has_province_flag = integrating_uppercanada
+			}
+			cede_province = ROOT
+			add_core = ROOT
+			remove_core = FROM
+			clr_province_flag = integrating_uppercanada
+			set_province_flag = allowed_uppercanada
+		}
+	}
+}
+
+# malvinas
+country_event = {
+	id = colonialnorthamericaborders.7
+	title = "north_american_colony.EVTNAME5"
+	desc = "north_american_colony.EVTDESC5"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "north_american_colony.EVTOPT1"
+		every_province = {
+			limit = {
+				province_id = 1095
+			}
+			cede_province = ROOT
+			remove_core = FROM
+		}
+	}
+}
+
+# massachusetts absorbs maine
+country_event = {
+	id = colonialnorthamericaborders.8
+	title = "north_american_colony.EVTNAME6"
+	desc = "north_american_colony.EVTDESC6"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "north_american_colony.EVTOPT1"
+		every_province = {
+			limit = {
+				has_province_flag = integrating_maine
+			}
+			cede_province = ROOT
+			add_core = ROOT
+			remove_core = FROM
+			clr_province_flag = integrating_maine
+			set_province_flag = allowed_maine
+		}
+	}
+}
+
+# galapagos
+country_event = {
+	id = colonialnorthamericaborders.9
+	title = "north_american_colony.EVTNAME7"
+	desc = "north_american_colony.EVTDESC7"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "north_american_colony.EVTOPT1"
+		every_province = {
+			limit = {
+				province_id = 2002
+			}
+			cede_province = ROOT
+			remove_core = FROM
+		}
+	}
+}

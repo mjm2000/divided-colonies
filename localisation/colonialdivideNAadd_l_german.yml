@@ -1,0 +1,15 @@
+﻿l_german:
+ colonial_bordersNZadd.EVTNAME2: "Overlord Gives Us Our Rightful Territory"
+ colonial_bordersNZadd.EVTDESC2: "Our overlord had somehow acquired land within our colonial territory, but they have no rightfully turned it over to us."
+ colonial_bordersNZadd.EVTOPT3: "Excellent!"
+ colonial_bordersNZadd.EVTOPT1: "Rectify the situation right away!"
+ colonial_bordersNZadd.EVTOPT2: "No! It is ourses! My precioussss."
+
+ colonial_bordersNZadd.EVTNAME2: "New Zealand's Borders"
+ colonial_bordersNZadd.EVTDESC1: "We have acquired land within the territorial boundaries of one of our subjects. Should we transfer that land to our vassal?"
+
+ colonial_border_cleanupNZadd.EVTNAME1: "Colonial Borders Unclear"
+ colonial_border_cleanupNZadd.EVTDESC14: "One of our colonies from another region have somehow acquired land in New Zealand. Should we take control of it and establish it as part of the Alabama territory?"
+ colonial_border_cleanupNZadd.EVTOPT1: "Yes! We must make sure our colonies do not overstep their bounds."
+ colonial_border_cleanupNZadd.EVTOPT2: "No! If they have claimed, it is theirs."
+

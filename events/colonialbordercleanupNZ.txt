@@ -1,0 +1,70 @@
+namespace = colonial_border_cleanupNZadd
+
+# if your colonial nations overgrow their boundaries
+
+country_event = {
+	id = colonial_border_cleanupNZadd.14
+	title = "colonial_border_cleanupNZadd.EVTNAME1"
+	desc = "colonial_border_cleanupNZadd.EVTDESC14"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_new_zealand
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_new_zealand
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_new_zealand
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanupNZadd.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_new_zealand
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_new_zealand
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_new_zealand }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanupNZadd.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_new_zealand
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_new_zealand
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_new_zealand
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

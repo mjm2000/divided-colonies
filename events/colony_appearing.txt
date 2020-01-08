@@ -1,0 +1,537 @@
+namespace =  colonyappearing
+
+# pei
+country_event = {
+	id =  colonyappearing.1
+	title = "colonyappearing.EVTNAME1"
+	desc = "colonyappearing.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_year = 1798
+		culture_group = british
+		any_country = {
+			capital_scope = {
+				colonial_region = colonial_acadia
+			}
+			owns = 983
+			is_colonial_nation = yes
+			is_colonial_nation_of = ROOT
+			OR = {
+				owns = 984
+				owns = 2568
+				owns = 2569
+				owns = 982
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonyappearing.EVTOPT1"
+		every_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_acadia
+				}
+				owns = 983
+				OR = {
+					owns = 984
+					owns = 2568
+					owns = 2569
+					owns = 982
+				}
+				is_colonial_nation = yes
+				is_colonial_nation_of = ROOT
+			}
+			every_owned_province = {
+				limit = {
+					province_id = 983
+				}
+				cede_province = PEI
+				remove_core = PREV
+			}
+		}
+		vassalize = PEI
+		PEI = {
+			change_government = colonial_government
+		}
+	}
+}
+
+# vermont origins
+country_event = {
+	id =  colonyappearing.2
+	title = "colonyappearing.EVTNAME2"
+	desc = "colonyappearing.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		NOT = { has_global_flag = vermontquestionanswered }
+		any_country = {
+			is_colonial_nation = yes
+			is_colonial_nation_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_newyork
+			}
+			NOT = {
+				capital_scope = {
+					province_id = 2563
+				}
+			}
+			NOT = {
+				capital_scope = {
+					province_id = 969
+				}
+			}
+			OR = {
+				AND = { # own both provinces
+					owns = 2563
+					owns = 969
+				}
+				AND = {
+					OR = { # own one of the provinces...
+						owns = 2563
+						owns = 969
+					}
+					NOT = { # ...and all the provinces in vermont are owned by someone
+						any_province = {
+							OR = {
+								province_id = 2563
+								province_id = 969
+							}
+							is_city = no
+							is_colony = no
+						}
+					}
+				}
+			}
+		}
+		any_country = {
+			capital_scope = {
+				colonial_region = colonial_newhampshire
+			}
+			is_colonial_nation = yes
+			is_colonial_nation_of = ROOT
+			OR = {
+				owns = 2564
+				owns = 2562
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonyappearing.EVTOPT2" # New York
+		set_global_flag = vermontquestionanswered
+		every_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_newyork
+				}
+				is_colonial_nation = yes
+				is_colonial_nation_of = ROOT
+				OR = {
+					owns = 2563
+					owns = 969
+				}
+			}
+			add_liberty_desire = -10
+			every_owned_province = {
+				limit = {
+					OR = {
+						province_id = 2563
+						province_id = 969
+					}
+				}
+				set_province_flag = vermontdenied
+			}
+		}
+		every_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_massachusetts
+				}
+				is_colonial_nation = yes
+				is_colonial_nation_of = ROOT
+				owns = 966
+			}
+			add_liberty_desire = 10
+		}
+		every_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_newhampshire
+				}
+				is_colonial_nation = yes
+				is_colonial_nation_of = ROOT
+				OR = {
+					owns = 2564
+					owns = 2562
+				}
+			}
+			add_liberty_desire = 10
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = "colonyappearing.EVTOPT3" # New Hampshire
+		set_global_flag = vermontquestionanswered
+		every_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_newyork
+				}
+				is_colonial_nation = yes
+				is_colonial_nation_of = ROOT
+				OR = {
+					owns = 2563
+					owns = 969
+				}
+			}
+			add_liberty_desire = 10
+		}
+		every_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_massachusetts
+				}
+				is_colonial_nation = yes
+				is_colonial_nation_of = ROOT
+				owns = 966
+			}
+			add_liberty_desire = 10
+		}
+		every_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_newhampshire
+				}
+				is_colonial_nation = yes
+				is_colonial_nation_of = ROOT
+				OR = {
+					owns = 2564
+					owns = 2562
+				}
+			}
+			add_liberty_desire = -10
+			every_country = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_newyork
+					}
+					is_colonial_nation = yes
+					is_colonial_nation_of = ROOT
+					OR = {
+						owns = 2563
+						owns = 969
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 2563
+							province_id = 969
+						}
+					}
+					set_province_flag = changingvermont
+					set_province_flag = allowed_newyork
+				}
+			}
+			every_province = {
+				limit = {
+					has_province_flag = changingvermont
+				}
+				cede_province = PREV
+				clr_province_flag = changingvermont
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = "colonyappearing.EVTOPT4" # Massachusetts
+		set_global_flag = vermontquestionanswered
+		trigger = {
+			any_country = {
+				capital_scope = {
+					colonial_region = colonial_massachusetts
+				}
+				is_colonial_nation = yes
+				is_colonial_nation_of = ROOT
+				owns = 966
+			}
+		}
+		every_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_newyork
+				}
+				is_colonial_nation = yes
+				is_colonial_nation_of = ROOT
+				OR = {
+					owns = 2563
+					owns = 969
+				}
+			}
+			add_liberty_desire = 10
+		}
+		every_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_massachusetts
+				}
+				is_colonial_nation = yes
+				is_colonial_nation_of = ROOT
+				OR = {
+					owns = 2564
+					owns = 2562
+				}
+			}
+			add_liberty_desire = 10
+		}
+		every_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_massachusetts
+				}
+				is_colonial_nation = yes
+				is_colonial_nation_of = ROOT
+				owns = 966
+			}
+			add_liberty_desire = -10
+			every_country = {
+				limit = {
+					capital_scope = {
+						colonial_region = colonial_newyork
+					}
+					is_colonial_nation = yes
+					is_colonial_nation_of = ROOT
+					OR = {
+						owns = 2563
+						owns = 969
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 2563
+							province_id = 969
+						}
+					}
+					cede_province = PREV
+					set_province_flag = allowed_newyork
+					set_province_flag = changingvermont
+					set_province_flag = vermontdenied
+				}
+			}
+			every_province = {
+				limit = {
+					has_province_flag = changingvermont
+				}
+				cede_province = PREV
+				clr_province_flag = changingvermont
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = {
+	id =  colonyappearing.3
+	title = "colonyappearing.EVTNAME3"
+	desc = "colonyappearing.EVTDESC3"
+	picture = BIG_BOOK_eventPicture
+
+	major = yes
+	
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = vermontquestionanswered
+		NOT = { has_global_flag = vermontindependence }
+		OR = {
+			capital_scope = {
+				colonial_region = colonial_massachusetts
+			}
+			capital_scope = {
+				colonial_region = colonial_newyork
+			}
+		}
+		OR = {
+			owns = 2563
+			owns = 969
+		}
+		any_owned_province = {
+			OR = {
+				province_id = 2563
+				province_id = 969
+			}
+			had_province_flag = {
+				flag = vermontdenied
+				days = 4745
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		every_owned_province = {
+			limit = {
+				OR = {
+					province_id = 2563
+					province_id = 969
+				}
+			}
+			cede_province = VRM
+		}
+		VRM = {
+			add_core = 2563
+			add_core = 969
+		}
+		VRM = {
+			capital_scope = {
+				VRM = {
+					change_primary_culture = PREV
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				capital_scope = {
+					colonial_region = colonial_newhampshire
+				}
+			}
+			create_alliance = VRM
+		}
+		set_global_flag = vermontindependence
+	}
+	option = {
+		name = "colonyappearing.EVTOPT5" # War!
+		set_global_flag = vermontindependence
+		declare_war_with_cb = {
+			who = VRM
+			casus_belli = cb_core
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = "colonyappearing.EVTOPT6" # Okay
+		set_global_flag = vermontindependence
+		every_province = {
+			limit = {
+				OR = {
+					province_id = 2563
+					province_id = 969
+				}
+			}
+			remove_core = ROOT
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+}
+
+country_event = { # Vermont joins a country
+	id =  colonyappearing.4
+	title = "colonyappearing.EVTNAME4"
+	desc = "colonyappearing.EVTDESC4"
+	picture = BIG_BOOK_eventPicture
+
+	major = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		had_global_flag = {
+			flag = vermontindependence
+			days = 4745
+		}
+		any_neighbor_country = {
+			OR = {
+				tag = USA
+				tag = QUE
+				tag = CAN
+				tag = NEG
+			}
+			is_subject = no
+		}
+	}
+	mean_time_to_happen = {
+		years = 1
+	}
+	option = {
+		name = "colonyappearing.EVTOPT7" # Join the USA 
+		trigger = {
+			any_neighbor_country = {
+				tag = USA
+			}
+		}
+		USA = {
+			inherit = VRM
+		}
+		ai_chance = {
+			factor = 200
+		}
+	}
+	option = {
+		name = "colonyappearing.EVTOPT8" # Join Quebec 
+		trigger = {
+			any_neighbor_country = {
+				tag = QUE
+			}
+		}
+		QUE = {
+			inherit = VRM
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = "colonyappearing.EVTOPT9" # Join Canada 
+		trigger = {
+			any_neighbor_country = {
+				tag = CAN
+			}
+		}
+		CAN = {
+			inherit = VRM
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = "colonyappearing.EVTOPT10" # Join New England 
+		trigger = {
+			any_neighbor_country = {
+				tag = NEG
+			}
+		}
+		NEG = {
+			inherit = VRM
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = "colonyappearing.EVTOPT11" # Stay Independent 
+		add_prestige = 20
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

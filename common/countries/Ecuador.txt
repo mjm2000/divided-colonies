@@ -1,0 +1,78 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+colonial_parent = SPA
+random_nation_chance = 0
+
+color = { 135 194 224 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	diplomatic_ideas
+	spy_ideas
+	economic_ideas
+	maritime_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Pedro José #0" = 20
+	"José #0 Plácido" = 10
+	"Pedro #0" = 20
+	"Eloy #0" = 10
+	"Luis #0" = 10
+	"Agustín #0" = 10
+	"Rafael #0 Pérez" = 10
+	"Ignacio #0" = 10
+	"Antonio #0" = 10
+	"José #0 Javier" = 10
+	"Francisco Xavier #0" = 10
+	"Gabriel #0 García" = 10
+	"Manuel #0" = 30
+	"Javier #0" = 10
+	"Jerónimo #0" = 10
+	"Mariano #0" = 10
+	"Guillermo #0" = 10
+	"Francisco #0" = 10
+	"Rafael #0" = 10
+	"Diego #0" = 10
+	"Vicente Ramón #0" = 10
+	"José Joaquín #0" = 10
+	"Juan José #0" = 10
+	
+	"Adelita #0" = -1
+	"Carmela #0" = -1
+	"Delia #0" = -1
+}
+
+leader_names = {
+	Flores Rocafuerte "de Olmedo" Roca Ascásubi Noboa Urvina Robles Moreno
+	Carrión Chiriboga Carvajal Franco Borrero Pinzano "de Arteta" Espinosa
+	León Eguiguren Veintemilla Caamaño Cordero Guerrero Lizarzaburu Pareja
+	Alfaro Carbo Cevallos
+}
+
+
+ship_names = {
+	Valverde Danae Guayas Quito Almirante Alfaro Amazonas Manabi Orion Hualcopo Calderón
+	Independiente Indomable Intrepido 
+}

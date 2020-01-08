@@ -1,0 +1,10 @@
+﻿l_french:
+ colonialimmigrantcultures.EVTNAME3: "Colonial Census Begun"
+ colonialimmigrantcultures.EVTDESC3: "As more and more people flock to our colonies, our officials have begun a census to see who all is living there."
+ colonialimmigrantcultures.EVTOPT3: "Let me know once it's complete."
+ colonialimmigrantcultures.EVTNAME35: "Finalizing Census in [Root.GetName]"
+ colonialimmigrantcultures.EVTDESC35: "The colony of [Root.GetName] is preparing to send in their census results."
+ colonialimmigrantcultures.EVTOPT35: "I can't wait!"
+ colonialimmigrantcultures.EVTNAME4: "Colonial Census Complete"
+ colonialimmigrantcultures.EVTDESC4: "The census for the province of [Root.GetName] is complete. [Root.GetName] is a majority [Root.Culture.GetName] and [Root.Religion.GetName]."
+ colonialimmigrantcultures.EVTOPT4: "Understood."

@@ -1,0 +1,96 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+colonial_parent = GBR
+random_nation_chance = 0
+
+color = { 176  176  176 }
+
+historical_idea_groups = {
+	plutocracy_ideas
+	trade_ideas
+	economic_ideas
+	defensive_ideas
+	maritime_ideas
+	administrative_ideas
+	offensive_ideas
+	quantity_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	chevauchee
+	western_longbow
+	gaelic_mercenary
+	gaelic_free_shooter
+	french_caracolle
+	irish_charge
+	anglofrench_line
+	french_dragoon
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Jefferson #0" = 10
+	"Alexander #0" = 10
+	"Robert #0" = 30
+	"Judah #0" = 30
+	"Christopher #0" = 10
+	"George #0" = 30
+	"John #0" = 30
+	"Leroy Pope #0" = 10
+	"James #0" = 10
+	"Stephen #0" = 10
+	"Thomas #0" = 20
+	"Elias #0" = 10
+	"Samuel Benton #0" = 10
+	"Burton Allen #0" = 10
+	"Robert McDonald #0" = 10
+	"Robert Woodward #0" = 10
+	"Thomas Stanhope #0" = 10
+	"Josiah Abigail #0" = 10
+	"Jesse #0" = 10
+	"Henry #0" = 10
+	"Asa #0" = 10
+	"Andrew #0" = 10
+	"Braxton #0" = 10
+	"Nathan Bedford #0" = 10
+	"Theophilus #0" = 10
+	
+    "Deborah #0" = -1
+    "Sarah #0" = -1
+    "Anne #0" = -1
+}
+
+leader_names = {
+	Davis Stephens Toombs Hunter Benjamin Memminger Trenholm Reagan
+	Walker Randolph Seddon Breckinridge Mallory Benjamin Bragg Watts Cobb Barnwell
+	Bocock Campbell Boudinot Callahan Holder Jones Finley Jackson Biggs Magrath Ringo Jones
+	Moise Clayton Humphreys Devine Halyburton Brockenbrough Lee Beauregard Cooper Johnston
+	Smith Buckner Early Forrest Ewell Hood Longstreet Pemberton Polk Stewart Wheeler Taylor Anderson
+	Skipwith
+}
+
+ship_names = {
+	Albermarle Arkansas Atlanta Baltic Charleston Chicora Columbia Eastport Fredericksburg
+	Georgia Huntsville Louisiana Manassas Milledgeville
+	Mississippi Missouri Mobile Muscogee Nashville Neuse "New Orleans" "North Carolina"
+	"Palmetto State" Raleigh Richmond Savannah Tennessee Texas Tuscaloosa Virginia Wilmington
+	Arctic Phoenix Memphis Alexandra Archer Chickamauga Clarence Florida Georgiana Lapwing
+	Rappahannock Shenandoah Sumter Tacony Tallahassee Stonewall Cheops Appomattox Bartow
+	"Bayou City" Beaufort Bienville "Black Warrior" Bombshell Calhoun Carondelet Chattahootchee
+	Clifton Curlew "De Soto" Defiance Diana Drewry Ellis Equator Fanny Fashion Fulton Forrest
+	Gaines Germantown Hampton Harmony Huntress Isondiga Ivy Jackson Jamestown Junaluska "Lady Davis"
+	Livingston Macon Matilda Maurepas McRae Morgan "Morning Light" Nansemond Neptune Nina Oregon
+	Pamlico Pedee Pickens Plymouth Polk Pontchartrain Rattlesnake Rescue Resolute Roanoke
+	"Queen of the West" Sampson "Sea Bird" Selma Spray Stono Talomico Teaser Tiger Torpedo
+	Tuscarora Tropic Velocity "Water Witch" Winslow Yadkin David Midge Squire Squib Hornet Scorpion 
+	Wasp Advance Owl Webb
+}

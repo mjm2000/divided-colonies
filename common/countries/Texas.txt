@@ -1,0 +1,86 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+colonial_parent = SPA
+random_nation_chance = 0
+
+color = { 219  124  139 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Gaspar #0" = 10
+	"Vicente Álvarez #0" = 10
+	"Ignacio #0" = 10
+	"Simón #0" = 20
+	"José Joaquín #0" = 10
+	"José María #0" = 10
+	"Martín #0" = 10
+	"Fernando #0" = 10
+	"Silvestre #0" = 10
+	"Isidro #0" = 10
+	"Manuel #0" = 10
+	"Salvador #0" = 10
+	"Blas María #0" = 10
+	"Juan #0" = 30
+	"Alonso #0" = 10
+	"Toribio #0" = 10
+	"Damián #0" = 10
+	"José Ángel #0" = 10
+	"José Antonio #0" = 10
+	"Felipe #0" = 10
+	"Tomás #0" = 10
+	"Erasmo #0" = 10
+	"Pedro Romero #0" = 10
+	"Lorenzo #0" = 10
+	
+	"Patricia #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Abrego "Santa Anna" Travieso "de Armas" "de Arocha" "de Arredondo" Carbajal "de Cos" "de Herrera"
+	"de León" Elizondo Esparza Espinosa Flores Falcón "de la Garza" Curbelo Leal Losoya
+	Moya Navarro "de Olivares" "de Pineda" Medero Rodríguez Seguín Tarin "de Terreros"
+	"de Ugalde" "de Urrutia" Vial "de Zavala"
+}
+
+ship_names = {
+	Bravo
+	Galeana
+	Ilhunicamina
+	Juarez
+	Romero
+	Serria Victoria
+	Alamo Atascosa Bosque Blanco Brazos "Corpus Christi" Dallas "El Paso" Galveston Gonzalez
+	Grimes Guadalupe Hidalgo Houston Matagorda Maumee "San Antonio" Navasota
+	Neches Pecos Presidio Sabie "Río Grande" "San Jacinto" Shoshone Texas Texan Uvalde
+	Waxahachie
+}

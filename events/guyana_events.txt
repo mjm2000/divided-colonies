@@ -1,0 +1,49 @@
+namespace =  colonialguyanaborders
+
+# brazilian guyana
+country_event = {
+	id =  colonialguyanaborders.1
+	title = "guyana_brazil.EVTNAME1"
+	desc = "guyana_brazil.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "guyana_brazil.EVTOPT1"
+		every_province = {
+			limit = {
+				has_province_flag = integrating_brazilian_guyana
+			}
+			cede_province = ROOT
+			add_core = ROOT
+			remove_core = FROM
+			clr_province_flag = integrating_brazilian_guyana
+			set_province_flag = allowed_guyana
+		}
+	}
+}
+
+# venezuelan guyana
+country_event = {
+	id =  colonialguyanaborders.2
+	title = "guyana_venezuela.EVTNAME1"
+	desc = "guyana_venezuela.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "guyana_venezuela.EVTOPT1"
+		every_province = {
+			limit = {
+				has_province_flag = integrating_venezuelan_guyana
+			}
+			cede_province = ROOT
+			add_core = ROOT
+			remove_core = FROM
+			clr_province_flag = integrating_venezuelan_guyana
+			set_province_flag = allowed_guyana
+		}
+	}
+}

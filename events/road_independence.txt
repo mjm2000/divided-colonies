@@ -1,0 +1,31 @@
+namespace = road_to_independence
+
+country_event = {
+    id = rti.1
+    title = "capital_occupied.EVTNAME1"
+    desc = "capital_occupied.EVTDESC1"
+    picture = place_holder
+
+    trigger = {
+        continent = europe
+        CAPITAL = {
+            NOT = {
+                controlled_by = ROOT
+            }
+        }
+        colony = 1
+    }
+    mean_time_to_happen = {
+        days = 15
+    }
+    option = {
+    #create Juntas 
+        name = "capital_occupied.EVTNAME1"
+        every_subject_country = {
+            limit = {
+                has_colonial_parent = ROOT 
+            }
+        add_liberty_desire = 50
+        }
+    }
+}

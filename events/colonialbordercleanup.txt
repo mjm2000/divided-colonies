@@ -1,0 +1,4764 @@
+namespace = colonial_border_cleanup_core
+
+# if your colonial nations overgrow their boundaries
+
+country_event = {
+	id = colonial_border_cleanup_core.1
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_acadia
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_acadia
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_acadia
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_acadia
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_acadia
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_acadia }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_acadia
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_acadia
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_acadia
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.2
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_alaska
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_alaska
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_alaska
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_alaska
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_alaska
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_alaska }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_alaska
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_alaska
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_alaska
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+country_event = {
+	id = colonial_border_cleanup_core.4
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC4"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_louisiana
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_louisiana
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_louisiana
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_louisiana
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_louisiana
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_louisiana }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_louisiana
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_louisiana
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_louisiana
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.5
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC5"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_california
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_california
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_california
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_california
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_california
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_california }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_california
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_california
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_california
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.6
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC6"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_mexico
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_mexico
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_mexico
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_mexico
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_mexico
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_mexico }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_mexico
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_mexico
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_mexico
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.8
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC8"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_colombia
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_colombia
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_colombia
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_colombia
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_colombia
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_colombia }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_colombia
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_colombia
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_colombia
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.9
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC9"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_peru
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_peru
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_peru
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_peru
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_peru
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_peru }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_peru
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_peru
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_peru
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.10
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC10"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_la_plata
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_la_plata
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_la_plata
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_la_plata
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_la_plata
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_la_plata }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_la_plata
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_la_plata
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_la_plata
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.11
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC11"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_espirito_santo
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_espirito_santo
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_espirito_santo
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_espirito_santo
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_espirito_santo
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_espirito_santo }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_espirito_santo
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_espirito_santo
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_espirito_santo
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.12
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC12"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_guyana
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_guyana
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_guyana
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_guyana
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_guyana
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_guyana }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_guyana
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_guyana
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_guyana
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.13
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC13"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_australia
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_australia
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_australia
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_australia
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_australia
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_australia }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_australia
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_australia
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_australia
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.14
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC14"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_rio
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_rio
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_rio
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_rio
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_rio
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_rio }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_rio
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_rio
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_rio
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.15
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC15"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_sao_paulo
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_sao_paulo
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_sao_paulo
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_sao_paulo
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_sao_paulo
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_sao_paulo }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_sao_paulo
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_sao_paulo
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_sao_paulo
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.16
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC16"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_uppercanada
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_uppercanada
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_uppercanada
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_uppercanada
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_uppercanada
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_uppercanada }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_uppercanada
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_uppercanada
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_uppercanada
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.17
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC17"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_lowercanada
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_lowercanada
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_lowercanada
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_lowercanada
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_lowercanada
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_lowercanada }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_lowercanada
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_lowercanada
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_lowercanada
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.18
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC18"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_southcarolina
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_southcarolina
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_southcarolina
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_southcarolina
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_southcarolina
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_southcarolina }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_southcarolina
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_southcarolina
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_southcarolina
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.19
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC19"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_northcarolina
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_northcarolina
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_northcarolina
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_northcarolina
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_northcarolina
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_northcarolina }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_northcarolina
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_northcarolina
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_northcarolina
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.20
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC20"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_connecticut
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_connecticut
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_connecticut
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_connecticut
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_connecticut
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_connecticut }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_connecticut
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_connecticut
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_connecticut
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.21
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC21"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_delaware
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_delaware
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_delaware
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_delaware
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_delaware
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_delaware }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_delaware
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_delaware
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_delaware
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.22
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC22"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_florida
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_florida
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_florida
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_florida
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_florida
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_florida }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_florida
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_florida
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_florida
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.23
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC23"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_georgia
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_georgia
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_georgia
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_georgia
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_georgia
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_georgia }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_georgia
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_georgia
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_georgia
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.24
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC24"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_nuevo_santander
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_nuevo_santander
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_nuevo_santander
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_nuevo_santander
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_nuevo_santander
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_nuevo_santander }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_nuevo_santander
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_nuevo_santander
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_nuevo_santander
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.25
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC25"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_nueva_extremadura
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_nueva_extremadura
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_nueva_extremadura
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_nueva_extremadura
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_nueva_extremadura
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_nueva_extremadura }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_nueva_extremadura
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_nueva_extremadura
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_nueva_extremadura
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.28
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC28"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_maryland
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_maryland
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_maryland
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_maryland
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_maryland
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_maryland }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_maryland
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_maryland
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_maryland
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.29
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC29"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_maine
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_maine
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_maine
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_maine
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_maine
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_maine }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_maine
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_maine
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_maine
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.30
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC30"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_massachusetts
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_massachusetts
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_massachusetts
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_massachusetts
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_massachusetts
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_massachusetts }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_massachusetts
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_massachusetts
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_massachusetts
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.34
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC34"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_newbrunswick
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_newbrunswick
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_newbrunswick
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_newbrunswick
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_newbrunswick
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_newbrunswick }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_newbrunswick
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_newbrunswick
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_newbrunswick
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.35
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC35"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_newhampshire
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_newhampshire
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_newhampshire
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_newhampshire
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_newhampshire
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_newhampshire }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_newhampshire
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_newhampshire
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_newhampshire
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.36
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC36"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_jersey
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_jersey
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_jersey
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_jersey
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_jersey
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_jersey }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_jersey
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_jersey
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_jersey
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.37
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC37"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_new_mexico
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_new_mexico
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_new_mexico
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_new_mexico
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_new_mexico
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_new_mexico }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_new_mexico
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_new_mexico
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_new_mexico
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.38
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC38"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_newyork
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_newyork
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_newyork
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_newyork
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_newyork
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_newyork }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_newyork
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_newyork
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_newyork
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.39
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC39"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_newfoundland
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_newfoundland
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_newfoundland
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_newfoundland
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_newfoundland
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_newfoundland }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_newfoundland
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_newfoundland
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_newfoundland
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.40
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC40"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_ohio
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_ohio
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_ohio
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_ohio
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_ohio
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_ohio }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_ohio
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_ohio
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_ohio
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.41
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC41"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_oregon
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_oregon
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_oregon
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_oregon
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_oregon
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_oregon }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_oregon
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_oregon
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_oregon
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.42
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC42"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_pennsylvania
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_pennsylvania
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_pennsylvania
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_pennsylvania
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_pennsylvania
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_pennsylvania }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_pennsylvania
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_pennsylvania
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_pennsylvania
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.43
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC43"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_rhodeisland
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_rhodeisland
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_rhodeisland
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_rhodeisland
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_rhodeisland
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_rhodeisland }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_rhodeisland
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_rhodeisland
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_rhodeisland
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.44
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC44"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_ruperts_land
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_ruperts_land
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_ruperts_land
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_ruperts_land
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_ruperts_land
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_ruperts_land }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_ruperts_land
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_ruperts_land
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_ruperts_land
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.46
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC46"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_texas
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_texas
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_texas
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_texas
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_texas
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_texas }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_texas
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_texas
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_texas
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.48
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC48"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_virginia
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_virginia
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_virginia
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_virginia
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_virginia
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_virginia }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_virginia
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_virginia
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_virginia
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.49
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC49"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_guatemala
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_guatemala
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_guatemala
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_guatemala
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_guatemala
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_guatemala }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_guatemala
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_guatemala
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_guatemala
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.50
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC50"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_newgalicia
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_newgalicia
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_newgalicia
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_newgalicia
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_newgalicia
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_newgalicia }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_newgalicia
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_newgalicia
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_newgalicia
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.51
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC51"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_newnavarra
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_newnavarra
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_newnavarra
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_newnavarra
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_newnavarra
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_newnavarra }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_newnavarra
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_newnavarra
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_newnavarra
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.52
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC52"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_newbiscay
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_newbiscay
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_newbiscay
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_newbiscay
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_newbiscay
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_newbiscay }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_newbiscay
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_newbiscay
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_newbiscay
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.53
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC53"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_nuevo_leon
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_nuevo_leon
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_nuevo_leon
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_nuevo_leon
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_nuevo_leon
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_nuevo_leon }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_nuevo_leon
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_nuevo_leon
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_nuevo_leon
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.54
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC54"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_yucatan
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_yucatan
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_yucatan
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_yucatan
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_yucatan
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_yucatan }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_yucatan
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_yucatan
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_yucatan
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.55
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC55"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_cuba
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_cuba
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_cuba
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_cuba
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_cuba
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_cuba }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_cuba
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_cuba
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_cuba
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.56
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC56"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_hispaniola
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_hispaniola
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_hispaniola
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_hispaniola
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_hispaniola
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_hispaniola }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_hispaniola
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_hispaniola
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_hispaniola
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+country_event = {
+	id = colonial_border_cleanup_core.58
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC58"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_philippines
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_philippines
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_philippines
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_philippines
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_philippines
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_philippines }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_philippines
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_philippines
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_philippines
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.59
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC59"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_south_africa
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_south_africa
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_south_africa
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_south_africa
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_south_africa
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_south_africa }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_south_africa
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_south_africa
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_south_africa
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.60
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC60"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_greenland
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_greenland
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_greenland
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_greenland
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_greenland
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_greenland }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_greenland
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_greenland
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_greenland
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.61
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC61"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_graopara
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_graopara
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_graopara
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_graopara
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_graopara
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_graopara }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_graopara
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_graopara
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_graopara
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.62
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC62"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_maranhao
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_maranhao
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_maranhao
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_maranhao
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_maranhao
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_maranhao }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_maranhao
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_maranhao
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_maranhao
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.63
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC63"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_pernambuco
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_pernambuco
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_pernambuco
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_pernambuco
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_pernambuco
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_pernambuco }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_pernambuco
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_pernambuco
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_pernambuco
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.64
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC64"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_bahia
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_bahia
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_bahia
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_bahia
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_bahia
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_bahia }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_bahia
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_bahia
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_bahia
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.65
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC65"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_goyaz
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_goyaz
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_goyaz
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_goyaz
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_goyaz
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_goyaz }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_goyaz
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_goyaz
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_goyaz
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.66
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC66"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_matogrosso
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_matogrosso
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_matogrosso
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_matogrosso
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_matogrosso
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_matogrosso }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_matogrosso
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_matogrosso
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_matogrosso
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.67
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC67"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_riograndedosul
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_riograndedosul
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_riograndedosul
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_riograndedosul
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_riograndedosul
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_riograndedosul }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_riograndedosul
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_riograndedosul
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_riograndedosul
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.68
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC68"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_minasgerais
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_minasgerais
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_minasgerais
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_minasgerais
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_minasgerais
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_minasgerais }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_minasgerais
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_minasgerais
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_minasgerais
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.69
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC69"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_paraguay
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_paraguay
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_paraguay
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_paraguay
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_paraguay
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_paraguay }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_paraguay
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_paraguay
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_paraguay
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.70
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC70"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_uruguay
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_uruguay
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_uruguay
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_uruguay
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_uruguay
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_uruguay }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_uruguay
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_uruguay
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_uruguay
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.71
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC71"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_upper_peru
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_upper_peru
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_upper_peru
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_upper_peru
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_upper_peru
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_upper_peru }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_upper_peru
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_upper_peru
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_upper_peru
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.72
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC72"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_chile
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_chile
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_chile
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_chile
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_chile
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_chile }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_chile
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_chile
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_chile
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.73
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC73"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_quito
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_quito
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_quito
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_quito
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_quito
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_quito }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_quito
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_quito
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_quito
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = {
+	id = colonial_border_cleanup_core.74
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC74"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_venezuela
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_venezuela
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_venezuela
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_venezuela
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_venezuela
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_venezuela }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_venezuela
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_venezuela
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_venezuela
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = colonial_border_cleanup_core.75
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC75"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_chiapas
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_chiapas
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_chiapas
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_chiapas
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_chiapas
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_chiapas }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_chiapas
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_chiapas
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_chiapas
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = colonial_border_cleanup_core.76
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC76"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_honduras
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_honduras
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_honduras
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_honduras
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_honduras
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_honduras }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_honduras
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_honduras
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_honduras
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = colonial_border_cleanup_core.77
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC77"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_nicaragua
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_nicaragua
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_nicaragua
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_nicaragua
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_nicaragua
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_nicaragua }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_nicaragua
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_nicaragua
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_nicaragua
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = colonial_border_cleanup_core.78
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC78"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_costa_rica
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_costa_rica
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_costa_rica
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_nicaragua
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_nicaragua
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_costa_rica }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_costa_rica
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_costa_rica
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_costa_rica
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = colonial_border_cleanup_core.79
+	title = "colonial_border_cleanup.EVTNAME1"
+	desc = "colonial_border_cleanup.EVTDESC79"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_province = {
+			colonial_region = colonial_san_salvador
+			owner = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					NOT = {
+						colonial_region = colonial_san_salvador
+					}
+				}
+			}
+			is_core = owner
+			NOT = {
+				has_province_flag = allowed_san_salvador
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT1" #fix the provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_san_salvador
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_san_salvador
+						}
+					}
+				}
+				NOT = { has_province_flag = allowed_san_salvador }
+			}
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+	option = {
+		name = "colonial_border_cleanup.EVTOPT2" #allow them to keep provinces
+		every_province = {
+			limit = {
+				colonial_region = colonial_san_salvador
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						NOT = {
+							colonial_region = colonial_san_salvador
+						}
+					}
+				}
+			}
+			set_province_flag = allowed_san_salvador
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+	

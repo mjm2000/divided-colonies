@@ -1,0 +1,104 @@
+on_bi_yearly_pulse_4 = {
+	events = {
+		colonialimmigrantcultures.3
+		colonialimmigrantcultures.35
+		colonial_border_cleanup_core.1
+		colonial_border_cleanup_core.2
+
+		colonial_border_cleanup_core.4
+		colonial_border_cleanup_core.5
+		colonial_border_cleanup_core.6
+
+		colonial_border_cleanup_core.8
+		colonial_border_cleanup_core.9
+		colonial_border_cleanup_core.10
+		colonial_border_cleanup_core.11
+		colonial_border_cleanup_core.12
+		colonial_border_cleanup_core.13
+		colonial_border_cleanup_core.14
+		colonial_border_cleanup_core.15
+		colonial_border_cleanup_core.16
+		colonial_border_cleanup_core.17
+		colonial_border_cleanup_core.18
+		colonial_border_cleanup_core.19
+		colonial_border_cleanup_core.20
+		colonial_border_cleanup_core.21
+		colonial_border_cleanup_core.22
+		colonial_border_cleanup_core.23
+		colonial_border_cleanup_core.24
+		colonial_border_cleanup_core.25
+
+
+		colonial_border_cleanup_core.28
+		colonial_border_cleanup_core.29
+		colonial_border_cleanup_core.30
+
+
+		colonial_border_cleanup_core.34
+		colonial_border_cleanup_core.35
+		colonial_border_cleanup_core.36
+		colonial_border_cleanup_core.37
+		colonial_border_cleanup_core.38
+		colonial_border_cleanup_core.39
+		colonial_border_cleanup_core.40
+		colonial_border_cleanup_core.41
+		colonial_border_cleanup_core.42
+		colonial_border_cleanup_core.43
+		colonial_border_cleanup_core.44
+
+		colonial_border_cleanup_core.46
+
+		colonial_border_cleanup_core.48
+		colonial_border_cleanup_core.49
+		colonial_border_cleanup_core.50
+		colonial_border_cleanup_core.51
+		colonial_border_cleanup_core.52
+		colonial_border_cleanup_core.53
+		colonial_border_cleanup_core.54
+		colonial_border_cleanup_core.55
+		colonial_border_cleanup_core.56
+
+		colonial_border_cleanup_core.58
+		colonial_border_cleanup_core.59
+		colonial_border_cleanup_core.60
+		colonial_border_cleanup_core.61
+		colonial_border_cleanup_core.62
+		colonial_border_cleanup_core.63
+		colonial_border_cleanup_core.64
+		colonial_border_cleanup_core.65
+		colonial_border_cleanup_core.66
+		colonial_border_cleanup_core.67
+		colonial_border_cleanup_core.68
+		colonial_border_cleanup_core.69
+		colonial_border_cleanup_core.70
+		colonial_border_cleanup_core.71
+		colonial_border_cleanup_core.72
+		colonial_border_cleanup_core.73
+		colonial_border_cleanup_core.74
+	}
+}
+
+on_five_year_pulse = {
+	if = {
+		limit = {
+			owns = 1
+		}
+		
+		country_event = { id = NAmoving.1 }
+		country_event = { id = NAmoving.2 }
+		country_event = { id = NAmoving.3 }
+		country_event = { id = NAmoving.4 }
+		country_event = { id = NAmoving.5 }
+		country_event = { id = NAmoving.6 }
+		country_event = { id = NAmoving.7 }
+		country_event = { id = NAmoving.8 }
+		country_event = { id = NAmoving.9 }
+		country_event = { id = NAmoving.10 }
+	}
+}
+
+on_siege_lost_province =  {
+	events = {
+		caribbeandynamism.1
+	}
+}

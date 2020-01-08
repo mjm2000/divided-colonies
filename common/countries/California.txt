@@ -1,0 +1,76 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+colonial_parent = SPA
+random_nation_chance = 0
+
+color = { 189 138 94 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Pío #0" = 20
+	"Andrés #0" = 10
+	"José María #0" = 10
+	"Manuel #0" = 10
+	"Juan Batista #0" = 10
+	"Carlos Antonio #0" = 0
+	"Nicolás #0" = 0
+	"Mariano #0" = 0
+	"José #0" = 30
+	"Luis Antonio #0" = 0
+	"Pablo Vicente #0" = 0
+	"José Darío #0" = 0
+	"Pedro #0" = 0
+	"José Joaquín #0" = 0
+	"José Antonio #0" = 0
+	"Felipe #0" = 0
+	"Fernando Rivera #0" = 0
+	"Gaspar #0" = 0
+	
+	"Laura #0" = -1
+	"Cristina #0" = -1
+	"Monica #0" = -1
+}
+
+leader_names = {
+	"de Portolà" Fages Moncada Rivera "de Neve" Roméu "de Arrillaga" "de Borica" "de Alberni"
+	Argüello "de Solá" "de Echeandía" Victoria Pico Zamorano Figueroa Castro Gutiérrez
+	Chico Alvarado Carrillo Micheltorena 
+}
+
+ship_names = {
+	Sacramento "San Diego" "Los Ángeles" Monterey "Yerba Buena" "San Francisco" Sonoma
+	"San José" "Santa Monica" California Alameda Amador Anacapa Calaveras Colusa Coronado
+	Cusabo Fresno "La Jolla" Luiseño Mendocino Madera Capistrano Carmel "De Pala" Dolores
+	Loreto Purisima "San Antonio" "San Carlos" "San Fernando" "San Gabriel" "San Juan"
+	"San Luis Obsipo" "San Luis Rey" "San Miguel" "San Rafael" "Santa Ana" "Santa Barbara"
+	"Santa Clara" "Santa Cruz" "Santa Ynez" Solano Soledad Pasadena Corona Salinan
+	"San Bernardino" "San Pablo" "San Pedro" Sausalito Sierra Vallejo 
+}

@@ -1,0 +1,96 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+colonial_parent = GBR
+random_nation_chance = 0
+
+color = { 22 44 90 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	trade_ideas
+	economic_ideas
+	plutocracy_ideas
+	diplomatic_ideas
+	offensive_ideas
+	spy_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_longbow
+	gaelic_mercenary
+	gaelic_free_shooter
+	irish_charge
+	anglofrench_line
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Thomas #0" = 30
+	"James #0" = 10
+	"George #0" = 40
+	"John #0" = 40
+	"Alexander #0" = 20
+	"Richard #0" = 30
+	"John Robert #0" = 10
+	"William  #0" = 30
+	"Joseph Frederick #0" = 10
+	"Edmund #0" = 20
+	"Andrew Snape #0" = 10
+	"Mariot #0" = 10
+	"Michael #0" = 10
+	"Benjamin #0" = 10
+	"Montague #0" = 10
+	"Jonathan #0" = 10
+	"Charles #0" = 10
+	"Edward #0" = 20
+	"Paul #0" = 10
+	"Lawrence #0" = 20
+	"Peregrine #0" = 20
+	"Samuel #0" = 10
+	"Francis #0" = 10
+	"Arthur #0" = 10
+	"Archibald #0" = 10
+	"Howard #0" = 10
+	"Martin #0" = 10
+	"Gabriel #0" = 10
+
+	"Laura #0" = -1
+	"Maria #0" = -1	
+	"Victoria #0" = -1
+}
+
+leader_names = { 
+	Carleton Ludlow Winslow Hunter Johnstone Balfour Smyth Saumarez Hailes Douglas
+	Campbell Harvey Colebrooke Head "Manners-Sutton" "Hamilton-Gordon"
+	Vetch Nicholson Caulfeild Philipps Doucett Armstrong Cosby Mascarene Cornwallis
+	Hopson Lawrence Belcher Wilmot Green Francklin Legge Arbuthnot Hughes Hamond
+	Parr Fanning DesBarres Macarmick Ainslie Bulkeley Wentworth Prévost Croke Sherbrooke
+	Dalhousie Kempt Jeffery Maitland
+}
+
+ship_names = {
+	Cabot Cartier
+	Micmac
+	"St. Maurice" "St. Laurent" Margaree
+	Restigouche "St. Francis" "St. Croix"
+	Miscou Magdalen
+	Chignecto Fortune Miramichi Quinte Thunder
+	Memphrémagog "Bras d'Or" Nipigon
+	Preserver Protecteur
+	Cormorant Lynx Badger Caribou Otter Wolf Grizzly Raccoon Loon "Blue Heron" Mallard Vison Renard Elk Beaver Ambler Husky Reindeer Moose Outarde 
+	Bonaventure Manitoulin "Prince Edward" Royale
+	Rainbow Niobe Aurora Patriot Patrician Champlain Constance Curlew Shearwater
+	Canada Florence Galiano Laurentian Malaspina Margaret Newington Restless Tuna
+	Puncher Warrior Magnificent Crescent Crusader Lanark Swansea Arrowhead Cobalt
+}

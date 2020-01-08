@@ -1,0 +1,5026 @@
+# Acadia/Nova Scotia
+colonial_acadia = {
+	color = { 255 215 10 } # yellow star of Acadian flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 4
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		fur = 1
+		fish = 8
+		naval_supplies = 1
+		copper = 4
+	}
+
+	culture = {
+		mikmaq = 10
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		2568 984 2569 982
+		983 # PEI
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_CANADA_French_Acadia"
+	}
+	names = {
+		trigger = {
+			tag = FRA
+			OR = {
+				overlord_of = SCO
+				alliance_with = SCO
+			}
+		}
+		name = "COLONIAL_CANADA_Nouvelle_Ecosse"
+	}
+	names = {
+		trigger = {
+			culture_group = british
+		}
+		name = "COLONIAL_CANADA_Nova_Scotia"
+	}
+	names = {
+		trigger = {
+			primary_culture = greek
+		}
+		name = "COLONIAL_CANADA_Arcadia"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+	names = {
+		name = "COLONIAL_CANADA_Acadia"
+	}
+}
+
+# Alaska
+colonial_alaska = {
+	color = { 15 32 75 } # dark blue state flag
+
+	# Random New World
+	tax_income = 0
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		fur = 10
+		fish = 3
+		naval_supplies = 2
+		gold = 2
+		
+		copper = 3
+	}
+	
+	culture = {
+		aleutian = 8
+		
+		haida = 6	
+	}
+	
+	religion = {
+		totemism = 10
+	}
+
+	provinces = {
+		979 978 977 976 2611 2612 2613
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			primary_culture = russian
+		}
+		name = "COLONIAL_ALASKA_Alyaska"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = iberian
+				culture_group = latin
+			}
+		}
+		name = "COLONIAL_ALASKA_Alasca"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_ALASKA_Alaska"
+	}
+	names = {
+		name = "COLONIAL_ALASKA_Root_Culture_GetGroupName_Alaska"
+	} 
+	names = {
+		name = "COLONIAL_ALASKA_Aleutia"
+	}
+}
+
+
+# California
+colonial_california = {
+	color = { 200 117 43 }
+
+	# Random New World
+	tax_income = 1
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 3
+	
+	trade_goods = {
+		fur = 4
+		grain = 3
+		salt = 1
+		wool = 2
+	}
+	
+	culture = {
+		shoshone = 10
+		piman = 8
+		navajo = 1
+	}
+	
+	religion = {
+		shamanism = 4
+		animism = 10
+	}
+	
+	provinces = {
+		868 867 876 875 870 869 871 2021
+		2476 2477 2478 2479 2480 2491
+		2493    
+		4638 4637 4636 4635 4634
+		865 866 2620 4639 4577 4633   # beja california, arizona, and sonoria
+		877 879 
+	}
+
+
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+			culture_group = british
+		}
+		name = "COLONIAL_CALIFORNIA_New_Albion"
+	}
+	names = {
+		trigger = {
+			culture_group = latin
+		}
+		name = "COLONIAL_CALIFORNIA_Calafornina"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = ARA
+				tag = CAS
+				tag = SPA
+			}
+		}
+		name = "COLONIAL_CALIFORNIA_Las_Californias"
+	}
+	names = {
+		trigger = {
+			religion_group = muslim
+		}
+		name = "COLONIAL_CALIFORNIA_Khalifatiya"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_CALIFORNIA_Califerne"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_CALIFORNIA_California"
+	}
+}
+
+# Canada - Upper Canada/Ontario
+colonial_uppercanada = {
+	color = { 10 121 52 } # green from ontario flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 4
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		fur = 15
+		fish = 5
+		grain = 15
+		copper = 10
+		tobacco = 3
+	}
+
+	culture = {
+		anishinabe = 9
+		cree = 7
+		huron = 4
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		987 988 989 991 1001 1007 2015 2585 2586 
+		2587 2588 2589 2590 2591 2593 2670 2671
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_CANADA_Haut_Canada"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+			culture_group = british
+		}
+		name = "COLONIAL_CANADA_Ontario"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_CANADA_Root_Culture_GetName_Canada"
+	}
+	names = {
+		name = "COLONIAL_CANADA_Upper_Canada"
+	}
+	names = {
+		name = "COLONIAL_CANADA_Ontario"
+	}
+}
+
+# Canada - Lower Canda/Quebec
+colonial_lowercanada = {
+	color = { 10 36 149 } # blue for Quebec
+
+	# Random New World
+	tax_income = 1
+	native_size = 4
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		fur = 15
+		fish = 8
+		naval_supplies = 3
+		iron = 3
+		copper = 3
+	}
+
+	culture = {
+		inuit = 4
+		cree = 10
+		huron = 5
+		abenaki = 1
+		mikmaq = 2
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		986 990 992 993 994 995 996 997 1002 2012 2574 2575
+		2576 2577 2578 2579 2580 2581 2582 2583 2584 
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_CANADA_French_Quebec"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_CANADA_Basse_Canada"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+		}
+		name = "COLONIAL_CANADA_Lower_Canada"
+	}
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_CANADA_Lavrador"
+	}
+	names = {
+		trigger = {
+			culture_group = scandinavian
+		}
+		name = "COLONIAL_CANADA_Markland"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_CANADA_Root_Culture_GetName_Canada"
+	}
+	names = {
+		name = "COLONIAL_CANADA_Lower_Canada"
+	}
+	names = {
+		name = "COLONIAL_CANADA_Root_Culture_GetName_Quebec"
+	}
+	names = {
+		name = "COLONIAL_CANADA_Labrador"
+	}
+}
+
+# South Carolina
+colonial_southcarolina = {
+	color = { 22 11 96 } # Dark Blue from flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 6
+	native_ferocity = 6
+	native_hostileness = 6
+	
+	trade_goods = {
+		naval_supplies = 1
+		fish = 1
+		tobacco = 3
+		
+		cloth = 1
+	}
+	
+	culture = {
+		catawba = 5
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		
+	2542 2541 932 933 2543
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+		}
+		name = "COLONIAL_SOUTH_CAROLINA_SCarolina"
+	}
+	# Generic
+	names = {
+		trigger = {
+			has_regency = no
+		}
+		name = "COLONIAL_SOUTH_CAROLINA_KINGNAME"
+	}
+	names = {
+		name = "COLONIAL_SOUTH_CAROLINA_SCarolina"
+	}
+}
+
+
+
+# North Carolina
+colonial_northcarolina = {
+	color = { 64 63 61 } # Dark Gray Tar Heel
+
+	# Random New World
+	tax_income = 1
+	native_size = 6
+	native_ferocity = 6
+	native_hostileness = 6
+	
+	trade_goods = {
+		cloth = 1
+		
+		copper = 1
+		iron = 1
+		tobacco = 4
+		
+		gold = 1
+	}
+	
+	culture = {
+		catawba = 3
+		cherokee = 1
+		
+		iroquois = 1
+		
+		powhatan = 2
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		
+	2546 938 2547 937 2545 2544 936
+	918 934 935 2527 # Tennessee
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+			}
+			OR = {
+				owns = 918
+				owns = 934
+				owns = 935
+				owns = 2527
+			}
+			NOT = {
+				OR = {
+					owns = 2546
+					owns = 938
+					owns = 2547
+					owns = 937
+					owns = 2545
+					owns = 2544
+					owns = 936
+				}
+			}
+		}
+		name = "COLONIAL_TENNESSEE_Tanasqui"
+	}
+	names = {
+		trigger = {
+			OR = {
+				owns = 918
+				owns = 934
+				owns = 935
+				owns = 2527
+			}
+			NOT = {
+				OR = {
+					owns = 2546
+					owns = 938
+					owns = 2547
+					owns = 937
+					owns = 2545
+					owns = 2544
+					owns = 936
+				}
+			}
+		}
+		name = "COLONIAL_TENNESSEE"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+		}
+		name = "COLONIAL_NORTH_CAROLINA_NCarolina"
+	}
+	# Generic
+	names = {
+		trigger = {
+			has_regency = no
+		}
+		name = "COLONIAL_NORTH_CAROLINA_KINGNAME"
+	}
+	names = {
+		name = "COLONIAL_NORTH_CAROLINA_NCarolina"
+	}
+	names = {
+		name = "COLONIAL_TENNESSEE"
+	}
+}
+
+
+
+# Connecticut
+colonial_connecticut = {
+	color = { 66 28 82 } # purple grapes from seal - color adjusted due to weird display
+
+	# Random New World
+	tax_income = 1
+	native_size = 4
+	native_ferocity = 1
+	native_hostileness = 1
+	
+	trade_goods = {
+		fish = 2
+		
+		naval_supplies = 4
+		
+		grain = 2
+	}
+	
+	culture = {
+		pequot = 10
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		2010 2560
+	}
+	
+	# Specific 
+	names = {
+		trigger = {
+			OR = {
+				tag = NED
+				tag = HOL
+				primary_culture = dutch
+			}
+		}
+		name = "COLONIAL_CONNECTICUT_Versche"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_CONNECTICUT"
+	}
+}
+
+
+
+# Delaware
+colonial_delaware = {
+	color = { 118 161 160 } # mint from flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 4
+	native_ferocity = 1
+	native_hostileness = 1
+	
+	trade_goods = {
+		copper = 1
+		grain = 2
+		fish = 1
+		
+		naval_supplies = 1
+	}
+	
+	culture = {
+		delaware = 10
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		957
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_DELAWARE_De_la_Guerre"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = ENG
+				tag = SCO
+				tag = GBR
+			}
+		}
+		name = "COLONIAL_DELAWARE"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = NED
+				tag = HOL
+				primary_culture = dutch
+			}
+		}
+		name = "COLONIAL_DELAWARE_Zwaanendael"
+	}
+	names = {
+		trigger = {
+			tag = SWE
+		}
+		name = "COLONIAL_DELAWARE_New_Sweden"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_DELAWARE_Nanticoke"
+	}
+}
+
+
+
+# Florida
+colonial_florida = {
+	color = { 255 122 47 } # orange
+
+	# Random New World
+	tax_income = 1
+	native_size = 6
+	native_ferocity = 9
+	native_hostileness = 9
+	
+	trade_goods = {
+		fish = 2
+		naval_supplies = 2
+		grain = 3
+		cotton = 1
+		sugar = 1
+	}
+	
+	culture = {
+		creek = 7
+		# taino = 1
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+	
+		2536 2535 926 927 2534 928 2533 923
+		922 # Mobile
+		2530 # Biloxi
+		4625 4626
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				owns = 922
+				owns = 2530
+			}
+			NOT = {
+				owns = 2536
+				owns = 2535
+				owns = 926
+				owns = 927
+				owns = 2534
+				owns = 928
+				owns = 2533
+				owns = 923
+			}
+		}
+		name = "COLONIAL_West_Florida"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_EASTERN_AMERICA_Floride_French"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+		}
+		name = "COLONIAL_EASTERN_AMERICA_La_Florida"
+	}
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_EASTERN_AMERICA_Florida"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_EASTERN_AMERICA_Floridia"
+	}
+	names = {
+		name = "COLONIAL_EASTERN_AMERICA_Florida"
+	}
+}
+
+
+# Georgia
+colonial_georgia = {
+	color = { 245 166 133 } # peach
+
+	# Random New World
+	tax_income = 1
+	native_size = 6
+	native_ferocity = 7
+	native_hostileness = 7
+	
+	trade_goods = {
+		naval_supplies = 1
+		grain = 3
+		cotton = 2
+		sugar = 2
+		
+		tobacco = 3
+		
+		fur = 1
+	}
+	
+	culture = {
+		creek = 7
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		
+		2537 2539 929 2540 2538 930 931
+		924 2532 925 2531 #Alabama
+		2529 920 919 2528 #Missisippi
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				owns = 924
+				owns = 2532
+				owns = 925
+				owns = 2531
+			}
+			NOT = {
+				OR = {
+					owns = 2537
+					owns = 2539
+					owns = 929
+					owns = 2540
+					owns = 2538
+					owns = 930
+					owns = 931
+				}
+			}
+		}
+		name = "COLONIAL_ALABAMA_Alabama"
+	}
+	names = {
+		trigger = {
+			culture_group = french
+			OR = {
+				owns = 2529
+				owns = 920
+				owns = 919
+				owns = 2528
+			}
+			NOT = {
+				OR = {
+					owns = 2537
+					owns = 2539
+					owns = 929
+					owns = 2540
+					owns = 2538
+					owns = 930
+					owns = 931
+				}
+			}
+		}
+		name = "COLONIAL_MISSISSIPPI_Fleuve"
+	}
+	names = {
+		trigger = {
+			OR = {
+				owns = 2529
+				owns = 920
+				owns = 919
+				owns = 2528
+			}
+			NOT = {
+				OR = {
+					owns = 2537
+					owns = 2539
+					owns = 929
+					owns = 2540
+					owns = 2538
+					owns = 930
+					owns = 931
+				}
+			}
+		}
+		name = "COLONIAL_Mississippi"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+		}
+		name = "COLONIAL_GEORGIA"
+	}
+	names = {
+		trigger = {
+			has_heir = yes
+			}
+		name = "COLONIAL_GEORGIA_HEIRNAME"
+	}
+	# Generic
+	
+}
+
+# Louisiana
+colonial_louisiana = {
+	color = { 10 68 123 } # blue from state flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 7
+	native_ferocity = 2
+	native_hostileness = 4
+	
+	trade_goods = {
+		sugar = 3
+		fish = 2
+		naval_supplies = 1
+	}
+	
+	culture = {
+		choctaw = 2
+		caddo = 2
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		2516 893 2014 921
+		891 892 894 895 896 897 2515 #Arkansas and Oklahoma
+		889 890 898 901 903 904 905 906 907 908 909 
+		1809 2006 2007 2008 2009 2016 2020 2490 2501 
+		2502 2503 2504 2505 2506 2507 2508 2509 2510 
+		2511 2512 2513 2625 2672 # Upper Louisiana
+		900 902 2514 899 #Missouri
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+			OR = {
+				owns = 900
+				owns = 902
+				owns = 2514
+				owns = 899
+			}
+			NOT = {
+				OR = {
+					owns = 2516
+					owns = 893
+					owns = 2014
+					owns = 921
+				}
+			}
+		}
+		name = "COLONIAL_Misuri"
+	}
+	names = {
+		trigger = {
+			OR = {
+				owns = 900
+				owns = 902
+				owns = 2514
+				owns = 899
+			}
+			NOT = {
+				OR = {
+					owns = 2516
+					owns = 893
+					owns = 2014
+					owns = 921
+				}
+			}
+		}
+		name = "COLONIAL_MISSOURI"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+			OR = {
+				owns = 891
+				owns = 892
+				owns = 894
+				owns = 895
+				owns = 896
+				owns = 897
+				owns = 2515
+			}
+			NOT = {
+				OR = {
+					owns = 2516
+					owns = 893
+					owns = 2014
+					owns = 921
+				}
+			}
+		}
+		name = "COLONIAL_ARKANSAW_Arkansas"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+			OR = {
+				owns = 891
+				owns = 892
+				owns = 894
+				owns = 895
+				owns = 896
+				owns = 897
+				owns = 2515
+			}
+			NOT = {
+				OR = {
+					owns = 2516
+					owns = 893
+					owns = 2014
+					owns = 921
+				}
+			}
+		}
+		name = "COLONIAL_ARKANSAW_Arkansaw_Territory"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_LOUISIANA_French_Louisiana"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+		}
+		name = "COLONIAL_LOUISIANA_Luisiana"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = ENG
+				tag = SCO
+				tag = GBR
+			}
+		}
+		name = "COLONIAL_LOUISIANA_Louisiana"
+	}
+	# Generic
+	names = {
+		trigger = {
+			has_regency = no
+		}
+		name = "COLONIAL_LOUISIANA_KINGNAME"
+	}
+	names = {
+		name = "COLONIAL_LOUISIANA_Louisiana"
+	}
+}
+
+
+# Maryland
+colonial_maryland = {
+	color = { 152 30 50 } # red from flag
+
+	# Random New World
+	tax_income = 2
+	native_size = 6
+	native_ferocity = 2
+	native_hostileness = 3
+	
+	trade_goods = {
+		fish = 2
+		naval_supplies = 2
+		tobacco = 2
+		
+		grain = 1
+		
+		iron = 2
+	}
+	
+	culture = {
+		powhatan = 2
+		susquehannock = 1
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		2553 953 2554
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = SCO
+				tag = ENG
+			}
+		}
+		name = "COLONIAL_MARYLAND"
+	}
+	names = {
+		trigger = {
+			culture_group = french
+		}
+		name = "COLONIAL_MARYLAND_Terre_Marie"
+	}
+	names = {
+		trigger = {
+			religion = catholic
+		}
+		name = "COLONIAL_MARYLAND_Terra_Maria"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_CHESAPEAKE"
+	}
+	names = {
+		name = "COLONIAL_MARYLAND"
+	}
+}
+
+
+
+# Maine
+colonial_maine = {
+	color = { 130 10 36 } # cranberry state color
+
+	# Random New World
+	tax_income = 1
+	native_size = 4
+	native_ferocity = 4
+	native_hostileness = 2
+	
+	trade_goods = {
+		fish = 8
+
+		naval_supplies = 8
+	}
+	
+	culture = {
+		abenaki = 10
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		971 2013 2565 2566 2567
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_Le_Maine"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_MAINE"
+	}
+}
+
+
+
+# Massachusetts
+colonial_massachusetts = {
+	color = { 10 99 56 } # green from naval ensign
+
+	# Random New World
+	tax_income = 2
+	native_size = 4
+	native_ferocity = 1
+	native_hostileness = 1
+	
+	trade_goods = {
+		fish = 4
+		
+		naval_supplies = 8
+		
+		grain = 2
+		
+		fur = 2
+	}
+	
+	culture = {
+		pequot = 10
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		966 968 2561
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_MASSACHUSETTS_Mallebar"
+	}
+	
+	# Generic
+	names = {
+		name = "COLONIAL_MASSACHUSETTS"
+	}
+	names = {
+		name = "COLONIAL_MASSACHUSETTS_Mallebar"
+	}
+}
+
+
+
+# New Brunswick
+colonial_newbrunswick = {
+	color = { 22 44 90 } # blue from flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 4
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		fur = 3
+		fish = 10
+		naval_supplies = 3
+		copper = 3
+	}
+
+	culture = {
+		mikmaq = 3
+		abenaki = 1
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		2571 2570 2572 985
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = BRU
+		}
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+	names = {
+		trigger = {
+			culture_group = british
+		}
+		name = "COLONIAL_NEW_BRUNSWICK"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# New Hampshire
+colonial_newhampshire = {
+	color = { 158 77 60 } # brown from boat from flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 4
+	native_ferocity = 1
+	native_hostileness = 1
+	
+	trade_goods = {
+		fish = 4
+		
+		fur = 4
+		
+		naval_supplies = 4
+	}
+	
+	culture = {
+		abenaki = 10
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		970 2562 2564
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+			culture_group = british
+		}
+		name = "COLONIAL_NEW_HAMPSHIRE"
+	}
+	# Generic
+}
+
+
+
+# New Jersey
+colonial_jersey = {
+	color = { 240 220 130 } # buff from flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 4
+	native_ferocity = 1
+	native_hostileness = 1
+	
+	trade_goods = {
+		grain = 1
+		
+		naval_supplies = 4
+	}
+	
+	culture = {
+		delaware = 10
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		2639 962
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+			culture_group = british
+		}
+		name = "COLONIAL_NEW_JERSEY"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = NED
+				tag = HOL
+				primary_culture = dutch
+			}
+		}
+		name = "COLONIAL_NEW_JERSEY_Zuyd"
+	}
+	# Generic
+}
+
+
+
+# New Mexico
+colonial_new_mexico = {
+	color = { 254 215 10 } # yellow from flag
+
+	# Random New World
+	tax_income = 0
+	native_size = 6
+	native_ferocity = 8
+	native_hostileness = 8
+	
+	trade_goods = {
+		grain = 2
+		gold = 2
+
+		spices = 2
+		
+		iron = 2
+	}
+	
+	culture = {
+		navajo = 3
+		
+		pueblo = 5
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		878 880 881 882 2492 2494 2495 2496
+		
+		4630 4631 4632
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+			}
+		}
+		name = "COLONIAL_MEXICO_New_Mexico"
+	}
+	names = {
+		trigger = {
+			tag = FRA
+		}
+		name = "COLONIAL_MEXICO_Comantcherie"
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "COLONIAL_NEW_MEXICO_Comancheria"
+	}
+	names = {
+		name = "COLONIAL_NEW_MEXICO"
+	}
+}
+
+# New York
+colonial_newyork = {
+	color = { 255 102 10 } # orange from flag
+
+	# Random New World
+	tax_income = 2
+	native_size = 7
+	native_ferocity = 4
+	native_hostileness = 4
+	
+	trade_goods = {
+		iron = 4
+		
+		naval_supplies = 4
+		
+		grain = 4
+	}
+	
+	culture = {
+		iroquois = 6
+		
+		delaware = 2
+		
+		mahican = 1
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		958 959 960 961 963 964 965 2558 2559
+		969 2563 #vermont
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			culture_group = french
+		}
+		name = "COLONIAL_NEW_ANGOULEME"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+			culture_group = british
+			owns = 245 #yorkshire
+		}
+		name = "COLONIAL_NEW_YORK"
+	}
+	names = {
+		trigger = {
+			primary_culture = dutch
+		}
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = CAS 
+				tag = SPA
+			}
+			owns = 217
+		}
+		name = "COLONIAL_NEW_MADRID"
+	}
+	# Generic
+}
+
+
+
+# Newfoundland
+colonial_newfoundland = {
+	color = { 255 153 204 } # newfoundland tricolor pink
+
+	# Random New World
+	tax_income = 1
+	native_size = 4
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		fur = 3
+		fish = 15
+		naval_supplies = 7
+		copper = 3
+	}
+
+	culture = {
+		cree = 10
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		980 981 2573
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_Terre_Neuve"
+	}
+	names = {
+		trigger = {
+				tag = POR
+		}
+		name = "COLONIAL_Terra_Nova"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+		}
+		name = "COLONIAL_CANADA_Newfoundland"
+	}
+	names = {
+		trigger = {
+			culture_group = scandinavian
+		}
+		name = "COLONIAL_CANADA_Vinland"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_CANADA_Newfoundland"
+	}
+}
+
+# Ohio - Northwest Territory
+colonial_ohio = {
+	color = { 193 19 61 } # red from flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 6
+	native_ferocity = 6
+	native_hostileness = 6
+	
+	trade_goods = {
+		tobacco = 2	
+		fur = 4
+		grain = 6
+	}
+	
+	culture = {
+		susquehannock = 1
+		shawnee = 2		
+		iroquois = 1
+			
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		
+		946 947 948 2525 # Ohio Proper
+		915 916 917 2519 2520 # Illinois
+		942 943 2523 2524 # Indiana
+		910 911 912 913 914 944 945 2517 2518 2521 2522 # Michigan
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		trigger = {
+			culture_group = british
+			OR = {
+				owns = 946
+				owns = 947
+				owns = 948
+				owns = 2525
+			}
+		}
+		name = "COLONIAL_OHIO_Northwest_Territory"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+			OR = {
+				owns = 915
+				owns = 916
+				owns = 917
+				owns = 2519
+				owns = 2520
+			}
+		}
+		name = "COLONIAL_ILLINOIS_French"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+			OR = {
+				owns = 910
+				owns = 911
+				owns = 912
+				owns = 913
+				owns = 914
+				owns = 944
+				owns = 945
+				owns = 2517
+				owns = 2518 
+				owns = 2521
+				owns = 2522
+			}
+		}
+		name = "COLONIAL_MICHIGAN_French"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+			OR = {
+				owns = 910
+				owns = 911
+				owns = 912
+				owns = 913
+				owns = 914
+				owns = 944
+				owns = 945
+				owns = 2517
+				owns = 2518 
+				owns = 2521
+				owns = 2522
+			}
+			culture_group = british
+		}
+		name = "COLONIAL_Michigan_Territory"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+			OR = {
+				owns = 910
+				owns = 911
+				owns = 912
+				owns = 913
+				owns = 914
+				owns = 944
+				owns = 945
+				owns = 2517
+				owns = 2518 
+				owns = 2521
+				owns = 2522
+			}
+		}
+		name = "COLONIAL_Ouisconsin"
+	}
+	names = {
+		trigger = {
+			culture_group = british
+		}
+		name = "COLONIAL_OHIO_Northwest_Territory"
+	}
+	names = {
+		trigger = {
+			OR = {
+				owns = 915
+				owns = 916
+				owns = 917
+				owns = 2519
+				owns = 2520
+			}
+		}
+		name = "COLONIAL_ILLINOIS"
+	}
+	names = {
+		trigger = {
+			OR = {
+				owns = 910
+				owns = 911
+				owns = 912
+				owns = 913
+				owns = 914
+				owns = 944
+				owns = 945
+				owns = 2517
+				owns = 2518 
+				owns = 2521
+				owns = 2522
+			}
+		}
+		name = "COLONIAL_MICHIGAN"
+	}
+	names = {
+		trigger = {
+			OR = {
+				owns = 910
+				owns = 911
+				owns = 912
+				owns = 913
+				owns = 914
+				owns = 944
+				owns = 945
+				owns = 2517
+				owns = 2518 
+				owns = 2521
+				owns = 2522
+			}
+		}
+		name = "COLONIAL_WISCONSIN"
+	}
+	names = {
+		name = "COLONIAL_OHIO"
+	}
+}
+
+# Oregon
+colonial_oregon = {
+	color = { 10 132 87 } # green from washington flag
+
+	# Random New World
+	tax_income = 0
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		fur = 10
+		fish = 3
+		naval_supplies = 2
+		gold = 2
+		
+		copper = 4
+	}
+	
+	culture = {
+		chinook = 8
+		aleutian = 2
+		
+athabascan = 3
+
+		shoshone = 3
+
+		salish = 8
+
+		haida = 1
+	}
+	
+	religion = {
+		totemism = 10
+	}
+
+	provinces = {
+		872 873 874 972 973 974 975 2003 2019 
+		2022 2481 2482 2483 2484 2485 2486 2487 2488
+		2489 2604 2605 2606 2607 2609 2610
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+			culture_group = british
+		}
+		name = "COLONIAL_CALIFORNIA_Root_Culture_GetGroupName_Columbia"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+		}
+		name = "COLONIAL_ALASKA_Pacifico_Norte1"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_Ouragan"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_CALIFORNIA_Root_Culture_GetGroupName_Columbia"
+	}
+	names = {
+		name = "COLONIAL_CALIFORNIA_Oregon"
+	}
+}
+
+
+# Pennsylvania
+colonial_pennsylvania = {
+	color = { 72 144 179 } # blue from seal
+
+	# Random New World
+	tax_income = 2
+	native_size = 7
+	native_ferocity = 4
+	native_hostileness = 4
+	
+	trade_goods = {
+		iron = 6
+		naval_supplies = 3	
+		grain = 4
+		fur = 2
+	}
+	
+	culture = {
+		susquehannock = 5	
+		delaware = 2
+		
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		954 955 956 2555 2556 2557 2023
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+			culture_group = british
+		}
+		name = "COLONIAL_PENNSYLVANIA"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_SUSQUEHANNA"
+	}
+	names = {
+		name = "COLONIAL_PENNSYLVANIA"
+	}
+}
+
+
+
+# Rhode Island
+colonial_rhodeisland = {
+	color = { 254 33 56 } # red - Red Eyland
+
+	# Random New World
+	tax_income = 1
+	native_size = 4
+	native_ferocity = 1
+	native_hostileness = 1
+	
+	trade_goods = {
+		
+		naval_supplies = 4
+	}
+	
+	culture = {
+		pequot = 10
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		967
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			primary_culture = dutch
+		}
+		name = "COLONIAL_Roodt_Eylant"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+				tag = SCO
+			}
+		}
+		name = "COLONIAL_RHODE_ISLAND"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_RHODE_ISLAND"
+	}
+}
+
+# Ruperts Land
+colonial_ruperts_land = {
+	color = { 207 20 43 } # Red from HBC flag
+
+	# Random New World
+	tax_income = 0
+	native_size = 4
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		fur = 20
+		fish = 10
+		naval_supplies = 2
+		grain = 2
+
+		copper = 4
+	}
+
+	culture = {
+		cree = 16
+		athabascan = 5
+
+		blackfoot = 3
+
+		nakota = 2
+		chipewyan = 1
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		998 999 1000 1003 1004 1005 1006 1008 1009 1010 1011 1813 
+		2004 2005 2017 2018 2592 2594 2595 2596 2597 2598 2599 2600 2601 2602 2603
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+			culture_group = british
+		}
+		name = "COLONIAL_CANADA_Ruperts_Land"
+	}
+	names = {
+		trigger = {
+			tag = FRA
+		}
+		name = "COLONIAL_CANADA_Cristinaux"
+	}
+	names = {
+		trigger = {
+			culture_group = scandinavian
+		}
+		name = "COLONIAL_CANADA_Helluland"
+	}
+	names = {
+		trigger = {
+			has_heir = yes
+			has_female_heir = no
+		}
+		name = "COLONIAL_HEIRNAME"
+	}
+	names = {
+		trigger = {
+			has_heir = yes
+			has_female_heir = yes
+		}
+		name = "COLONIAL_HEIRNAME_FEMALE"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_CANADA_Root_Culture_GetGroupName_Canada"
+	}
+}
+
+# Texas
+colonial_texas = {
+	color = { 191 10 48 } # red from state flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 8
+	native_ferocity = 8
+	native_hostileness = 8
+	
+	trade_goods = {
+		cotton = 8
+		copper = 2
+		grain = 5
+		wool = 5
+		fish = 3
+		naval_supplies = 1
+	}
+	
+	culture = {
+		caddo = 5
+		navajo = 6
+		wichita = 1
+		chichimecan = 1
+	}
+	
+	religion = {
+		shamanism = 10
+	}
+	
+	provinces = {
+		883 884 885 886 887 888 2497 2498 2499 2500 2665 2666 2669 
+		4627 4628 4629
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+			}
+		}
+		name = "COLONIAL_MEXICO_Tejas"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+			}
+		}
+		name = "COLONIAL_MEXICO_New_Philippines"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_MEXICO_Texas"
+	}
+}
+
+# Virginia
+colonial_virginia = {
+	color = { 151 200 240 } # baby blue from seal
+
+	# Random New World
+	tax_income = 2
+	native_size = 8
+	native_ferocity = 2
+	native_hostileness = 5
+	
+	trade_goods = {
+		fish = 2
+		naval_supplies = 3
+		tobacco = 6
+		
+		iron = 3
+		
+		copper = 1
+	}
+	
+	culture = {
+		powhatan = 4
+		catawba = 1
+		cherokee = 1
+		
+		susquehannock = 3
+		shawnee = 1
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		2550 952 950 2549 2011 2552 2551 951 949 2548
+		939 940 941 2526 # Kentucky
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				owns = 939
+				owns = 940
+				owns = 941
+				owns = 2526
+			}
+			NOT = {
+				OR = {
+					owns = 2550
+					owns = 952
+					owns = 950
+					owns = 2549
+					owns = 2011
+					owns = 2552
+					owns = 951
+					owns = 949
+					owns = 2548
+				}
+			}
+		}
+		name = "COLONIAL_KENTUCKY"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = ENG
+				tag = GBR
+			}
+		}
+		name = "COLONIAL_EASTERN_AMERICA_Virginia"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = SCO
+				culture_group = french # temporary
+			}
+		}
+		name = "COLONIAL_EASTERN_AMERICA_Virginie"
+	}
+	names = {
+		trigger = {
+			primary_culture = dutch
+		}
+		name = "COLONIAL_EASTERN_AMERICA_Maagdland"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_CHESAPEAKE"
+	}
+	names = {
+		name = "COLONIAL_EASTERN_AMERICA_Virginia"
+	}
+}
+
+
+# Mexico - Kingdom of Mexico
+colonial_mexico = {
+	color = { 193 141 85 } # golden eagle from flag
+
+	# Random New World
+	tax_income = 3
+	native_size = 8
+	native_ferocity = 5
+	native_hostileness = 5
+	
+	trade_goods = {
+		grain = 8
+		salt = 5
+		wool = 7
+		fish = 5
+		sugar = 8
+		gold = 5
+		cocoa = 6
+		naval_supplies = 1
+	}
+	
+	culture = {
+		tecos = 1
+		purepecha = 4
+		aztek = 6
+		totonac = 2
+		tlapanec = 4
+		mixtec = 3
+		zapotek = 3
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		851 2643 2624 2622 2626 2642 2641 2615 857 848 853 850 2647 2644 852 2623 2627 2648
+		2645 2628 2646 849 847 2629 2630 2631 844
+		
+		4570 4571 4572 4573 4574 4575 4580 4581 4582 4583 4584 4598 4641 4642 #1.28
+		
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = SPA
+		}
+		name = "COLONIAL_MEXICO_New_Spain_Spanish"
+	}
+	names = {
+		trigger = {
+			tag = CAS
+		}
+		name = "COLONIAL_MEXICO_New_Castile_Spanish"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_MEXICO_Mexico"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+	names = {
+		name = "COLONIAL_MEXICO_Root_Culture_GetName_Mexico"
+	}
+}
+
+# Kingdom of Guatemala
+colonial_guatemala = {
+	color = { 73 151 208 } # blue from guatemalan flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 8
+	native_ferocity = 2
+	native_hostileness = 5
+	
+	trade_goods = {
+		fish = 1
+		sugar = 5
+		gold = 7
+		cocoa = 5
+		naval_supplies = 1
+		spices = 5
+		copper = 1
+	}
+	
+	culture = {
+		zapotek = 1
+		putun = 2
+		yucatec = 1
+		highland_mayan = 7
+		miskito = 6
+		muisca = 2
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		#836 2663 # Costa Rica
+		#2660 838 837 2661 # Nicaragua
+		#840 2662 2640 2637 # Comayagua - Honduras
+		#839 # San Salvador
+		2636 2653 841 842 4587 4594  # Guatemala
+		#2649 2638 2635 # Chiapas - Mexico
+		843 4589 # Belize
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+			culture_group = british
+		}
+		name = "COLONIAL_MEXICO_Belize"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_MEXICO_Guatemala"
+	}
+}
+
+colonial_chiapas = {
+	color = { 175 49 49 } 
+
+	# Random New World
+	tax_income = 2
+	native_size = 8
+	native_ferocity = 2
+	native_hostileness = 5
+	
+	trade_goods = {
+		fish = 1
+		sugar = 5
+		gold = 7
+		cocoa = 5
+		naval_supplies = 1
+		spices = 5
+		copper = 1
+	}
+	
+	culture = {
+		zapotek = 1
+		putun = 2
+		yucatec = 1
+		highland_mayan = 7
+		miskito = 6
+		muisca = 2
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		#836 2663 # Costa Rica
+		##2660 838 837 2661 # Nicaragua
+		#840 2662 2640 2637 # Comayagua - Honduras
+		#839 # San Salvador
+		#2636 2653 841 842 # Guatemala
+		2649 2638 2635 4585 4586# Chiapas - Mexico
+		#843 # Belize
+	}
+	
+	
+	# Generic
+	names = {
+		name = "COLONIAL_MEXICO_Chiapas"
+	}
+	
+}
+colonial_honduras = {
+	color = { 171 49 175 } # blue from guatemalan flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 8
+	native_ferocity = 2
+	native_hostileness = 5
+	
+	trade_goods = {
+		fish = 1
+		sugar = 5
+		gold = 7
+		cocoa = 5
+		naval_supplies = 1
+		spices = 5
+		copper = 1
+	}
+	
+	culture = {
+		zapotek = 1
+		putun = 2
+		yucatec = 1
+		highland_mayan = 7
+		miskito = 6
+		muisca = 2
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		#836 2663 # Costa Rica
+		#2660 838 837 2661 # Nicaragua
+		840 2662 2640 2637 4593 # Comayagua - Honduras
+		#839 # San Salvador
+		#2636 2653 841 842 # Guatemala
+		#2649 2638 2635 # Chiapas - Mexico
+		#843 # Belize
+	}
+	
+
+	# Generic
+	names = {
+		name = "COLONIAL_MEXICO_Root_Culture_GetName_Honduras"
+	}
+}
+colonial_nicaragua = {
+	color = { 49 175 175 } 
+
+	# Random New World
+	tax_income = 1
+	native_size = 8
+	native_ferocity = 2
+	native_hostileness = 5
+	
+	trade_goods = {
+		fish = 1
+		sugar = 5
+		gold = 7
+		cocoa = 5
+		naval_supplies = 1
+		spices = 5
+		copper = 1
+	}
+	
+	culture = {
+		zapotek = 1
+		putun = 2
+		yucatec = 1
+		highland_mayan = 7
+		miskito = 6
+		muisca = 2
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		#836 2663 # Costa Rica
+		2660 838 837 2661 4592 # Nicaragua
+		#840 2662 2640 2637 # Comayagua - Honduras
+		#839 # San Salvador
+		#2636 2653 841 842 # Guatemala
+		#2649 2638 2635 # Chiapas - Mexico
+		#843 # Belize
+	}
+	
+	# Specific
+	
+	# Generic
+	names = {
+		name = "COLONIAL_MEXICO_Nicaragua"
+	}
+}
+colonial_costa_rica = {
+	color = { 239 228 16 } # blue from guatemalan flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 8
+	native_ferocity = 2
+	native_hostileness = 5
+	
+	trade_goods = {
+		fish = 1
+		sugar = 5
+		gold = 7
+		cocoa = 5
+		naval_supplies = 1
+		spices = 5
+		copper = 1
+	}
+	
+	culture = {
+		zapotek = 1
+		putun = 2
+		yucatec = 1
+		highland_mayan = 7
+		miskito = 6
+		muisca = 2
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		836 2663 4597  # Costa Rica
+		##2660 838 837 2661 # Nicaragua
+		#840 2662 2640 2637 # Comayagua - Honduras
+		#839 # San Salvador
+		#2636 2653 841 842 # Guatemala
+		#2649 2638 2635 # Chiapas - Mexico
+		#843 # Belize
+	}
+	trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+			culture_group = british
+		
+		name = "COLONIAL_MEXICO_Rich_Cost"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_MEXICO_Costa_Rica"
+	}
+}
+colonial_san_salvador = {
+	color = { 73 208 91 } # blue from guatemalan flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 8
+	native_ferocity = 2
+	native_hostileness = 5
+	
+	trade_goods = {
+		fish = 1
+		sugar = 5
+		gold = 7
+		cocoa = 5
+		naval_supplies = 1
+		spices = 5
+		copper = 1
+	}
+	
+	culture = {
+		zapotek = 1
+		putun = 2
+		yucatec = 1
+		highland_mayan = 7
+		miskito = 6
+		muisca = 2
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		#836 2663 # Costa Rica
+		##2660 838 837 2661 # Nicaragua
+		#840 2662 2640 2637 # Comayagua - Honduras
+		839 # San Salvador
+		#2636 2653 841 842 # Guatemala
+		#2649 2638 2635 # Chiapas - Mexico
+		#843 # Belize
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "COLONIAL_MEXICO_Salvador"
+	}
+}
+# New Galicia
+colonial_newgalicia = {
+	color = { 10 124 195 } # blue from flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 5
+	native_ferocity = 3
+	native_hostileness = 3
+	
+	trade_goods = {
+		grain = 4
+		salt = 5
+		wool = 4
+		fish = 5
+		gold = 3
+		naval_supplies = 1
+	}
+	
+	culture = {
+		chichimecan = 1
+		piman = 1
+		tecos = 3
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		854 2617 2657 2621 856 
+		
+		4576 4640 4643 4578 4645 #  1.28
+		4579 4647
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = SPA
+			owns = 206 #Galicia
+		}
+		name = "COLONIAL_MEXICO_New_Galicia"
+	}
+	names = {
+		trigger = {
+			tag = CAS
+			owns = 206 #Galicia
+		}
+		name = "COLONIAL_MEXICO_New_Galicia"
+	}
+	names = {
+		trigger = {
+			owns = 206 #Galicia
+		}
+		name = "COLONIAL_MEXICO_New_Galicia_english"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+	names = {
+		name = "COLONIAL_MEXICO_Root_Culture_GetName_Mexico"
+	}
+}
+
+# New Navarra
+colonial_newnavarra = {
+	color = { 128 10 10 } # burgundy from flag of sonora
+
+	# Random New World
+	tax_income = 1
+	native_size = 5
+	native_ferocity = 5
+	native_hostileness = 5
+	
+	trade_goods = {
+		grain = 5
+		salt = 3
+		cotton = 4
+		fish = 3
+		copper = 5
+	}
+	
+	culture = {
+		chichimecan = 1
+		piman = 3
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		2616 862 859 855
+		# Arizona
+		4644 4646 4648 4649 4650  # 1.28 update
+		
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = SPA
+		}
+		name = "COLONIAL_MEXICO_New_Navarra"
+	}
+	names = {
+		trigger = {
+			tag = CAS
+			owns = 210 #Navarra
+		}
+		name = "COLONIAL_MEXICO_New_Navarra"
+	}
+	names = {
+	names = {
+		trigger = {
+			tag = SPA
+		}
+		name = "COLONIAL_MEXICO_Rio_Cao"
+	}
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+	names = {
+		name = "COLONIAL_MEXICO_Root_Culture_GetName_Mexico"
+	}
+}
+#
+# New Vizcaya/Biscay
+colonial_newbiscay = {
+	color = { 118 196 236 } # blue from flag of chihuahua
+
+	# Random New World
+	tax_income = 1
+	native_size = 5
+	native_ferocity = 5
+	native_hostileness = 5
+	
+	trade_goods = {
+		iron = 5
+		cotton = 4
+		gold = 4
+		copper = 2
+	}
+	
+	culture = {
+		piman = 1
+		navajo = 3
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		863 864 2618 860
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = SPA
+			owns = 209 #Vizcaya
+		}
+		name = "COLONIAL_MEXICO_New_Biscay"
+	}
+	names = {
+		trigger = {
+			tag = CAS
+			owns = 209 #Vizcaya
+		}
+		name = "COLONIAL_MEXICO_New_Biscay"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+	names = {
+		name = "COLONIAL_MEXICO_Root_Culture_GetName_Mexico"
+	}
+}
+#
+# Nuevo Leon
+colonial_nuevo_leon = {
+	color = { 188 192 195 } # gray from flag of nuevo leon
+
+	# Random New World
+	tax_income = 1
+	native_size = 5
+	native_ferocity = 5
+	native_hostileness = 5
+	
+	trade_goods = {
+		iron = 3
+		grain = 2
+		cotton = 2
+		gold = 4
+		naval_supplies = 2
+	}
+	
+	culture = {
+		navajo = 1
+		chichimecan = 5
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		2614 # Nuevo Leon
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = CAS
+				tag = SPA
+			}
+			owns = 208 #leonn
+		}
+		name = "COLONIAL_MEXICO_New_Leon"
+	}
+	names = {
+		trigger = {
+			tag = LON
+		}
+		name = "COLONIAL_MEXICO_New_Leon"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+#
+# Nuevo Santander
+colonial_nuevo_santander = {
+	color = { 10 113 188 } # blue from coat of arms
+
+	# Random New World
+	tax_income = 1
+	native_size = 5
+	native_ferocity = 5
+	native_hostileness = 5
+	
+	trade_goods = {
+		iron = 3
+		grain = 2
+		cotton = 2
+		gold = 4
+		naval_supplies = 2
+	}
+	
+	culture = {
+		navajo = 1
+		chichimecan = 5
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		2668 858  # New Santander - Tamaulipas
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = CAS
+				tag = SPA
+			}
+			owns = 1745 #Cantabria - where Santander is
+		}
+		name = "COLONIAL_MEXICO_New_Santander"
+	}
+	# Generic
+}
+
+#
+# Nueva Extremadura
+colonial_nueva_extremadura = {
+	color = { 215 167 58 } # parchment from flag of coahuila
+
+	# Random New World
+	tax_income = 1
+	native_size = 5
+	native_ferocity = 5
+	native_hostileness = 5
+	
+	trade_goods = {
+		iron = 3
+		grain = 2
+		cotton = 2
+		gold = 4
+		naval_supplies = 2
+	}
+	
+	culture = {
+		navajo = 1
+		chichimecan = 5
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		861 2619 2667 4606 # New Extremadura - Coahuila
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = CAS
+				tag = SPA
+			}
+			owns = 218 #Extremadura region in Spain
+		}
+		name = "COLONIAL_MEXICO_New_Extremadura"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+# Yucatan
+colonial_yucatan = {
+	color = { 10 104 71 } # green from republic flag
+
+	# Random New World
+	tax_income = 2
+	native_size = 10
+	native_ferocity = 2
+	native_hostileness = 5
+	
+	trade_goods = {
+		fish = 1
+		tropical_wood = 5
+		gold = 4
+		cocoa = 4
+		naval_supplies = 1
+		spices = 5
+	}
+	
+	culture = {
+		putun = 1
+		highland_mayan = 7
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		846 2652 2634 2633 2651 845 2650 2632
+		
+		4588 4590 4591
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = SPA
+		}
+		name = "COLONIAL_YUCATAN_SPANISH"
+	}
+	names = {
+		trigger = {
+			tag = CAS
+		}
+		name = "COLONIAL_YUCATAN_SPANISH"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_YUCATAN_english"
+	}
+}
+
+# Cuba
+colonial_cuba = {
+	color = { 10 170 228 } # light blue from original flag
+
+	# Random New World
+	tax_income = 3
+	native_size = 12
+	native_ferocity = 1
+	native_hostileness = 3
+	
+	trade_goods = {
+		sugar = 7
+		naval_supplies = 5
+		tobacco = 2
+	}
+	
+	culture = {
+		# taino = 8
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		484 485 486 2654 2655 2656
+		4622 4623 4624 #1.28
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Cuba"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Isla_Juana"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Antilles"
+	}
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Caraibas"
+	}
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Antilhas"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_THE_CARRIBEAN_Cuba"
+	}
+	names = {
+		name = "COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_West_Indies"
+	}
+	names = {
+		name = "COLONIAL_THE_CARRIBEAN_West_Indies"
+	}
+	names = {
+		name = "COLONIAL_THE_CARRIBEAN_The_Carribean"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# Hispaniola
+colonial_hispaniola = {
+	color = { 10 32 159 } # dark blue from Haiti flag
+
+	# Random New World
+	tax_income = 3
+	native_size = 12
+	native_ferocity = 1
+	native_hostileness = 3
+	
+	trade_goods = {
+		sugar = 18
+		cocoa = 10
+		copper = 5
+	}
+	
+	culture = {
+		# taino = 8
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		488 489 490 2658 2659 4618 4619 4620 4621
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+			OR = {
+				owns = 488 # Les Cayes
+				owns = 489 # Barahonas
+			}
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Espanola"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Santo_Domingo"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+			OR = {
+				owns = 488 # Les Cayes
+				owns = 489 # Barahonas
+			}
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Haiti"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Sainte_Domingue"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Antilles"
+	}
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Caraibas"
+	}
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_THE_CARRIBEAN_Antilhas"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_THE_CARRIBEAN_Haiti"
+	}
+	names = {
+		name = "COLONIAL_THE_CARRIBEAN_Root_Culture_GetName_West_Indies"
+	}
+	names = {
+		name = "COLONIAL_THE_CARRIBEAN_West_Indies"
+	}
+	names = {
+		name = "COLONIAL_THE_CARRIBEAN_The_Carribean"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+# Guyana
+colonial_guyana = {
+	color = { 252 221 10 } # all guyanan flags have yellow
+
+	# Random New World
+	tax_income = 1
+	native_size = 10
+	native_ferocity = 2
+	native_hostileness = 2
+	
+	trade_goods = {
+		sugar = 6
+		cocoa = 3
+		gold = 1
+		grain = 2
+	}
+	
+	culture = {
+		carib = 5
+		# lokono = 7
+	}
+	
+	religion = {
+		animism = 10
+	}
+
+	provinces = {
+		2803 2804 2811 742 # Venezuela
+		743 2931 744 # Guyana
+		745 2937 # Suriname
+		746 # French Guiana
+		2938 747  # Amapa
+		4617
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+		}
+		name = "COLONIAL_GUYANA_Las_Guayanas"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+		}
+		name = "COLONIAL_GUYANA_Guyane"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = NED
+				tag = HOL
+				primary_culture = dutch
+			}
+		}
+		name = "COLONIAL_GUYANA_Suriname"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = NED
+				tag = HOL
+				primary_culture = dutch
+			}
+		}
+		name = "COLONIAL_GUYANA_Root_Culture_GetName_Guiana"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_GUYANA_Root_Culture_GetName_Guyana"
+	}
+	names = {
+		name = "COLONIAL_GUYANA_Guyana"
+	}
+	names = {
+		name = "COLONIAL_GUYANA_Suriname"
+	}
+}
+
+# Australia
+colonial_australia = {
+	color = { 10 10 139 } # blue from flag
+
+	provinces = {
+		1084 1085 1086 1087 1088 1089 1090 1091 1092 1093 1094
+		2726 2727 2728 2729 2730 2731 2732 2733 2734 2735 2736
+		1246 1109 2738 2737 1107 1108 2739 1106	# New Zealand
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = ENG
+				tag = GBR
+				tag = SCO
+				tag = WLS
+			}
+			NOT = {
+				OR = {
+					owns = 1246
+					owns = 1109
+					owns = 2738
+					owns = 2737
+					owns = 1107
+					owns = 1108
+					owns = 2739
+					owns = 1106
+				}
+			}
+		}
+		name = "COLONIAL_AUSTRALIA_NSW"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = ENG
+				tag = GBR
+			}
+			NOT = {
+				OR = {
+					owns = 1246
+					owns = 1109
+					owns = 2738
+					owns = 2737
+					owns = 1107
+					owns = 1108
+					owns = 2739
+					owns = 1106
+				}
+			}
+		}
+		name = "COLONIAL_AUSTRALIA_Australia"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+			NOT = {
+				OR = {
+					owns = 1246
+					owns = 1109
+					owns = 2738
+					owns = 2737
+					owns = 1107
+					owns = 1108
+					owns = 2739
+					owns = 1106
+				}
+			}
+		}
+		name = "COLONIAL_AUSTRALIA_Tierra_Austral"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				culture_group = french
+			}
+			NOT = {
+				OR = {
+					owns = 1246
+					owns = 1109
+					owns = 2738
+					owns = 2737
+					owns = 1107
+					owns = 1108
+					owns = 2739
+					owns = 1106
+				}
+			}
+		}
+		name = "COLONIAL_AUSTRALIA_Terre_Australe"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = NED
+				tag = HOL
+				primary_culture = dutch
+			}
+			NOT = {
+				OR = {
+					owns = 1246
+					owns = 1109
+					owns = 2738
+					owns = 2737
+					owns = 1107
+					owns = 1108
+					owns = 2739
+					owns = 1106
+				}
+			}
+		}
+		name = "COLONIAL_AUSTRALIA_New_Holland"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = NED
+				tag = HOL
+				primary_culture = dutch
+			}
+			NOT = {
+				OR = {
+					owns = 1246
+					owns = 1109
+					owns = 2738
+					owns = 2737
+					owns = 1107
+					owns = 1108
+					owns = 2739
+					owns = 1106
+				}
+			}
+		}
+		name = "COLONIAL_AUSTRALIA_Australie"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = ENG
+				tag = GBR
+			}
+			OR = {
+				owns = 1246
+				owns = 1109
+				owns = 2738
+				owns = 2737
+				owns = 1107
+				owns = 1108
+				owns = 2739
+				owns = 1106
+			}
+		}
+		name = "COLONIAL_NEW_ZEALAND"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = NED
+				tag = HOL
+				primary_culture = dutch
+			}
+			OR = {
+				owns = 1246
+				owns = 1109
+				owns = 2738
+				owns = 2737
+				owns = 1107
+				owns = 1108
+				owns = 2739
+				owns = 1106
+			}
+		}
+		name = "COLONIAL_NEW_ZEELAND"
+	}
+	names = {
+		trigger = {
+			tag = DAN
+			OR = {
+				owns = 1246
+				owns = 1109
+				owns = 2738
+				owns = 2737
+				owns = 1107
+				owns = 1108
+				owns = 2739
+				owns = 1106
+			}
+		}
+		name = "COLONIAL_NEW_ZEALAND_Danish"
+	}
+	# Generic
+	names = {
+		trigger = {
+			NOT = {
+				OR = {
+					owns = 1246
+					owns = 1109
+					owns = 2738
+					owns = 2737
+					owns = 1107
+					owns = 1108
+					owns = 2739
+					owns = 1106
+				}
+			}
+		}
+		name = "COLONIAL_AUSTRALIA_Australia"
+	}
+	names = {
+		trigger = {
+			NOT = {
+				OR = {
+					owns = 1246
+					owns = 1109
+					owns = 2738
+					owns = 2737
+					owns = 1107
+					owns = 1108
+					owns = 2739
+					owns = 1106
+				}
+			}
+		}
+		name = "COLONIAL_AUSTRALIA_Root_Culture_GetName_Australia"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+	names = {
+		trigger = {
+			NOT = {
+				OR = {
+					owns = 1246
+					owns = 1109
+					owns = 2738
+					owns = 2737
+					owns = 1107
+					owns = 1108
+					owns = 2739
+					owns = 1106
+				}
+			}
+		}
+		name = "COLONIAL_REGION_Terra_Australis"
+	}
+	names = {
+		trigger = {
+			OR = {
+				owns = 1246
+				owns = 1109
+				owns = 2738
+				owns = 2737
+				owns = 1107
+				owns = 1108
+				owns = 2739
+				owns = 1106
+			}
+		}
+		name = "COLONIAL_REGION_Aotearoa"
+	}
+}
+
+
+
+
+# Greenland
+colonial_greenland = {
+	color = { 34 139 34 } # green lol
+
+	# Random New World
+	tax_income = 0
+	native_size = 1
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		fur = 10
+		fish = 3
+		naval_supplies = 2
+		gold = 2
+		copper = 3
+	}
+	
+	culture = {
+		inuit = 10	
+	}
+	
+	religion = {
+		animism = 10
+	}
+
+	provinces = {
+		1105 1104
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = DAN
+		}
+		name = "COLONIAL_GROENLAND"
+	} 
+	# Generic
+	names = {
+		name = "COLONIAL_GREENLAND"
+	} 
+}
+# Grao Para
+colonial_graopara = {
+	color = { 50 137 214 } # blue star from flag of Para
+
+	# Random New World
+	tax_income = 2
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		iron = 8
+		tropical_wood = 7
+		gold = 4
+	}
+	
+	culture = {
+		guarani = 5
+		tupinamba = 12
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		2889 2933 2934 2930 2935 2890 2929 748 2928
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_BRAZIL_Grao_Para"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = MOR
+				tag = GRA
+				tag = ALG
+			}
+			religion_group = muslim			
+		}
+		name = "COLONIAL_BRAZIL_new_granada"
+	}
+	names = {
+		trigger = {
+			tag = FRA	
+		}
+		name = "COLONIAL_BRAZIL_Amazonie"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+			}
+		}
+		name = "COLONIAL_BRAZIL_Amazonie_Dutch"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_BRAZIL_Brazil"
+	}
+	names = {
+		name = "COLONIAL_BRAZIL_Amazonia"
+	}
+	names = {
+		name = "COLONIAL_BRAZIL_Root_Culture_GetName_Brazil"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# Maranhao
+colonial_maranhao = {
+	color = { 30 30 30 } # close to black
+
+	# Random New World
+	tax_income = 2
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		sugar = 4
+		grain = 6
+		iron = 3
+		fish = 2
+		tropical_wood = 6
+	}
+	
+	culture = {
+		guarani = 5
+		tupinamba = 12
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		2927 749 2924 2926 2923
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_BRAZIL_Maranhao"
+	}
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = CAS
+				tag = SPA
+			}
+		}
+		name = "COLONIAL_BRAZIL_Maranon"
+	}
+	names = {
+		trigger = {
+			tag = FRA
+		}
+		name = "COLONIAL_BRAZIL_France_Equinoxiale"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = MOR
+				tag = GRA
+				tag = ALG
+			}
+			religion_group = muslim			
+		}
+		name = "COLONIAL_BRAZIL_new_granada"
+	}
+	names = {
+		trigger = {
+			religion = catholic
+		}
+		name = "COLONIAL_BRAZIL_Maragnanum"
+	}
+	names = {
+		trigger = {
+			tag = FRA	
+		}
+		name = "COLONIAL_BRAZIL_Amazonie"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+			}
+		}
+		name = "COLONIAL_BRAZIL_Amazonie_Dutch"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_BRAZIL_Brazil"
+	}
+	names = {
+		name = "COLONIAL_BRAZIL_Amazonia"
+	}
+	names = {
+		name = "COLONIAL_BRAZIL_Root_Culture_GetName_Brazil"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# Pernambuco
+colonial_pernambuco = {
+	color = { 10 155 58 } # green from flag of Brazil 
+
+	# Random New World
+	tax_income = 2
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		cloth = 7
+		sugar = 9
+		fish = 3
+		grain = 3
+		iron = 2
+		tropical_wood = 7
+	}
+	
+	culture = {
+		guarani = 5
+		tupinamba = 12
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		2918 2925 752 2886 751 750 753 2922 754 755 2921
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = POR
+				tag = CAS
+				tag = SPA
+			}
+		}
+		name = "COLONIAL_BRAZIL_Pernambuco"
+	}
+	names = {
+		trigger = {
+			culture_group = british
+		}
+		name = "COLONIAL_BRAZIL_Brazil"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+			}
+		}
+		name = "COLONIAL_AUSTRALIA_New_Holland"
+	}
+	names = {
+		trigger = {
+			tag = POR
+			religion_group = christian
+		}
+		name = "COLONIAL_BRAZIL_Terra_de_Vera_Cruz"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = MOR
+				tag = GRA
+				tag = ALG
+			}
+			religion_group = muslim			
+		}
+		name = "COLONIAL_BRAZIL_new_granada"
+	}
+	names = {
+		trigger = {
+			tag = FRA	
+		}
+		name = "COLONIAL_BRAZIL_Pernambouc"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+			}
+		}
+		name = "COLONIAL_BRAZIL_Amazonie_Dutch"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_BRAZIL_Brazil"
+	}
+	names = {
+		name = "COLONIAL_BRAZIL_Amazonia"
+	}
+	names = {
+		name = "COLONIAL_BRAZIL_Root_Culture_GetName_Brazil"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# Bahia
+colonial_bahia = {
+	color = { 10 20 200 } # blue from bahia flag
+
+	# Random New World
+	tax_income = 2
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		grain = 8
+		salt = 9
+		copper = 9
+		gold = 7
+		cocoa = 15
+		tropical_wood = 10
+	}
+	
+	culture = {
+		ge = 9
+		tupinamba = 4
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		2917 2916 757 756 2914 2885 2913 2915 2912 760
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_BRAZIL_Bahia"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = CAS
+				tag = SPA
+			}
+		}
+		name = "COLONIAL_BRAZIL_Bahia_Spanish"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = MOR
+				tag = GRA
+				tag = ALG
+			}
+			religion_group = muslim			
+		}
+		name = "COLONIAL_BRAZIL_new_granada"
+	}
+	names = {
+		trigger = {
+			tag = FRA	
+		}
+		name = "COLONIAL_BRAZIL_Amazonie"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+			}
+		}
+		name = "COLONIAL_BRAZIL_Amazonie_Dutch"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_BRAZIL_Brazil"
+	}
+	names = {
+		name = "COLONIAL_BRAZIL_Amazonia"
+	}
+}
+
+# Goyaz
+colonial_goyaz = {
+	color = { 255 150 10 } # orange from flag of tocantins
+
+	# Random New World
+	tax_income = 1
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		sugar = 13
+		iron = 8
+		cotton = 4
+		gold = 8
+		tropical_wood = 6
+	}
+	
+	culture = {
+		ge = 10
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		2892 2907 2919 758 2906 2908 2909 2910 2911
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_BRAZIL_Goyaz"
+	}
+	names = {
+		trigger = {
+			tag = FRA	
+		}
+		name = "COLONIAL_BRAZIL_Amazonie"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+			}
+		}
+		name = "COLONIAL_BRAZIL_Amazonie_Dutch"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_BRAZIL_Root_Culture_GetName_Brazil"
+	}
+	names = {
+		name = "COLONIAL_BRAZIL_Amazonia"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# Mato Grosso
+colonial_matogrosso = {
+	color = { 253 253 253 } # white from flag
+
+	# Random New World
+	tax_income = 1
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		cotton = 7
+		tropical_wood = 10
+	}
+	
+	culture = {
+		ge = 1
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+	 2893 2881 2920 2903 2888 2904 2905 2902 2901 2900
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_BRAZIL_Mato_Grosso"
+	}
+	names = {
+		trigger = {
+			tag = FRA	
+		}
+		name = "COLONIAL_BRAZIL_Amazonie"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+			}
+		}
+		name = "COLONIAL_BRAZIL_Amazonie_Dutch"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_BRAZIL_Root_Culture_GetName_Brazil"
+	}
+	names = {
+		name = "COLONIAL_BRAZIL_Amazonia"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# Espirito Santo
+colonial_espirito_santo = {
+	color = { 239 90 141 } # pink from flag
+
+	# Random New World
+	tax_income = 3
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		sugar = 13
+		iron = 4
+		fish = 1
+		gold = 2
+		cocoa = 3
+		grain = 2
+		tropical_wood = 10
+	}
+	
+	culture = {
+		tupinamba = 6
+		ge = 10
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		761 # Espirito Santo
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = POR	
+		}
+		name = "COLONIAL_BRAZIL_ES"
+	}
+	names = {
+		trigger = {
+			tag = FRA	
+		}
+		name = "COLONIAL_BRAZIL_ES_French"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = CAS
+				tag = SPA
+			}	
+		}
+		name = "COLONIAL_BRAZIL_ES_Spanish"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG	
+			}
+		}
+		name = "COLONIAL_BRAZIL_ES_English"
+	}
+	names = {
+		trigger = {
+			primary_culture = dutch	
+		}
+		name = "COLONIAL_BRAZIL_ES_Dutch"
+	}
+	names = {
+		trigger = {
+			culture_group = germanic
+			NOT = { primary_culture = dutch }	
+		}
+		name = "COLONIAL_BRAZIL_ES_German"
+	}
+	names = {
+		trigger = {
+			culture_group = latin	
+		}
+		name = "COLONIAL_BRAZIL_ES_Italian"
+	}
+	names = {
+		trigger = {
+			tag = SCO	
+		}
+		name = "COLONIAL_BRAZIL_ES_Scottish"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = MOR
+				tag = GRA
+				tag = ALG
+			}
+			religion_group = muslim			
+		}
+		name = "COLONIAL_BRAZIL_new_granada"
+	}
+	names = {
+		trigger = {
+			tag = FRA	
+		}
+		name = "COLONIAL_BRAZIL_Amazonie"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+			}
+		}
+		name = "COLONIAL_BRAZIL_Amazonie_Dutch"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_BRAZIL_Brazil"
+	}
+	names = {
+		name = "COLONIAL_BRAZIL_Root_Culture_GetName_Brazil"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# Brazil - Sao Paulo
+colonial_sao_paulo = {
+	color = { 41 66 146 } # blue from flag
+
+	# Random New World
+	tax_income = 3
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		sugar = 13
+		iron = 4
+		fish = 1
+		gold = 2
+		cocoa = 3
+		grain = 2
+		tropical_wood = 10
+	}
+	
+	culture = {
+		tupinamba = 6
+		ge = 10
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		769 2895 768 766 764 2896 2897 # Sao Paulo
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = POR	
+		}
+		name = "COLONIAL_BRAZIL_SP"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = FRA
+				tag = GBR
+				tag = ENG
+			}	
+		}
+		name = "COLONIAL_BRAZIL_SP_French"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = CAS
+				tag = SPA
+			}	
+		}
+		name = "COLONIAL_BRAZIL_SP_Spanish"
+	}
+	names = {
+		trigger = {
+			primary_culture = dutch	
+		}
+		name = "COLONIAL_BRAZIL_SP_Dutch"
+	}
+	names = {
+		trigger = {
+			culture_group = germanic
+			NOT = { primary_culture = dutch }	
+		}
+		name = "COLONIAL_BRAZIL_SP_German"
+	}
+	names = {
+		trigger = {
+			culture_group = latin	
+		}
+		name = "COLONIAL_BRAZIL_SP_Italian"
+	}
+	names = {
+		trigger = {
+			tag = SCO	
+		}
+		name = "COLONIAL_BRAZIL_SP_Scottish"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = MOR
+				tag = GRA
+				tag = ALG
+			}
+			religion_group = muslim			
+		}
+		name = "COLONIAL_BRAZIL_new_granada"
+	}
+	names = {
+		trigger = {
+			tag = FRA	
+		}
+		name = "COLONIAL_BRAZIL_Amazonie"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+			}
+		}
+		name = "COLONIAL_BRAZIL_Amazonie_Dutch"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_BRAZIL_Brazil"
+	}
+	names = {
+		name = "COLONIAL_BRAZIL_Root_Culture_GetName_Brazil"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# Rio de Janeiro
+colonial_rio = {
+	color = { 10 175 239 } # blue from flag of Rio state
+
+	# Random New World
+	tax_income = 3
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		sugar = 13
+		iron = 4
+		fish = 1
+		gold = 2
+		cocoa = 3
+		grain = 2
+		tropical_wood = 10
+	}
+	
+	culture = {
+		tupinamba = 6
+		ge = 10
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		763 762 # Rio de Janeiro
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = FRA
+		}
+		name = "COLONIAL_BRAZIL_France_Antarctique"
+	}
+	names = {
+		trigger = {
+			tag = POR	
+		}
+		name = "COLONIAL_BRAZIL_Rio"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = CAS
+				tag = SPA
+			}	
+		}
+		name = "COLONIAL_BRAZIL_Rio_Spanish"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = GBR
+				tag = ENG	
+			}
+		}
+		name = "COLONIAL_BRAZIL_Rio_English"
+	}
+	names = {
+		trigger = {
+			primary_culture = dutch	
+		}
+		name = "COLONIAL_BRAZIL_Rio_Dutch"
+	}
+	names = {
+		trigger = {
+			culture_group = germanic
+			NOT = { primary_culture = dutch }	
+		}
+		name = "COLONIAL_BRAZIL_Rio_German"
+	}
+	names = {
+		trigger = {
+			culture_group = latin	
+		}
+		name = "COLONIAL_BRAZIL_Rio_Italian"
+	}
+	names = {
+		trigger = {
+			tag = SCO	
+		}
+		name = "COLONIAL_BRAZIL_Rio_Scottish"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = MOR
+				tag = GRA
+				tag = ALG
+			}
+			religion_group = muslim			
+		}
+		name = "COLONIAL_BRAZIL_new_granada"
+	}
+	names = {
+		trigger = {
+			tag = FRA	
+		}
+		name = "COLONIAL_BRAZIL_Amazonie"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+			}
+		}
+		name = "COLONIAL_BRAZIL_Amazonie_Dutch"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_BRAZIL_Brazil"
+	}
+	names = {
+		name = "COLONIAL_BRAZIL_Root_Culture_GetName_Brazil"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# Rio Grande do Sul
+colonial_riograndedosul = {
+	color = { 20 250 10 } # green from flag and seal of porto alegre
+
+	# Random New World
+	tax_income = 1
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		grain = 10
+		tobacco = 10
+		copper = 2
+	}
+	
+	culture = {
+		guarani = 5
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		2879 2857 2884 2887
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_BRAZIL_Rio_Grande_do_Sul"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = ARA
+				tag = CAS
+				tag = SPA
+			}
+		}
+		name = "COLONIAL_BRAZIL_Rio_Grande_del_Sur"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_BRAZIL_Brazil"
+	}
+	names = {
+		name = "COLONIAL_BRAZIL_Root_Culture_GetName_Brazil"
+	}
+}
+
+# Minas Gerais
+colonial_minasgerais = {
+	color = { 218 37 29 } # red from flag
+
+	# Random New World
+	tax_income = 2
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		iron = 10
+		cocoa = 8
+		gold = 2
+		sugar = 2
+		tropical_wood = 10
+	}
+	
+	culture = {
+		tupinamba = 1
+		ge = 5
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		2891 759 2898 765 2899 2894
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_BRAZIL_Minas_Gerais"
+	}
+	names = {
+		trigger = {
+			tag = FRA	
+		}
+		name = "COLONIAL_BRAZIL_Amazonie"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_BRAZIL_Root_Culture_GetName_Brazil"
+	}
+	names = {
+		name = "COLONIAL_BRAZIL_Amazonia"
+	}
+}
+
+# Paraguay
+colonial_paraguay = {
+	color = { 10 103 10 } # green from second flag of Paraguay
+
+	# Random New World
+	tax_income = 0
+	native_size = 12
+	native_ferocity = 8
+	native_hostileness = 8
+	
+	trade_goods = {
+		grain = 15
+		cloth = 8
+		cotton = 6
+		naval_supplies = 1
+	}
+
+	culture = {
+		guarani = 4
+		chacoan = 2
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		775 776 799 2883 2858 2859 #Paraguay
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "COLONIAL_PARAGUAY_Paraguay"
+	}
+	names = {
+		name = "COLONIAL_LA_PLATA_Root_Culture_GetName_Paraguay"
+	}
+}
+
+# Uruguay
+colonial_uruguay = {
+	color = { 251 208 22 } # yellow sun of may
+
+	# Random New World
+	tax_income = 1
+	native_size = 4
+	native_ferocity = 1
+	native_hostileness = 4
+	
+	trade_goods = {
+		grain = 10
+		fish = 5
+		wool = 5
+	}
+
+	culture = {
+		charruan = 10
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		2851 2850 772 773 2852
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = CAS
+				tag = SPA
+			}
+		}
+		name = "COLONIAL_URUGUAY"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = CAS
+				tag = SPA
+			}
+		}
+		name = "COLONIAL_URUGUAY_Banda_Oriental"
+	}
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_LA_PLATA_Cisplatina"
+	}
+	names = {
+		trigger = {
+			tag = FRA
+		}
+		name = "COLONIAL_LA_PLATA_Cisplatine"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_URUGUAY"
+	}
+}
+
+# Peru
+colonial_peru = {
+	color = { 11 104 112 } # turquoise from 1821 flag
+
+	# Random New World
+	tax_income = 2
+	native_size = 12
+	native_ferocity = 4
+	native_hostileness = 4
+	
+	trade_goods = {
+		grain = 7
+		fish = 2
+		gold = 7
+		cocoa = 2
+		copper = 2
+	}
+
+	culture = {
+		chimuan = 5
+		# quechua = 11
+		chachapoyan = 2
+		jivaro = 3
+		maipurean = 2
+		aimara = 5
+	}
+	religion = {
+		animism = 10
+	}
+
+	provinces = {
+		2945 2943 813 2821 2822 2823 2825 812 2826 2827 814 2944 811 809
+		810 808 2830 2829 806 2828 805 807 804 2947
+		796 793 # Iquique and Arica
+	}
+
+	# Specific
+	# Generic
+	names = {
+		name = "COLONIAL_PERU_Peru"
+	}
+	names = {
+		name = "COLONIAL_PERU_Root_Culture_GetName_Peru"
+	}
+}
+
+# Upper Peru/Bolivia
+colonial_upper_peru = {
+	color = { 116 44 100 } # purple from variant flag
+
+	# Random New World
+	tax_income = 2
+	native_size = 12
+	native_ferocity = 4
+	native_hostileness = 4
+	
+	trade_goods = {
+		grain = 8
+		gold = 12
+		copper = 8
+		iron = 3
+	}
+
+	culture = {
+		aimara = 8
+		maipurean = 4
+		guarani = 3
+	}
+	religion = {
+		animism = 10
+	}
+
+	provinces = {
+		2833 802 803 2832 2834 801 800 2882 2835 2838 2940 2840 2841 
+		2946 795 2941 2942 797 2831
+	}
+
+	# Specific
+	# Generic
+	names = {
+		name = "COLONIAL_PERU_UpperPeru"
+	}
+	names = {
+		name = "COLONIAL_PERU_Root_Culture_GetName_Peru"
+	}
+}
+
+# Chile
+colonial_chile = {
+	color = { 255 254 25 } # yellow from first flag of chile
+
+	# Random New World
+	tax_income = 1
+	native_size = 12
+	native_ferocity = 8
+	native_hostileness = 8
+	
+	trade_goods = {
+		grain = 8
+		fish = 5
+		copper = 18
+		iron = 2
+		gold = 5
+		naval_supplies = 5
+	}
+
+	culture = {
+		mapuche = 5
+		patagonian = 2
+	}
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		792 2862 787 784 2873 2874 783
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "COLONIAL_LA_PLATA_Chile"
+	}
+	names = {
+		name = "COLONIAL_LA_PLATA_Root_Culture_GetName_Chile"
+	}
+}
+
+# Colombia
+colonial_colombia = {
+	color = { 218 18 26 } # red from Gran Colombia flag
+
+	# Random New World
+	tax_income = 3
+	native_size = 12
+	native_ferocity = 1
+	native_hostileness = 2
+	
+	trade_goods = {
+		sugar = 4
+		cocoa = 8
+		gold = 4
+		grain = 2
+		copper = 3
+		tobacco = 4
+	}
+
+	culture = {
+		muisca = 10
+		# lokono = 6
+		carib = 2
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		822 823 824 825 826 827 832 2812 2814 2815 2816 2817 2818 #New Granada
+		835 2664 2819 4595 #Castilla del Oro
+		828 829 2806 #New Andalucia
+		4596 4600 4601 4602 4603 4604 4605 4607 4608 4599
+	}
+
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+			owns = 223 # Granada
+		}
+		name = "COLONIAL_COLOMBIA_New_Granada_spanish"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_COLOMBIA_Root_Culture_GetName_Colombia"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# Ecuador/Quito
+colonial_quito = {
+	color = { 135 194 224 } # blue from 1920 flag
+
+	# Random New World
+	tax_income = 2
+	native_size = 9
+	native_ferocity = 1
+	native_hostileness = 2
+	
+	trade_goods = {
+		wool = 7
+		cotton = 7
+		sugar = 7
+		cocoa = 9
+		copper = 1
+		tobacco = 5
+	}
+
+	culture = {
+		# caran = 4
+		jivaro = 1
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		817 818 819 820 2820 # not the galapagos because countries making tiny galapagos colonies
+		815 821 # border regions modern day peru
+		816 # Tumbes was part of Quito and voted to join peru upon independence
+		2824 # so did San Ignacio?
+	}
+
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+		}
+		name = "COLONIAL_COLOMBIA_Quito"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_COLOMBIA_Equatoria"
+	}
+}
+
+# Venezuela
+colonial_venezuela = {
+	color = { 10 36 125 } # blue from venezuela flag
+
+	# Random New World
+	tax_income = 3
+	native_size = 12
+	native_ferocity = 1
+	native_hostileness = 2
+	
+	trade_goods = {
+		cocoa = 9
+		tobacco = 7
+		grain = 7
+		naval_supplies = 1
+		copper = 1
+	}
+
+	culture = {
+		carib = 15
+		# lokono = 15
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		830 2813 2807 834 2808 831 2809 2810 2939 741 2805 4609 4610 4611 4612 4613 4614 4615 4616
+	}
+
+	# Specific
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+			is_year = 1777
+		}
+		name = "COLONIAL_COLOMBIA_Venezuela"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				tag = ARA
+			}
+			NOT = { is_year = 1777 }
+		}
+		name = "COLONIAL_COLOMBIA_New_Andalucia_spanish"
+	}
+	names = {
+		trigger = {
+				culture_group = germanic
+				NOT = { primary_culture = dutch }
+				NOT = { primary_culture = flemish }
+		}
+		name = "COLONIAL_COLOMBIA_Klein_Venedig"
+	}
+	names = {
+		trigger = {
+				tag = POR
+		}
+		name = "COLONIAL_COLOMBIA_Venezinha"
+	}
+	names = {
+		trigger = {
+				culture_group = latin
+		}
+		name = "COLONIAL_COLOMBIA_Venezziola"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_COLOMBIA_Little_Venice"
+	}
+}
+
+# La Plata
+colonial_la_plata = {
+	color = { 116 172 223 } # blue from flag of Argentina and La Plata
+
+	# Random New World
+	tax_income = 3
+	native_size = 12
+	native_ferocity = 4
+	native_hostileness = 4
+	
+	trade_goods = {
+		grain = 15
+		fish = 5
+		copper = 3
+		cloth = 3
+		iron = 1
+	}
+
+	culture = {
+		patagonian = 7
+		mapuche = 2
+		het = 8
+		charruan = 3
+		huarpe = 8
+		chacoan = 3
+		diaguita = 8
+	}
+	
+	religion = {
+		animism = 10
+	}
+	
+	provinces = {
+		777 778 779 780 781 782 785 786 790 791 794 2836 2837 2839
+		2842 2843 2844 2845 2846 2847 2848 2849 2853 2854 2855 2860 2861 2863 
+		2866 2868 2869 2870 2871 2872 2875 2876 2877 2878 2865 2867
+	}
+
+	# Specific
+	names = {
+		trigger = {
+			culture_group = british
+		}
+		name = "COLONIAL_LA_PLATA_Argentine"
+	}
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_LA_PLATA_Rio_de_Prata"
+	}
+	names = {
+		trigger = {
+			tag = POR
+		}
+		name = "COLONIAL_LA_PLATA_Transplatina"
+	}
+	names = {
+		trigger = {
+			OR = {
+				tag = CAS
+				tag = SPA
+			}
+		}
+		name = "COLONIAL_LA_PLATA"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_LA_PLATA_Patagonia"
+	}
+	names = {
+		name = "COLONIAL_LA_PLATA_Argentina"
+	}
+	names = {
+		name = "COLONIAL_LA_PLATA_Root_Culture_GetName_La_Plata"
+	}
+	names = {
+		name = "COLONIAL_LA_PLATA"
+	}
+}

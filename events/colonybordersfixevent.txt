@@ -1,0 +1,6083 @@
+namespace = colonial_borders
+
+# if colonial/former colonial country with colony vassals
+# somehow gets land in their vassal's territory - give it to vassal
+
+
+
+country_event = {
+	id = colonial_borders.1
+	title = "colonial_borders.EVTNAME1"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_acadia }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_acadia
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_acadia
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_acadia = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_acadia
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_acadia
+				}
+			}
+			country_event = {
+				id = colonial_borders.2
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_acadia
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.2
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_acadia
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_acadia
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.3
+	title = "colonial_borders.EVTNAME3"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_alaska }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_alaska
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_alaska
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_alaska = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_alaska
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_alaska
+				}
+			}
+			country_event = {
+				id = colonial_borders.4
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_alaska
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.4
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_alaska
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_alaska
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.5
+	title = "colonial_borders.EVTNAME5"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_rio }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_rio
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_rio
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_rio = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_rio
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_rio
+				}
+			}
+			country_event = {
+				id = colonial_borders.6
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_rio
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.6
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_rio
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_rio
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.7
+	title = "colonial_borders.EVTNAME7"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_espirito_santo }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_espirito_santo
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_espirito_santo
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_espirito_santo = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_espirito_santo
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_espirito_santo
+				}
+			}
+			country_event = {
+				id = colonial_borders.144
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_espirito_santo
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.144
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_espirito_santo
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_espirito_santo
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.8
+	title = "colonial_borders.EVTNAME8"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_california }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_california
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_california
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_california = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_california
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_california
+				}
+			}
+			country_event = {
+				id = colonial_borders.145
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_california
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.145
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_california
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_california
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.9
+	title = "colonial_borders.EVTNAME9"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_uppercanada }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_uppercanada
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_uppercanada
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_uppercanada = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_uppercanada
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_uppercanada
+				}
+			}
+			country_event = {
+				id = colonial_borders.146
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_uppercanada
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.146
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_uppercanada
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_uppercanada
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.10
+	title = "colonial_borders.EVTNAME10"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_lowercanada }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_lowercanada
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_lowercanada
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_lowercanada = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_lowercanada
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_lowercanada
+				}
+			}
+			country_event = {
+				id = colonial_borders.11
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_lowercanada
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.11
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_lowercanada
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_lowercanada
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.12
+	title = "colonial_borders.EVTNAME12"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_southcarolina }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_southcarolina
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_southcarolina
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_southcarolina = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_southcarolina
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_southcarolina
+				}
+			}
+			country_event = {
+				id = colonial_borders.13
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_southcarolina
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.13
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_southcarolina
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_southcarolina
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.14
+	title = "colonial_borders.EVTNAME14"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_northcarolina }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_northcarolina
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_northcarolina
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_northcarolina = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_northcarolina
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_northcarolina
+				}
+			}
+			country_event = {
+				id = colonial_borders.15
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_northcarolina
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.15
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_northcarolina
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_northcarolina
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.16
+	title = "colonial_borders.EVTNAME16"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_connecticut }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_connecticut
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_connecticut
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_connecticut = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_connecticut
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_connecticut
+				}
+			}
+			country_event = {
+				id = colonial_borders.17
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_connecticut
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.17
+	title = "colonial_borders.EVTNAME16"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_connecticut
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_connecticut
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.18
+	title = "colonial_borders.EVTNAME18"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_delaware }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_delaware
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_delaware
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_delaware = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_delaware
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_delaware
+				}
+			}
+			country_event = {
+				id = colonial_borders.19
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_delaware
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.19
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_delaware
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_delaware
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.20
+	title = "colonial_borders.EVTNAME20"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_florida }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_florida
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_florida
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_florida = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_florida
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_florida
+				}
+			}
+			country_event = {
+				id = colonial_borders.21
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_florida
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.21
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_florida
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_florida
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.22
+	title = "colonial_borders.EVTNAME22"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_georgia }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_georgia
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_georgia
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_georgia = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_georgia
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_georgia
+				}
+			}
+			country_event = {
+				id = colonial_borders.23
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_georgia
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.23
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_georgia
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_georgia
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.24
+	title = "colonial_borders.EVTNAME24"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_sao_paulo }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_sao_paulo
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_sao_paulo
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_sao_paulo = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_sao_paulo
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_sao_paulo
+				}
+			}
+			country_event = {
+				id = colonial_borders.25
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_sao_paulo
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.25
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_sao_paulo
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_sao_paulo
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.26
+	title = "colonial_borders.EVTNAME26"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_nuevo_santander }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_nuevo_santander
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_nuevo_santander
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_nuevo_santander = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_nuevo_santander
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_nuevo_santander
+				}
+			}
+			country_event = {
+				id = colonial_borders.27
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_nuevo_santander
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.27
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_nuevo_santander
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_nuevo_santander
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.28
+	title = "colonial_borders.EVTNAME28"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_nueva_extremadura }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_nueva_extremadura
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_nueva_extremadura
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_nueva_extremadura = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_nueva_extremadura
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_nueva_extremadura
+				}
+			}
+			country_event = {
+				id = colonial_borders.29
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_nueva_extremadura
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.29
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_nueva_extremadura
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_nueva_extremadura
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.30
+	title = "colonial_borders.EVTNAME30"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_louisiana }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_louisiana
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_louisiana
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_louisiana = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_louisiana
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_louisiana
+				}
+			}
+			country_event = {
+				id = colonial_borders.31
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_louisiana
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.31
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_louisiana
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_louisiana
+		}
+	}
+}
+
+
+country_event = {
+	id = colonial_borders.34
+	title = "colonial_borders.EVTNAME34"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_maryland }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_maryland
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_maryland
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_maryland = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_maryland
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_maryland
+				}
+			}
+			country_event = {
+				id = colonial_borders.35
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_maryland
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.35
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_maryland
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_maryland
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.36
+	title = "colonial_borders.EVTNAME36"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_maine }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_maine
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_maine
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_maine = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_maine
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_maine
+				}
+			}
+			country_event = {
+				id = colonial_borders.37
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_maine
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.37
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_maine
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_maine
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.38
+	title = "colonial_borders.EVTNAME38"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_massachusetts }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_massachusetts
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_massachusetts
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_massachusetts = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_massachusetts
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_massachusetts
+				}
+			}
+			country_event = {
+				id = colonial_borders.39
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_massachusetts
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.39
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_massachusetts
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_massachusetts
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.46
+	title = "colonial_borders.EVTNAME46"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_newbrunswick }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_newbrunswick
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_newbrunswick
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_newbrunswick = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_newbrunswick
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_newbrunswick
+				}
+			}
+			country_event = {
+				id = colonial_borders.47
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_newbrunswick
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.47
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_newbrunswick
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_newbrunswick
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.48
+	title = "colonial_borders.EVTNAME48"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_newhampshire }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_newhampshire
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_newhampshire
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_newhampshire = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_newhampshire
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_newhampshire
+				}
+			}
+			country_event = {
+				id = colonial_borders.49
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_newhampshire
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.49
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_newhampshire
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_newhampshire
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.50
+	title = "colonial_borders.EVTNAME50"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_jersey }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_jersey
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_jersey
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_jersey = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_jersey
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_jersey
+				}
+			}
+			country_event = {
+				id = colonial_borders.51
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_jersey
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.51
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_jersey
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_jersey
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.52
+	title = "colonial_borders.EVTNAME52"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_new_mexico }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_new_mexico
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_new_mexico
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_new_mexico = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_new_mexico
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_new_mexico
+				}
+			}
+			country_event = {
+				id = colonial_borders.53
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_new_mexico
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.53
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_new_mexico
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_new_mexico
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.54
+	title = "colonial_borders.EVTNAME54"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_newyork }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_newyork
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_newyork
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_newyork = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_newyork
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_newyork
+				}
+			}
+			country_event = {
+				id = colonial_borders.55
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_newyork
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.55
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_newyork
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_newyork
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.56
+	title = "colonial_borders.EVTNAME56"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_newfoundland }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_newfoundland
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_newfoundland
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_newfoundland = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_newfoundland
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_newfoundland
+				}
+			}
+			country_event = {
+				id = colonial_borders.57
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_newfoundland
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.57
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_newfoundland
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_newfoundland
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.58
+	title = "colonial_borders.EVTNAME58"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_ohio }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_ohio
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_ohio
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_ohio = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_ohio
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_ohio
+				}
+			}
+			country_event = {
+				id = colonial_borders.59
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_ohio
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.59
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_ohio
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_ohio
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.60
+	title = "colonial_borders.EVTNAME60"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_oregon }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_oregon
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_oregon
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_oregon = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_oregon
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_oregon
+				}
+			}
+			country_event = {
+				id = colonial_borders.61
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_oregon
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.61
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_oregon
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_oregon
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.62
+	title = "colonial_borders.EVTNAME62"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_pennsylvania }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_pennsylvania
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_pennsylvania
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_pennsylvania = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_pennsylvania
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_pennsylvania
+				}
+			}
+			country_event = {
+				id = colonial_borders.63
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_pennsylvania
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.63
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_pennsylvania
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_pennsylvania
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.64
+	title = "colonial_borders.EVTNAME64"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_rhodeisland }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_rhodeisland
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_rhodeisland
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_rhodeisland = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_rhodeisland
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_rhodeisland
+				}
+			}
+			country_event = {
+				id = colonial_borders.65
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_rhodeisland
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.65
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_rhodeisland
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_rhodeisland
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.66
+	title = "colonial_borders.EVTNAME66"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_ruperts_land }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_ruperts_land
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_ruperts_land
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_ruperts_land = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_ruperts_land
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_ruperts_land
+				}
+			}
+			country_event = {
+				id = colonial_borders.67
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_ruperts_land
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.67
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_ruperts_land
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_ruperts_land
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.70
+	title = "colonial_borders.EVTNAME70"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_texas }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_texas
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_texas
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_texas = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_texas
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_texas
+				}
+			}
+			country_event = {
+				id = colonial_borders.71
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_texas
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.71
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_texas
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_texas
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.74
+	title = "colonial_borders.EVTNAME74"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_virginia }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_virginia
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_virginia
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_virginia = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_virginia
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_virginia
+				}
+			}
+			country_event = {
+				id = colonial_borders.75
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_virginia
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.75
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_virginia
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_virginia
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.76
+	title = "colonial_borders.EVTNAME76"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_mexico }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_mexico
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_mexico
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_mexico = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_mexico
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_mexico
+				}
+			}
+			country_event = {
+				id = colonial_borders.77
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_mexico
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.77
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_mexico
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_mexico
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.78
+	title = "colonial_borders.EVTNAME78"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_guatemala }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_guatemala
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_guatemala
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_guatemala = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_guatemala
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_guatemala
+				}
+			}
+			country_event = {
+				id = colonial_borders.79
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_guatemala
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.79
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_guatemala
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_guatemala
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.80
+	title = "colonial_borders.EVTNAME80"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_newgalicia }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_newgalicia
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_newgalicia
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_newgalicia = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_newgalicia
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_newgalicia
+				}
+			}
+			country_event = {
+				id = colonial_borders.81
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_newgalicia
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.81
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_newgalicia
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_newgalicia
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.82
+	title = "colonial_borders.EVTNAME82"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_newnavarra }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_newnavarra
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_newnavarra
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_newnavarra = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_newnavarra
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_newnavarra
+				}
+			}
+			country_event = {
+				id = colonial_borders.83
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_newnavarra
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.83
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_newnavarra
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_newnavarra
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.84
+	title = "colonial_borders.EVTNAME84"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_newbiscay }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_newbiscay
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_newbiscay
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_newbiscay = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_newbiscay
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_newbiscay
+				}
+			}
+			country_event = {
+				id = colonial_borders.85
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_newbiscay
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.85
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_newbiscay
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_newbiscay
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.86
+	title = "colonial_borders.EVTNAME86"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_nuevo_leon }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_nuevo_leon
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_nuevo_leon
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_nuevo_leon = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_nuevo_leon
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_nuevo_leon
+				}
+			}
+			country_event = {
+				id = colonial_borders.87
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_nuevo_leon
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.87
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_nuevo_leon
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_nuevo_leon
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.88
+	title = "colonial_borders.EVTNAME88"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_yucatan }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_yucatan
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_yucatan
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_yucatan = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_yucatan
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_yucatan
+				}
+			}
+			country_event = {
+				id = colonial_borders.89
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_yucatan
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.89
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_yucatan
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_yucatan
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.92
+	title = "colonial_borders.EVTNAME92"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_cuba }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_cuba
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_cuba
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_cuba = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_cuba
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_cuba
+				}
+			}
+			country_event = {
+				id = colonial_borders.93
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_cuba
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.93
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_cuba
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_cuba
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.94
+	title = "colonial_borders.EVTNAME94"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_hispaniola }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_hispaniola
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_hispaniola
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_hispaniola = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_hispaniola
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_hispaniola
+				}
+			}
+			country_event = {
+				id = colonial_borders.95
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_hispaniola
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.95
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_hispaniola
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_hispaniola
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.96
+	title = "colonial_borders.EVTNAME96"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_guyana }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_guyana
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_guyana
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_guyana = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_guyana
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_guyana
+				}
+			}
+			country_event = {
+				id = colonial_borders.97
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_guyana
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.97
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_guyana
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_guyana
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.98
+	title = "colonial_borders.EVTNAME98"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_australia }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_australia
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_australia
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_australia = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_australia
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_australia
+				}
+			}
+			country_event = {
+				id = colonial_borders.99
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_australia
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.99
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_australia
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_australia
+		}
+	}
+}
+
+
+country_event = {
+	id = colonial_borders.102
+	title = "colonial_borders.EVTNAME102"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_philippines }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_philippines
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_philippines
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_philippines = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_philippines
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_philippines
+				}
+			}
+			country_event = {
+				id = colonial_borders.103
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_philippines
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.103
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_philippines
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_philippines
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.104
+	title = "colonial_borders.EVTNAME104"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_south_africa }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_south_africa
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_south_africa
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_south_africa = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_south_africa
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_south_africa
+				}
+			}
+			country_event = {
+				id = colonial_borders.105
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_south_africa
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.105
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_south_africa
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_south_africa
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.106
+	title = "colonial_borders.EVTNAME106"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_greenland }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_greenland
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_greenland
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_greenland = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_greenland
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_greenland
+				}
+			}
+			country_event = {
+				id = colonial_borders.107
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_greenland
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.107
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_greenland
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_greenland
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.108
+	title = "colonial_borders.EVTNAME108"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_graopara }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_graopara
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_graopara
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_graopara = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_graopara
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_graopara
+				}
+			}
+			country_event = {
+				id = colonial_borders.109
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_graopara
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.109
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_graopara
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_graopara
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.110
+	title = "colonial_borders.EVTNAME110"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_maranhao }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_maranhao
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_maranhao
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_maranhao = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_maranhao
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_maranhao
+				}
+			}
+			country_event = {
+				id = colonial_borders.111
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_maranhao
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.111
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_maranhao
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_maranhao
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.112
+	title = "colonial_borders.EVTNAME112"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_pernambuco }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_pernambuco
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_pernambuco
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_pernambuco = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_pernambuco
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_pernambuco
+				}
+			}
+			country_event = {
+				id = colonial_borders.113
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_pernambuco
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.113
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_pernambuco
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_pernambuco
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.114
+	title = "colonial_borders.EVTNAME114"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_bahia }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_bahia
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_bahia
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_bahia = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_bahia
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_bahia
+				}
+			}
+			country_event = {
+				id = colonial_borders.115
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_bahia
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.115
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_bahia
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_bahia
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.116
+	title = "colonial_borders.EVTNAME116"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_goyaz }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_goyaz
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_goyaz
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_goyaz = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_goyaz
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_goyaz
+				}
+			}
+			country_event = {
+				id = colonial_borders.117
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_goyaz
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.117
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_goyaz
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_goyaz
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.118
+	title = "colonial_borders.EVTNAME118"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_matogrosso }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_matogrosso
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_matogrosso
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_matogrosso = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_matogrosso
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_matogrosso
+				}
+			}
+			country_event = {
+				id = colonial_borders.119
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_matogrosso
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.119
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_matogrosso
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_matogrosso
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.122
+	title = "colonial_borders.EVTNAME122"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_riograndedosul }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_riograndedosul
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_riograndedosul
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_riograndedosul = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_riograndedosul
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_riograndedosul
+				}
+			}
+			country_event = {
+				id = colonial_borders.123
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_riograndedosul
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.123
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_riograndedosul
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_riograndedosul
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.124
+	title = "colonial_borders.EVTNAME124"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_minasgerais }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_minasgerais
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_minasgerais
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_minasgerais = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_minasgerais
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_minasgerais
+				}
+			}
+			country_event = {
+				id = colonial_borders.125
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_minasgerais
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.125
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_minasgerais
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_minasgerais
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.126
+	title = "colonial_borders.EVTNAME126"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_paraguay }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_paraguay
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_paraguay
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_paraguay = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_paraguay
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_paraguay
+				}
+			}
+			country_event = {
+				id = colonial_borders.127
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_paraguay
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.127
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_paraguay
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_paraguay
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.128
+	title = "colonial_borders.EVTNAME128"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_uruguay }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_uruguay
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_uruguay
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_uruguay = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_uruguay
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_uruguay
+				}
+			}
+			country_event = {
+				id = colonial_borders.129
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_uruguay
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.129
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_uruguay
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_uruguay
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.130
+	title = "colonial_borders.EVTNAME130"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_peru }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_peru
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_peru
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_peru = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_peru
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_peru
+				}
+			}
+			country_event = {
+				id = colonial_borders.131
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_peru
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.131
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_peru
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_peru
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.132
+	title = "colonial_borders.EVTNAME132"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_upper_peru }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_upper_peru
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_upper_peru
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_upper_peru = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_upper_peru
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_upper_peru
+				}
+			}
+			country_event = {
+				id = colonial_borders.133
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_upper_peru
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.133
+	title = "colonial_borders.EVTNAME132"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_upper_peru
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_upper_peru
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.134
+	title = "colonial_borders.EVTNAME134"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_chile }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_chile
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_chile
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_chile = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_chile
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_chile
+				}
+			}
+			country_event = {
+				id = colonial_borders.135
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_chile
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.135
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_chile
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_chile
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.136
+	title = "colonial_borders.EVTNAME136"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_colombia }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_colombia
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_colombia
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_colombia = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_colombia
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_colombia
+				}
+			}
+			country_event = {
+				id = colonial_borders.137
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_colombia
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.137
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_colombia
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_colombia
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.138
+	title = "colonial_borders.EVTNAME138"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_quito }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_quito
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_quito
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_quito = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_quito
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_quito
+				}
+			}
+			country_event = {
+				id = colonial_borders.139
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_quito
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.139
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_quito
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_quito
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.140
+	title = "colonial_borders.EVTNAME140"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_venezuela }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_venezuela
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_venezuela
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_venezuela = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_venezuela
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_venezuela
+				}
+			}
+			country_event = {
+				id = colonial_borders.141
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_venezuela
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.141
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_venezuela
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_venezuela
+		}
+	}
+}
+#first part of the event 
+country_event = {
+	id = colonial_borders.142
+	title = "colonial_borders.EVTNAME142"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_la_plata }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_la_plata
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_la_plata
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_la_plata = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_la_plata
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_la_plata
+				}
+			}
+			country_event = {
+				id = colonial_borders.143
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_la_plata
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_borders.143
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_la_plata
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_la_plata
+		}
+	}
+}
+country_event = {
+	id = colonial_borders.144
+	title = "colonial_borders.EVTNAME144"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_chiapas }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_chiapas
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_chiapas
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_la_plata = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_chiapas
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_chiapas
+				}
+			}
+			country_event = {
+				id = colonial_borders.145
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_chiapas
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+#second part of event
+country_event = {
+	id = colonial_borders.145
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_chiapas
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_chiapas
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.146
+	title = "colonial_borders.EVTNAME146"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_honduras }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_honduras
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_honduras
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_la_plata = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_honduras
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_honduras
+				}
+			}
+			country_event = {
+				id = colonial_borders.147
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_honduras
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+#second part of event
+country_event = {
+	id = colonial_borders.147
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_honduras
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_honduras
+		}
+	}
+}
+country_event = {
+	id = colonial_borders.148
+	title = "colonial_borders.EVTNAME148"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_nicaragua }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_nicaragua
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_nicaragua
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_la_plata = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_nicaragua
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_nicaragua
+				}
+			}
+			country_event = {
+				id = colonial_borders.149
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_nicaragua
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+#second part of event
+country_event = {
+	id = colonial_borders.149
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_nicaragua
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_nicaragua
+		}
+	}
+}
+country_event = {
+	id = colonial_borders.150
+	title = "colonial_borders.EVTNAME150"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_costa_rica }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_costa_rica
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_costa_rica
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_la_plata = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_costa_rica
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_costa_rica
+				}
+			}
+			country_event = {
+				id = colonial_borders.151
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_costa_rica
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+#second part of event
+country_event = {
+	id = colonial_borders.151
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_costa_rica
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_costa_rica
+		}
+	}
+}
+
+country_event = {
+	id = colonial_borders.152
+	title = "colonial_borders.EVTNAME152"
+	desc = "colonial_borders.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_san_salvador }
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_san_salvador
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_san_salvador
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_borders.EVTOPT1" # cede the province
+		colonial_la_plata = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_san_salvador
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_san_salvador
+				}
+			}
+			country_event = {
+				id = colonial_borders.153
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_borders.EVTOPT2" # keep the province
+		set_country_flag = keeping_san_salvador
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+#second part of event
+country_event = {
+	id = colonial_borders.153
+	title = "colonial_borders.EVTNAME2"
+	desc = "colonial_borders.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_borders.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_san_salvador
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_san_salvador
+		}
+	}
+}
+
+country_event = {
+	id = colonial_bordersNZadd.5
+	title = "colonial_bordersNZadd.EVTNAME2"
+	desc = "colonial_bordersNZadd.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		OR = {
+			is_colonial_nation = yes
+			is_former_colonial_nation = yes
+		}
+		NOT = { has_country_flag = keeping_new_zealand }
+		capital_scope = {
+			continent = oceania
+		}
+		any_country = {
+			vassal_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_new_zealand
+			}
+		}
+		any_province = {
+			owned_by = ROOT
+			colonial_region = colonial_new_zealand
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_bordersNZadd.EVTOPT1" # cede the province
+		colonial_new_zealand = {
+			limit = {
+				owned_by = ROOT
+			}
+			set_province_flag = transferring_new_zealand
+		}
+		every_country = {
+			limit = {
+				vassal_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_new_zealand
+				}
+			}
+			country_event = {
+				id = colonial_bordersNZadd.6
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_bordersNZadd.EVTOPT2" # keep the province
+		set_country_flag = keeping_new_zealand
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#second part of event
+
+country_event = {
+	id = colonial_bordersNZadd.6
+	title = "colonial_bordersNZadd.EVTNAME2"
+	desc = "colonial_bordersNZadd.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "colonial_bordersNZadd.EVTOPT3"
+		every_province = {
+			limit = {
+				has_province_flag = transferring_new_zealand
+			}
+			cede_province = ROOT
+			remove_core = FROM
+			clr_province_flag = transferring_new_zealand
+		}
+	}
+}
+

@@ -1,0 +1,108 @@
+country_decisions = {
+
+	alaska_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			capital_scope = {
+				colonial_region = colonial_alaska
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_subject = no
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_alaska
+				is_core = ROOT
+			}
+			NOT = { exists = ALK }
+		}
+		effect = {
+			colonial_alaska = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			colonial_oregon = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					OR = {
+						province_id = 2609
+						province_id = 975
+						province_id = 974
+						province_id = 2610
+						province_id = 972
+						province_id = 973
+						province_id = 874
+						province_id = 2484
+						province_id = 2485
+						province_id = 873
+						province_id = 872
+						province_id = 2481
+					}
+				}
+				add_claim = ROOT
+			}
+			colonial_california = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					OR = {
+						province_id = 2477
+						province_id = 2480
+						province_id = 871
+						province_id = 2479
+						province_id = 2021
+					}
+				}
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+			every_country = {
+				limit = {
+					vassal_of = ROOT
+					capital_scope = {
+						colonial_region = colonial_alaska
+					}
+				}
+				ROOT = {
+					inherit = PREV
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+		change_tag = ALK
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

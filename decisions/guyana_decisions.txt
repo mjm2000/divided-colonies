@@ -1,0 +1,191 @@
+country_decisions = {
+# brazilian-guyana
+brazilian_guyana = {
+	major = yes
+	potential = {
+		# has_country_flag = show_colonial_decisions
+		is_random_new_world = no
+		any_country = {
+			is_colonial_nation_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_graopara
+			}
+		}	
+		any_country = {
+			is_colonial_nation_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_guyana
+			}
+			OR = {	
+				owns = 2938
+				owns = 747
+			}
+			OR = {
+				owns = 2803
+				owns = 2804
+				owns = 2811
+				owns = 742
+				owns = 743
+				owns = 2931
+				owns = 744
+				owns = 745
+				owns = 2937
+				owns = 746
+				AND = {
+					owns = 2938
+					owns = 747
+				}
+			}
+		}
+	}
+	allow = {
+		adm_tech = 10
+	}
+	effect = {
+		every_province = {
+			limit = {
+				province_group = brazilian_guyana
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						colonial_region = colonial_guyana
+					}
+				}
+			}
+			set_province_flag = integrating_brazilian_guyana
+		}
+		every_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_graopara
+				}
+			}
+			country_event = {
+				id = colonialguyanaborders.1
+			}
+		}
+					
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			any_country = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_graopara
+				}
+				liberty_desire = 50
+			}
+		}
+		modifier = {
+			factor = 0
+			any_country = {
+				is_colonial_nation_of = ROOT
+				ai = no
+				capital_scope = {
+					colonial_region = colonial_guyana
+				}
+			}
+		}
+	}
+	ai_importance = 400
+}
+
+# venezuelan-guyana
+venezuelan_guyana = {
+	major = yes
+	potential = {
+		# has_country_flag = show_colonial_decisions
+		is_random_new_world = no
+		any_country = {
+			is_colonial_nation_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_venezuela
+			}
+		}	
+		any_country = {
+			is_colonial_nation_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_guyana
+			}
+			OR = {	
+				owns = 2803
+				owns = 2804
+				owns = 2811
+				owns = 742
+			}
+			OR = {
+				owns = 2938
+				owns = 747
+				owns = 743
+				owns = 2931
+				owns = 744
+				owns = 745
+				owns = 2937
+				owns = 746
+				AND = {
+					owns = 2803
+					owns = 2804
+					owns = 2811
+					owns = 742
+				}
+			}
+		}
+	}
+	allow = {
+		adm_tech = 10
+	}
+	effect = {
+		every_province = {
+			limit = {
+				province_group = venezuelan_guyana
+				owner = {
+					is_colonial_nation_of = ROOT
+					capital_scope = {
+						colonial_region = colonial_guyana
+					}
+				}
+			}
+			set_province_flag = integrating_venezuelan_guyana
+		}
+		every_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_venezuela
+				}
+			}
+			country_event = {
+				id = colonialguyanaborders.2
+			}
+		}
+					
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			any_country = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_venezuela
+				}
+				liberty_desire = 50
+			}
+		}
+		modifier = {
+			factor = 0
+			any_country = {
+				is_colonial_nation_of = ROOT
+				ai = no
+				capital_scope = {
+					colonial_region = colonial_guyana
+				}
+			}
+		}
+	}
+	ai_importance = 400
+}
+}

@@ -1,0 +1,105 @@
+country_decisions = {
+
+	brazil_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			brazilian_territory = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_subject = no
+			is_at_war = no
+			capital_scope = {
+				province_group = brazilian_territory
+				is_core = ROOT
+			}
+			NOT = { exists = BRZ }
+			OR = {
+				AND = {
+					owns_or_vassal_of = 756 # Salvador
+					owns_or_vassal_of = 749 # Sao Luis
+				}
+				AND = {
+					owns_or_vassal_of = 756 # Salvador
+					owns_or_vassal_of = 763 # Rio
+				}
+				AND = {
+					owns_or_vassal_of = 763 # Rio
+					owns_or_vassal_of = 749 # Sao Luis
+				}
+				AND = {
+					owns_or_vassal_of = 766 # Sao Paulo
+					owns_or_vassal_of = 749 # Sao Luis
+				}
+				AND = {
+					owns_or_vassal_of = 756 # Salvador
+					owns_or_vassal_of = 766 # Sao Paulo
+				}
+			}
+		}
+		effect = {
+			brazilian_territory = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_free_idea_group = yes		#keep progress
+			set_country_flag = changed_from_colonial_nation
+			every_country = {
+				limit = {
+					vassal_of = ROOT
+					capital_scope = {
+						province_group = brazilian_territory
+					}
+				}
+				ROOT = {
+					inherit = PREV
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+		change_tag = BLV
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

@@ -1,0 +1,93 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+colonial_parent = GBR
+random_nation_chance = 0
+
+color = { 127  201  219 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	trade_ideas
+	economic_ideas
+	plutocracy_ideas
+	diplomatic_ideas
+	offensive_ideas
+	spy_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_longbow
+	gaelic_mercenary
+	gaelic_free_shooter
+	irish_charge
+	anglofrench_line
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Walter #0" = 10
+	"Edmund #0" = 10
+	"Joseph Frederick #0" = 10
+	"William #0" = 10
+	"Charles Douglass #0" = 10
+	"John #0" = 20
+	"Murray Maxwell #0" = 10
+	"Aretas William #0" = 10
+	"George #0" = 30
+	"Charles Augustus #0" = 10
+	"Henry Vere #0" = 10
+	"Donald #0" = 10
+	"Ambrose #0" = 10
+	"Alexander #0" = 10
+	"Dominick #0" = 10
+	"Charles #0" = 20
+	"Robert #0" = 10
+	"William Cleaver #0" = 10
+	"Thomas Heath #0" = 10
+	"Andrew Archibald #0" = 10
+	"Jedediah Slason #0" = 10
+	"George William #0" = 10
+	"Peter Adolphus #0" = 10
+	"Donald Alexander #0" = 10
+	"Benjamin #0" = 10
+	"Augustine Colin #0" = 10
+	"Murdock #0" = 10
+	"Frank #0" = 10
+
+	"Laura #0" = -1
+	"Maria #0" = -1	
+	"Victoria #0" = -1
+}
+
+leader_names = { 
+	Fanning DesBarres Townshend Smith Ready Maxwell Young Wright Harvey FitzRoy Huntley
+	Campbell Lane Bannerman Daly Dundas Hodgson Robinson Haviland Macdonald Carvell Howlan
+	McIntyre MacKinnon Rogers Heartz Dalton "de Blois" LePage Bernard Prowse
+}
+
+ship_names = {
+	Cabot Champlain Cartier
+	Micmac
+	"St. Maurice" "St. Laurent" Margaree
+	Restigouche "St. Francis" "St. Croix"
+	Miscou Magdalen
+	Chignecto Fortune Miramichi Quinte Thunder
+	Memphrémagog "Bras d'Or" Nipigon
+	Preserver Protecteur
+	Cormorant Lynx Badger Caribou Otter Wolf Grizzly Raccoon Loon "Blue Heron" Mallard Vison Renard Elk Beaver Ambler Husky Reindeer Moose Outarde 
+	Bonaventure Manitoulin "Prince Edward" Royale
+	Rainbow Niobe Aurora Patriot Patrician Constance Curlew Shearwater
+	Canada Florence Galiano Laurentian Malaspina Margaret Newington Restless Tuna
+	Puncher Warrior Magnificent Crescent Crusader Lanark Swansea Arrowhead Cobalt
+}

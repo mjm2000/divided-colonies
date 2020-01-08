@@ -1,0 +1,79 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+colonial_parent = GBR
+random_nation_chance = 0
+
+color = { 255 153 204 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	trade_ideas
+	economic_ideas
+	plutocracy_ideas
+	diplomatic_ideas
+	offensive_ideas
+	spy_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_longbow
+	gaelic_mercenary
+	gaelic_free_shooter
+	irish_charge
+	anglofrench_line
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Richard #0" = 30
+	"John #0" = 50
+	"James #0" = 10
+	"Guy #0" = 10
+	"Frederick #0" = 10
+	"Robert #0" = 10
+	"Thomas #0" = 20
+	"George #0" = 10
+	"Charles #0" = 10
+	"Henry #0" = 10
+	"Edward #0" = 10
+	"FitzRoy #0" = 10
+	"Daniel #0" = 10
+	"Hugh #0" = 10
+	"Joseph #0" = 10
+	"Jacques #0" = 10
+	"Francis #0" = 10
+	"Arthur #0" = 10
+	"David #0" = 10
+	"Ker #0" = 10
+
+	"Laura #0" = -1
+	"Maria #0" = -1	
+	"Victoria #0" = -1
+}
+
+leader_names = { 
+	Guy Mason Hayman Whitbourne Tanfield Wynne Aston Hill Kirke Treworgie Osborn Clinton
+	Falkingham Mukserry Lee Vanbrugh Medley Smith Byng Hardy Edwards Douglas Bradstreet
+	Watson Rodney Drake Bonfoy Dorrill Webb Graves Palliser Byron Shuldham Duff Montagu
+	Campbell Elliot Milbanke King Wallace Waldegrave Pole Gambier Holloway Duckworth Keats
+	Pickmore Hamilton Cochrane Prescott Harvey Law Merchant "Baillie-Hamilton"
+}
+
+ship_names = {
+	Rainbow Niobe Aurora Patriot Patrician Champlain Constance Curlew Shearwater
+	Canada Florence Galiano Laurentian Malaspina Margaret Newington Restless Tuna
+	Puncher Warrior Magnificent Crescent Crusader Lanark Swansea Arrowhead Cobalt
+	Cormorant Lynx Badger Caribou Otter Wolf Grizzly Raccoon Loon "Blue Heron" Mallard Vison Renard Elk Beaver Ambler Husky Reindeer Moose Outarde 
+	Bonaventure Manitoulin 
+}

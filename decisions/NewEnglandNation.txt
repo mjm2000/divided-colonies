@@ -1,0 +1,171 @@
+country_decisions = {
+
+	newengland_nation = {
+		major = yes
+		potential = {
+			OR = {
+				NOT = { has_country_flag = changed_from_colonial_nation }
+				tag = VRM
+			}
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			OR = {
+				capital_scope = {
+					colonial_region = colonial_maine
+				}
+				capital_scope = {
+					colonial_region = colonial_massachusetts
+				}
+				capital_scope = {
+					colonial_region = colonial_connecticut
+				}
+				capital_scope = {
+					colonial_region = colonial_rhodeisland
+				}
+				capital_scope = {
+					colonial_region = colonial_newhampshire
+				}
+				capital_scope = {
+					province_id = 969 #Vermont
+				}
+				capital_scope = {
+					province_id = 2563 #Vermont
+				}
+			}
+			culture_group = british
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_subject = no
+			is_colonial_nation = no
+			is_at_war = no
+			colonial_maine = {
+				country_or_vassal_holds = ROOT
+			}
+			colonial_massachusetts = {
+				country_or_vassal_holds = ROOT
+			}
+			colonial_connecticut = {
+				country_or_vassal_holds = ROOT
+			}
+			colonial_rhodeisland = {
+				country_or_vassal_holds = ROOT
+			}
+			colonial_newhampshire = {
+				country_or_vassal_holds = ROOT
+			}
+			OR = {
+				owns_or_vassal_of = 969 #Vermont
+				owns_or_vassal_of = 2563 #Vermont
+			}
+			NOT = { exists = NEG }
+		}
+		effect = {
+			colonial_maine = {
+				limit = {
+					NOT = { country_or_vassal_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			colonial_massachusetts = {
+				limit = {
+					NOT = { country_or_vassal_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			colonial_rhodeisland = {
+				limit = {
+					NOT = { country_or_vassal_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			colonial_newhampshire = {
+				limit = {
+					NOT = { country_or_vassal_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			colonial_jersey = {
+				limit = {
+					NOT = { country_or_vassal_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			colonial_newyork = {
+				limit = {
+					NOT = { country_or_vassal_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			colonial_connecticut = {
+				limit = {
+					NOT = { country_or_vassal_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+			every_country = {
+				limit = {
+					vassal_of = ROOT
+					OR = {
+						capital_scope = {
+							colonial_region = colonial_maine
+						}
+						capital_scope = {
+							colonial_region = colonial_massachusetts
+						}
+						capital_scope = {
+							colonial_region = colonial_connecticut
+						}
+						capital_scope = {
+							colonial_region = colonial_rhodeisland
+						}
+						capital_scope = {
+							colonial_region = colonial_newhampshire
+						}
+						capital_scope = {
+							province_id = 969 #Vermont
+						}
+						capital_scope = {
+							province_id = 2563 #Vermont
+						}
+					}
+				}
+				ROOT = {
+					inherit = PREV
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			change_tag = NEG
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

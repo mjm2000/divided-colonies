@@ -1,0 +1,3115 @@
+namespace = colonial_revolt
+
+# Other States can join in the revolution
+# America
+
+country_event = {
+	id = colonial_revolt.1
+	title = "colonial_revolt.EVTNAME1"
+	desc = "colonial_revolt.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_colonial_nation = yes
+		capital_scope = {
+			province_group = american_territory
+		}
+		overlord = {
+			NOT = { truce_with = ROOT }
+		}
+		any_country = {
+			is_at_war = yes
+			overlord_of = ROOT
+		}
+		any_country = {
+			is_at_war = yes
+			overlord_of = ROOT
+			any_country = { # the leader
+				is_at_war = yes
+				capital_scope = {
+					province_group = american_territory
+				}
+				is_subject = no
+				has_country_flag = americanrevolutionleader
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV # at war with our overlord
+				NOT = {
+					has_opinion_modifier = {
+						modifier = not_support_independence_war
+						who = ROOT
+					}
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 15
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT1" # join the war
+		overlord = {
+			every_country = {
+				limit = {
+					is_at_war = yes
+					capital_scope = {
+						province_group = american_territory
+					}
+					is_subject = no
+					has_country_flag = americanrevolutionleader
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+					offensive_war_with = PREV
+				}
+				white_peace = ROOT
+				create_alliance = ROOT
+			}
+			ROOT = {
+				declare_war_with_cb = {
+					who = PREV
+					casus_belli = cb_colonial_independance_war
+				}
+				set_country_flag = americanrevolutionparticipant
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { liberty_desire = 50 }
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT2" # side with parent country
+		every_country = {
+			limit = {
+				overlord_of = ROOT
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = honored_alliance
+			}
+		}
+		overlord = {
+			every_country = {
+				limit = {
+					is_at_war = yes
+					capital_scope = {
+						province_group = american_territory
+					}
+					is_subject = no
+					OR = {
+						has_country_flag = americanrevolutionleader
+						has_country_flag = americanrevolutionparticipant
+					}
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+					offensive_war_with = PREV
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = not_support_independence_war
+				}
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				liberty_desire = 50
+			}
+		}
+	}
+}
+
+
+
+
+# choosing the war leader
+# America
+
+country_event = {
+	id = colonial_revolt.6
+	title = "colonial_revolt.EVTNAME6"
+	desc = "colonial_revolt.EVTDESC6"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		is_at_war = yes
+		capital_scope = {
+			province_group = american_territory
+		}
+		NOT = {
+			any_country = {
+				has_country_flag = americanrevolutionleader
+			}
+		}
+		NOT = { has_country_flag = americanrevolutionleader }
+		NOT = { has_country_flag = refused_american_leadership }
+		any_country = { # overlord
+			is_at_war = yes
+			defensive_war_with = ROOT
+			ROOT = {
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV
+			}
+			any_country = { 
+				alliance_with = ROOT
+				offensive_war_with = PREV
+				capital_scope = {
+					province_group = american_territory
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT3" # lead the charge
+		set_country_flag = americanrevolutionleader
+		every_country = {
+			limit = {
+				has_country_flag = refused_american_leadership
+			}
+			clr_country_flag = refused_american_leadership
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = american_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = americanrevolutionparticipant
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = american_territory
+					}
+					is_at_war = yes
+					ai = no
+				}
+			}
+			modifier = {
+				factor = 0
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = american_territory
+					}
+					ROOT = {
+						NOT = { num_of_cities = PREV }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT4" # do not lead
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = american_territory
+				}
+				is_at_war = yes
+			}
+			ROOT = {
+				reverse_add_opinion = {
+					who = PREV
+					modifier = supported_independence
+				}
+				set_country_flag = refused_american_leadership
+				set_country_flag = americanrevolutionparticipant
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 5
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = american_territory
+					}
+					NOT = { num_of_cities = ROOT }
+					is_at_war = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT5" # only one left
+		trigger = {
+			NOT = {
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = american_territory
+					}
+					is_at_war = yes
+					NOT = { has_country_flag = refused_american_leadership }
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = american_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = americanrevolutionleader
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = american_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = americanrevolutionparticipant
+		}
+		every_country = {
+			limit = {
+				has_country_flag = refused_american_leadership
+			}
+			clr_country_flag = refused_american_leadership
+		}
+		ai_chance = {
+			factor = 10000
+		}
+	}
+}
+
+# Colonial Independence Victory- vassalization
+
+country_event = {
+	id = colonial_revolt.11
+	title = "colonial_revolt.EVTNAME11"
+	desc = "colonial_revolt.EVTDESC11"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		capital_scope = {
+			province_group = american_territory
+		}
+		has_country_flag = americanrevolutionparticipant
+		is_at_war = yes
+		any_country = { # the leader
+			alliance_with = ROOT
+			has_country_flag = americanrevolutionleader
+			is_at_war = no
+			is_subject = no
+			any_country = { #overlord
+				defensive_war_with = ROOT
+				truce_with = PREV #truce with peaced-out colonial member
+				ROOT = {
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT11" # vassalize all the other revolution participants
+		every_country = {
+			limit = {
+				has_country_flag = americanrevolutionleader
+			}
+			vassalize = ROOT
+			set_country_flag = americanrevolutionsuccess
+		}
+		every_country = {
+			limit = {
+				war_with = ROOT
+			}
+			white_peace = ROOT
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT12" # pass, we're fine on our own
+		clr_country_flag = americanrevolutionparticipant
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+# Colonial Independence Victory - vassalize other states in the region that might have peaced out first
+# America
+
+country_event = {
+	id = colonial_revolt.16
+	title = "colonial_revolt.EVTNAME16"
+	desc = "colonial_revolt.EVTDESC16"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		ai = yes
+		is_subject = no
+		capital_scope = {
+			province_group = american_territory
+		}
+		has_country_flag = americanrevolutionparticipant
+		any_country = { # the leader
+			alliance_with = ROOT
+			has_country_flag = americanrevolutionleader
+			is_at_war = no
+			is_subject = no
+			any_country = { #overlord
+				truce_with = ROOT
+				truce_with = PREV #truce with peaced-out colonial member
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT16" # vassalize all the other revolution participants
+		every_country = {
+			limit = {
+				has_country_flag = americanrevolutionleader
+			}
+			vassalize = ROOT
+			set_country_flag = americanrevolutionsuccess
+		}
+		every_country = {
+			limit = {
+				war_with = ROOT
+			}
+			white_peace = ROOT
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT17" # pass, we're fine on our own
+		clr_country_flag = americanrevolutionparticipant
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+# Ally with the leader if you're not already
+# America
+
+country_event = {
+	id = colonial_revolt.21
+	title = "colonial_revolt.EVTNAME21"
+	desc = "colonial_revolt.EVTDESC21"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		capital_scope = {
+			province_group = american_territory
+		}
+		has_country_flag = americanrevolutionparticipant
+		NOT = { has_country_flag = americanrevolutionleader }
+		any_country = { #overlord
+			is_at_war = yes
+			defensive_war_with = ROOT
+			ROOT = {
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV
+			}
+			any_country = { #leader
+				has_country_flag = americanrevolutionleader #is the leader
+				NOT = { alliance_with = ROOT } #not already allies
+				offensive_war_with = PREV #shares the same colonial overlord
+				capital_scope = {
+					province_group = american_territory
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 10
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT21" # ally with revolution leader
+		every_country = {
+			limit = {
+				has_country_flag = americanrevolutionleader
+			}
+			create_alliance = ROOT
+		}
+	}
+}
+
+# the war is over
+# America
+
+country_event = {
+	id = colonial_revolt.26
+	title = "colonial_revolt.EVTNAME26"
+	desc = "colonial_revolt.EVTDESC26"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		has_country_flag = americanrevolutionleader
+		has_country_flag = americanrevolutionsuccess
+		NOT = {
+			any_country = {
+				has_country_flag = americanrevolutionparticipant
+				NOT = {
+					vassal_of = ROOT
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 10
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT26" # the war is over
+		every_country = {
+			limit = {
+				has_country_flag = americanrevolutionleader
+			}
+			clr_country_flag = americanrevolutionleader
+		}
+		every_country = {
+			limit = {
+				has_country_flag = americanrevolutionparticipant
+			}
+			clr_country_flag = americanrevolutionparticipant
+		}
+	}
+}
+
+# Other States can join in the revolution
+# Canada
+
+country_event = {
+	id = colonial_revolt.2
+	title = "colonial_revolt.EVTNAME2"
+	desc = "colonial_revolt.EVTDESC2"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_colonial_nation = yes
+		capital_scope = {
+			province_group = canadian_territory
+		}
+		overlord = {
+			NOT = { truce_with = ROOT }
+		}
+		any_country = {
+			is_at_war = yes
+			overlord_of = ROOT
+		}
+		any_country = {
+			is_at_war = yes
+			overlord_of = ROOT
+			any_country = { # the leader
+				is_at_war = yes
+				capital_scope = {
+					province_group = canadian_territory
+				}
+				is_subject = no
+				has_country_flag = canadianrevolutionleader
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV # at war with our overlord
+				NOT = {
+					has_opinion_modifier = {
+						modifier = not_support_independence_war
+						who = ROOT
+					}
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 15
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT1" # join the war
+		overlord = {
+			every_country = {
+				limit = {
+					is_at_war = yes
+					capital_scope = {
+						province_group = canadian_territory
+					}
+					is_subject = no
+					has_country_flag = canadianrevolutionleader
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+					offensive_war_with = PREV
+				}
+				white_peace = ROOT
+				create_alliance = ROOT
+			}
+			ROOT = {
+				declare_war_with_cb = {
+					who = PREV
+					casus_belli = cb_colonial_independance_war
+				}
+				set_country_flag = canadianrevolutionparticipant
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { liberty_desire = 50 }
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT2" # side with parent country
+		every_country = {
+			limit = {
+				overlord_of = ROOT
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = honored_alliance
+			}
+		}
+		overlord = {
+			every_country = {
+				limit = {
+					is_at_war = yes
+					capital_scope = {
+						province_group = canadian_territory
+					}
+					is_subject = no
+					OR = {
+						has_country_flag = canadianrevolutionleader
+						has_country_flag = canadianrevolutionparticipant
+					}
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+					offensive_war_with = PREV
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = not_support_independence_war
+				}
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				liberty_desire = 50
+			}
+		}
+	}
+}
+
+
+
+
+# choosing the war leader
+# Canada
+
+country_event = {
+	id = colonial_revolt.7
+	title = "colonial_revolt.EVTNAME7"
+	desc = "colonial_revolt.EVTDESC7"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		is_at_war = yes
+		capital_scope = {
+			province_group = canadian_territory
+		}
+		NOT = {
+			any_country = {
+				has_country_flag = canadianrevolutionleader
+			}
+		}
+		NOT = { has_country_flag = canadianrevolutionleader }
+		NOT = { has_country_flag = refused_canadian_leadership }
+		any_country = { # overlord
+			is_at_war = yes
+			defensive_war_with = ROOT
+			ROOT = {
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV
+			}
+			any_country = { 
+				alliance_with = ROOT
+				offensive_war_with = PREV
+				capital_scope = {
+					province_group = canadian_territory
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT3" # lead the charge
+		set_country_flag = canadianrevolutionleader
+		every_country = {
+			limit = {
+				has_country_flag = refused_canadian_leadership
+			}
+			clr_country_flag = refused_canadian_leadership
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = canadian_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = canadianrevolutionparticipant
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = canadian_territory
+					}
+					is_at_war = yes
+					ai = no
+				}
+			}
+			modifier = {
+				factor = 0
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = canadian_territory
+					}
+					ROOT = {
+						NOT = { num_of_cities = PREV }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT4" # do not lead
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = canadian_territory
+				}
+				is_at_war = yes
+			}
+			ROOT = {
+				reverse_add_opinion = {
+					who = PREV
+					modifier = supported_independence
+				}
+				set_country_flag = refused_canadian_leadership
+				set_country_flag = canadianrevolutionparticipant
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 5
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = canadian_territory
+					}
+					NOT = { num_of_cities = ROOT }
+					is_at_war = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT5" # only one left
+		trigger = {
+			NOT = {
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = canadian_territory
+					}
+					is_at_war = yes
+					NOT = { has_country_flag = refused_canadian_leadership }
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = canadian_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = canadianrevolutionleader
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = canadian_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = canadianrevolutionparticipant
+		}
+		every_country = {
+			limit = {
+				has_country_flag = refused_canadian_leadership
+			}
+			clr_country_flag = refused_canadian_leadership
+		}
+		ai_chance = {
+			factor = 10000
+		}
+	}
+}
+
+# Colonial Independence Victory- vassalization
+
+country_event = {
+	id = colonial_revolt.12
+	title = "colonial_revolt.EVTNAME12"
+	desc = "colonial_revolt.EVTDESC12"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		capital_scope = {
+			province_group = canadian_territory
+		}
+		has_country_flag = canadianrevolutionparticipant
+		is_at_war = yes
+		any_country = { # the leader
+			alliance_with = ROOT
+			has_country_flag = canadianrevolutionleader
+			is_at_war = no
+			is_subject = no
+			any_country = { #overlord
+				defensive_war_with = ROOT
+				truce_with = PREV #truce with peaced-out colonial member
+				ROOT = {
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT11" # vassalize all the other revolution participants
+		every_country = {
+			limit = {
+				has_country_flag = canadianrevolutionleader
+			}
+			vassalize = ROOT
+			set_country_flag = canadianrevolutionsuccess
+		}
+		every_country = {
+			limit = {
+				war_with = ROOT
+			}
+			white_peace = ROOT
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT12" # pass, we're fine on our own
+		clr_country_flag = canadianrevolutionparticipant
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+# Colonial Independence Victory - vassalize other states in the region that might have peaced out first
+# Canada
+
+country_event = {
+	id = colonial_revolt.17
+	title = "colonial_revolt.EVTNAME17"
+	desc = "colonial_revolt.EVTDESC17"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		ai = yes
+		is_subject = no
+		capital_scope = {
+			province_group = canadian_territory
+		}
+		has_country_flag = canadianrevolutionparticipant
+		any_country = { # the leader
+			alliance_with = ROOT
+			has_country_flag = canadianrevolutionleader
+			is_at_war = no
+			is_subject = no
+			any_country = { #overlord
+				truce_with = ROOT
+				truce_with = PREV #truce with peaced-out colonial member
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT11" # vassalize all the other revolution participants
+		every_country = {
+			limit = {
+				has_country_flag = canadianrevolutionleader
+			}
+			vassalize = ROOT
+			set_country_flag = canadianrevolutionsuccess
+		}
+		every_country = {
+			limit = {
+				war_with = ROOT
+			}
+			white_peace = ROOT
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT12" # pass, we're fine on our own
+		clr_country_flag = canadianrevolutionparticipant
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+# Ally with the leader if you're not already
+# Canada
+
+country_event = {
+	id = colonial_revolt.22
+	title = "colonial_revolt.EVTNAME22"
+	desc = "colonial_revolt.EVTDESC22"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		capital_scope = {
+			province_group = canadian_territory
+		}
+		has_country_flag = canadianrevolutionparticipant
+		NOT = { has_country_flag = canadianrevolutionleader }
+		any_country = { #overlord
+			is_at_war = yes
+			defensive_war_with = ROOT
+			ROOT = {
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV
+			}
+			any_country = { #leader
+				has_country_flag = canadianrevolutionleader #is the leader
+				NOT = { alliance_with = ROOT } #not already allies
+				offensive_war_with = PREV #shares the same colonial overlord
+				capital_scope = {
+					province_group = canadian_territory
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 10
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT21" # ally with revolution leader
+		every_country = {
+			limit = {
+				has_country_flag = canadianrevolutionleader
+			}
+			create_alliance = ROOT
+		}
+	}
+}
+
+# the war is over
+# Canada
+
+country_event = {
+	id = colonial_revolt.27
+	title = "colonial_revolt.EVTNAME27"
+	desc = "colonial_revolt.EVTDESC27"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		has_country_flag = canadianrevolutionleader
+		has_country_flag = canadianrevolutionsuccess
+		NOT = {
+			any_country = {
+				has_country_flag = canadianrevolutionparticipant
+				NOT = {
+					vassal_of = ROOT
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 10
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT26" # the war is over
+		every_country = {
+			limit = {
+				has_country_flag = canadianrevolutionleader
+			}
+			clr_country_flag = canadianrevolutionleader
+		}
+		every_country = {
+			limit = {
+				has_country_flag = canadianrevolutionparticipant
+			}
+			clr_country_flag = canadianrevolutionparticipant
+		}
+	}
+}
+
+
+# Other States can join in the revolution
+# mexico
+
+country_event = {
+	id = colonial_revolt.3
+	title = "colonial_revolt.EVTNAME3"
+	desc = "colonial_revolt.EVTDESC3"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_colonial_nation = yes
+		capital_scope = {
+			province_group = mexican_territory
+		}
+		overlord = {
+			NOT = { truce_with = ROOT }
+		}
+		any_country = {
+			is_at_war = yes
+			overlord_of = ROOT
+		}
+		any_country = {
+			is_at_war = yes
+			overlord_of = ROOT
+			any_country = { # the leader
+				is_at_war = yes
+				capital_scope = {
+					province_group = mexican_territory
+				}
+				is_subject = no
+				has_country_flag = mexicanrevolutionleader
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV # at war with our overlord
+				NOT = {
+					has_opinion_modifier = {
+						modifier = not_support_independence_war
+						who = ROOT
+					}
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 15
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT1" # join the war
+		overlord = {
+			every_country = {
+				limit = {
+					is_at_war = yes
+					capital_scope = {
+						province_group = mexican_territory
+					}
+					is_subject = no
+					has_country_flag = mexicanrevolutionleader
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+					offensive_war_with = PREV
+				}
+				white_peace = ROOT
+				create_alliance = ROOT
+			}
+			ROOT = {
+				declare_war_with_cb = {
+					who = PREV
+					casus_belli = cb_colonial_independance_war
+				}
+				set_country_flag = mexicanrevolutionparticipant
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { liberty_desire = 50 }
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT2" # side with parent country
+		every_country = {
+			limit = {
+				overlord_of = ROOT
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = honored_alliance
+			}
+		}
+		overlord = {
+			every_country = {
+				limit = {
+					is_at_war = yes
+					capital_scope = {
+						province_group = mexican_territory
+					}
+					is_subject = no
+					OR = {
+						has_country_flag = mexicanrevolutionleader
+						has_country_flag = mexicanrevolutionparticipant
+					}
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+					offensive_war_with = PREV
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = not_support_independence_war
+				}
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				liberty_desire = 50
+			}
+		}
+	}
+}
+
+
+
+
+# choosing the war leader
+# mexico
+
+country_event = {
+	id = colonial_revolt.8
+	title = "colonial_revolt.EVTNAME8"
+	desc = "colonial_revolt.EVTDESC8"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		is_at_war = yes
+		capital_scope = {
+			province_group = mexican_territory
+		}
+		NOT = {
+			any_country = {
+				has_country_flag = mexicanrevolutionleader
+			}
+		}
+		NOT = { has_country_flag = mexicanrevolutionleader }
+		NOT = { has_country_flag = refused_mexican_leadership }
+		any_country = { # overlord
+			is_at_war = yes
+			defensive_war_with = ROOT
+			ROOT = {
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV
+			}
+			any_country = { 
+				alliance_with = ROOT
+				offensive_war_with = PREV
+				capital_scope = {
+					province_group = mexican_territory
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT3" # lead the charge
+		set_country_flag = mexicanrevolutionleader
+		every_country = {
+			limit = {
+				has_country_flag = refused_mexican_leadership
+			}
+			clr_country_flag = refused_mexican_leadership
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = mexican_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = mexicanrevolutionparticipant
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = mexican_territory
+					}
+					is_at_war = yes
+					ai = no
+				}
+			}
+			modifier = {
+				factor = 0
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = mexican_territory
+					}
+					ROOT = {
+						NOT = { num_of_cities = PREV }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT4" # do not lead
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = mexican_territory
+				}
+				is_at_war = yes
+			}
+			ROOT = {
+				reverse_add_opinion = {
+					who = PREV
+					modifier = supported_independence
+				}
+				set_country_flag = refused_mexican_leadership
+				set_country_flag = mexicanrevolutionparticipant
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 5
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = mexican_territory
+					}
+					NOT = { num_of_cities = ROOT }
+					is_at_war = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT5" # only one left
+		trigger = {
+			NOT = {
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = mexican_territory
+					}
+					is_at_war = yes
+					NOT = { has_country_flag = refused_mexican_leadership }
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = mexican_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = mexicanrevolutionleader
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = mexican_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = mexicanrevolutionparticipant
+		}
+		every_country = {
+			limit = {
+				has_country_flag = refused_mexican_leadership
+			}
+			clr_country_flag = refused_mexican_leadership
+		}
+		ai_chance = {
+			factor = 10000
+		}
+	}
+}
+
+# Colonial Independence Victory- vassalization
+
+country_event = {
+	id = colonial_revolt.13
+	title = "colonial_revolt.EVTNAME13"
+	desc = "colonial_revolt.EVTDESC13"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		capital_scope = {
+			province_group = mexican_territory
+		}
+		has_country_flag = mexicanrevolutionparticipant
+		is_at_war = yes
+		any_country = { # the leader
+			alliance_with = ROOT
+			has_country_flag = mexicanrevolutionleader
+			is_at_war = no
+			is_subject = no
+			any_country = { #overlord
+				defensive_war_with = ROOT
+				truce_with = PREV #truce with peaced-out colonial member
+				ROOT = {
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT11" # vassalize all the other revolution participants
+		every_country = {
+			limit = {
+				has_country_flag = mexicanrevolutionleader
+			}
+			vassalize = ROOT
+			set_country_flag = mexicanrevolutionsuccess
+		}
+		every_country = {
+			limit = {
+				war_with = ROOT
+			}
+			white_peace = ROOT
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT12" # pass, we're fine on our own
+		clr_country_flag = mexicanrevolutionparticipant
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+# Colonial Independence Victory - vassalize other states in the region that might have peaced out first
+# mexico
+
+country_event = {
+	id = colonial_revolt.18
+	title = "colonial_revolt.EVTNAME18"
+	desc = "colonial_revolt.EVTDESC18"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		ai = yes
+		is_subject = no
+		capital_scope = {
+			province_group = mexican_territory
+		}
+		has_country_flag = mexicanrevolutionparticipant
+		any_country = { # the leader
+			alliance_with = ROOT
+			has_country_flag = mexicanrevolutionleader
+			is_at_war = no
+			is_subject = no
+			any_country = { #overlord
+				truce_with = ROOT
+				truce_with = PREV #truce with peaced-out colonial member
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT11" # vassalize all the other revolution participants
+		every_country = {
+			limit = {
+				has_country_flag = mexicanrevolutionleader
+			}
+			vassalize = ROOT
+			set_country_flag = mexicanrevolutionsuccess
+		}
+		every_country = {
+			limit = {
+				war_with = ROOT
+			}
+			white_peace = ROOT
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT12" # pass, we're fine on our own
+		clr_country_flag = mexicanrevolutionparticipant
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+# Ally with the leader if you're not already
+# mexico
+
+country_event = {
+	id = colonial_revolt.23
+	title = "colonial_revolt.EVTNAME23"
+	desc = "colonial_revolt.EVTDESC23"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		capital_scope = {
+			province_group = mexican_territory
+		}
+		has_country_flag = mexicanrevolutionparticipant
+		NOT = { has_country_flag = mexicanrevolutionleader }
+		any_country = { #overlord
+			is_at_war = yes
+			defensive_war_with = ROOT
+			ROOT = {
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV
+			}
+			any_country = { #leader
+				has_country_flag = mexicanrevolutionleader #is the leader
+				NOT = { alliance_with = ROOT } #not already allies
+				offensive_war_with = PREV #shares the same colonial overlord
+				capital_scope = {
+					province_group = mexican_territory
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 10
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT21" # ally with revolution leader
+		every_country = {
+			limit = {
+				has_country_flag = mexicanrevolutionleader
+			}
+			create_alliance = ROOT
+		}
+	}
+}
+
+# the war is over
+# mexico
+
+country_event = {
+	id = colonial_revolt.28
+	title = "colonial_revolt.EVTNAME28"
+	desc = "colonial_revolt.EVTDESC28"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		has_country_flag = mexicanrevolutionleader
+		has_country_flag = mexicanrevolutionsuccess
+		NOT = {
+			any_country = {
+				has_country_flag = mexicanrevolutionparticipant
+				NOT = {
+					vassal_of = ROOT
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 10
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT26" # the war is over
+		every_country = {
+			limit = {
+				has_country_flag = mexicanrevolutionleader
+			}
+			clr_country_flag = mexicanrevolutionleader
+		}
+		every_country = {
+			limit = {
+				has_country_flag = mexicanrevolutionparticipant
+			}
+			clr_country_flag = mexicanrevolutionparticipant
+		}
+	}
+}
+
+
+# Other States can join in the revolution
+# gran_colombia
+
+country_event = {
+	id = colonial_revolt.4
+	title = "colonial_revolt.EVTNAME4"
+	desc = "colonial_revolt.EVTDESC4"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_colonial_nation = yes
+		capital_scope = {
+			province_group = gran_colombian_territory
+		}
+		overlord = {
+			NOT = { truce_with = ROOT }
+		}
+		any_country = {
+			is_at_war = yes
+			overlord_of = ROOT
+		}
+		any_country = {
+			is_at_war = yes
+			overlord_of = ROOT
+			any_country = { # the leader
+				is_at_war = yes
+				capital_scope = {
+					province_group = gran_colombian_territory
+				}
+				is_subject = no
+				has_country_flag = gran_colombianrevolutionleader
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV # at war with our overlord
+				NOT = {
+					has_opinion_modifier = {
+						modifier = not_support_independence_war
+						who = ROOT
+					}
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 15
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT1" # join the war
+		overlord = {
+			every_country = {
+				limit = {
+					is_at_war = yes
+					capital_scope = {
+						province_group = gran_colombian_territory
+					}
+					is_subject = no
+					has_country_flag = gran_colombianrevolutionleader
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+					offensive_war_with = PREV
+				}
+				white_peace = ROOT
+				create_alliance = ROOT
+			}
+			ROOT = {
+				declare_war_with_cb = {
+					who = PREV
+					casus_belli = cb_colonial_independance_war
+				}
+				set_country_flag = gran_colombianrevolutionparticipant
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { liberty_desire = 50 }
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT2" # side with parent country
+		every_country = {
+			limit = {
+				overlord_of = ROOT
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = honored_alliance
+			}
+		}
+		overlord = {
+			every_country = {
+				limit = {
+					is_at_war = yes
+					capital_scope = {
+						province_group = gran_colombian_territory
+					}
+					is_subject = no
+					OR = {
+						has_country_flag = gran_colombianrevolutionleader
+						has_country_flag = gran_colombianrevolutionparticipant
+					}
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+					offensive_war_with = PREV
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = not_support_independence_war
+				}
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				liberty_desire = 50
+			}
+		}
+	}
+}
+
+
+
+
+# choosing the war leader
+# gran_colombia
+
+country_event = {
+	id = colonial_revolt.9
+	title = "colonial_revolt.EVTNAME9"
+	desc = "colonial_revolt.EVTDESC9"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		is_at_war = yes
+		capital_scope = {
+			province_group = gran_colombian_territory
+		}
+		NOT = {
+			any_country = {
+				has_country_flag = gran_colombianrevolutionleader
+			}
+		}
+		NOT = { has_country_flag = gran_colombianrevolutionleader }
+		NOT = { has_country_flag = refused_gran_colombian_leadership }
+		any_country = { # overlord
+			is_at_war = yes
+			defensive_war_with = ROOT
+			ROOT = {
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV
+			}
+			any_country = { 
+				alliance_with = ROOT
+				offensive_war_with = PREV
+				capital_scope = {
+					province_group = gran_colombian_territory
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT3" # lead the charge
+		set_country_flag = gran_colombianrevolutionleader
+		every_country = {
+			limit = {
+				has_country_flag = refused_gran_colombian_leadership
+			}
+			clr_country_flag = refused_gran_colombian_leadership
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = gran_colombian_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = gran_colombianrevolutionparticipant
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = gran_colombian_territory
+					}
+					is_at_war = yes
+					ai = no
+				}
+			}
+			modifier = {
+				factor = 0
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = gran_colombian_territory
+					}
+					ROOT = {
+						NOT = { num_of_cities = PREV }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT4" # do not lead
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = gran_colombian_territory
+				}
+				is_at_war = yes
+			}
+			ROOT = {
+				reverse_add_opinion = {
+					who = PREV
+					modifier = supported_independence
+				}
+				set_country_flag = refused_gran_colombian_leadership
+				set_country_flag = gran_colombianrevolutionparticipant
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 5
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = gran_colombian_territory
+					}
+					NOT = { num_of_cities = ROOT }
+					is_at_war = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT5" # only one left
+		trigger = {
+			NOT = {
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = gran_colombian_territory
+					}
+					is_at_war = yes
+					NOT = { has_country_flag = refused_gran_colombian_leadership }
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = gran_colombian_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = gran_colombianrevolutionleader
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = gran_colombian_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = gran_colombianrevolutionparticipant
+		}
+		every_country = {
+			limit = {
+				has_country_flag = refused_gran_colombian_leadership
+			}
+			clr_country_flag = refused_gran_colombian_leadership
+		}
+		ai_chance = {
+			factor = 10000
+		}
+	}
+}
+
+# Colonial Independence Victory- vassalization
+
+country_event = {
+	id = colonial_revolt.14
+	title = "colonial_revolt.EVTNAME14"
+	desc = "colonial_revolt.EVTDESC14"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		capital_scope = {
+			province_group = gran_colombian_territory
+		}
+		has_country_flag = gran_colombianrevolutionparticipant
+		is_at_war = yes
+		any_country = { # the leader
+			alliance_with = ROOT
+			has_country_flag = gran_colombianrevolutionleader
+			is_at_war = no
+			is_subject = no
+			any_country = { #overlord
+				defensive_war_with = ROOT
+				truce_with = PREV #truce with peaced-out colonial member
+				ROOT = {
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT11" # vassalize all the other revolution participants
+		every_country = {
+			limit = {
+				has_country_flag = gran_colombianrevolutionleader
+			}
+			vassalize = ROOT
+			set_country_flag = gran_colombianrevolutionsuccess
+		}
+		every_country = {
+			limit = {
+				war_with = ROOT
+			}
+			white_peace = ROOT
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT12" # pass, we're fine on our own
+		clr_country_flag = gran_colombianrevolutionparticipant
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+# Colonial Independence Victory - vassalize other states in the region that might have peaced out first
+# gran_colombia
+
+country_event = {
+	id = colonial_revolt.19
+	title = "colonial_revolt.EVTNAME19"
+	desc = "colonial_revolt.EVTDESC19"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		ai = yes
+		is_subject = no
+		capital_scope = {
+			province_group = gran_colombian_territory
+		}
+		has_country_flag = gran_colombianrevolutionparticipant
+		any_country = { # the leader
+			alliance_with = ROOT
+			has_country_flag = gran_colombianrevolutionleader
+			is_at_war = no
+			is_subject = no
+			any_country = { #overlord
+				truce_with = ROOT
+				truce_with = PREV #truce with peaced-out colonial member
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT11" # vassalize all the other revolution participants
+		every_country = {
+			limit = {
+				has_country_flag = gran_colombianrevolutionleader
+			}
+			vassalize = ROOT
+			set_country_flag = gran_colombianrevolutionsuccess
+		}
+		every_country = {
+			limit = {
+				war_with = ROOT
+			}
+			white_peace = ROOT
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT12" # pass, we're fine on our own
+		clr_country_flag = gran_colombianrevolutionparticipant
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+# Ally with the leader if you're not already
+# gran_colombia
+
+country_event = {
+	id = colonial_revolt.24
+	title = "colonial_revolt.EVTNAME24"
+	desc = "colonial_revolt.EVTDESC24"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		capital_scope = {
+			province_group = gran_colombian_territory
+		}
+		has_country_flag = gran_colombianrevolutionparticipant
+		NOT = { has_country_flag = gran_colombianrevolutionleader }
+		any_country = { #overlord
+			is_at_war = yes
+			defensive_war_with = ROOT
+			ROOT = {
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV
+			}
+			any_country = { #leader
+				has_country_flag = gran_colombianrevolutionleader #is the leader
+				NOT = { alliance_with = ROOT } #not already allies
+				offensive_war_with = PREV #shares the same colonial overlord
+				capital_scope = {
+					province_group = gran_colombian_territory
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 10
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT21" # ally with revolution leader
+		every_country = {
+			limit = {
+				has_country_flag = gran_colombianrevolutionleader
+			}
+			create_alliance = ROOT
+		}
+	}
+}
+
+# the war is over
+# gran_colombia
+
+country_event = {
+	id = colonial_revolt.29
+	title = "colonial_revolt.EVTNAME29"
+	desc = "colonial_revolt.EVTDESC29"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		has_country_flag = gran_colombianrevolutionleader
+		has_country_flag = gran_colombianrevolutionsuccess
+		NOT = {
+			any_country = {
+				has_country_flag = gran_colombianrevolutionparticipant
+				NOT = {
+					vassal_of = ROOT
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 10
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT26" # the war is over
+		every_country = {
+			limit = {
+				has_country_flag = gran_colombianrevolutionleader
+			}
+			clr_country_flag = gran_colombianrevolutionleader
+		}
+		every_country = {
+			limit = {
+				has_country_flag = gran_colombianrevolutionparticipant
+			}
+			clr_country_flag = gran_colombianrevolutionparticipant
+		}
+	}
+}
+
+
+# Other States can join in the revolution
+# brazil
+
+country_event = {
+	id = colonial_revolt.5
+	title = "colonial_revolt.EVTNAME5"
+	desc = "colonial_revolt.EVTDESC5"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_colonial_nation = yes
+		capital_scope = {
+			province_group = brazilian_territory
+		}
+		overlord = {
+			NOT = { truce_with = ROOT }
+		}
+		any_country = {
+			is_at_war = yes
+			overlord_of = ROOT
+		}
+		any_country = {
+			is_at_war = yes
+			overlord_of = ROOT
+			any_country = { # the leader
+				is_at_war = yes
+				capital_scope = {
+					province_group = brazilian_territory
+				}
+				is_subject = no
+				has_country_flag = brazilianrevolutionleader
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV # at war with our overlord
+				NOT = {
+					has_opinion_modifier = {
+						modifier = not_support_independence_war
+						who = ROOT
+					}
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 15
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT1" # join the war
+		overlord = {
+			every_country = {
+				limit = {
+					is_at_war = yes
+					capital_scope = {
+						province_group = brazilian_territory
+					}
+					is_subject = no
+					has_country_flag = brazilianrevolutionleader
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+					offensive_war_with = PREV
+				}
+				white_peace = ROOT
+				create_alliance = ROOT
+			}
+			ROOT = {
+				declare_war_with_cb = {
+					who = PREV
+					casus_belli = cb_colonial_independance_war
+				}
+				set_country_flag = brazilianrevolutionparticipant
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { liberty_desire = 50 }
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT2" # side with parent country
+		every_country = {
+			limit = {
+				overlord_of = ROOT
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = honored_alliance
+			}
+		}
+		overlord = {
+			every_country = {
+				limit = {
+					is_at_war = yes
+					capital_scope = {
+						province_group = brazilian_territory
+					}
+					is_subject = no
+					OR = {
+						has_country_flag = brazilianrevolutionleader
+						has_country_flag = brazilianrevolutionparticipant
+					}
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+					offensive_war_with = PREV
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = not_support_independence_war
+				}
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				liberty_desire = 50
+			}
+		}
+	}
+}
+
+
+
+
+# choosing the war leader
+# brazil
+
+country_event = {
+	id = colonial_revolt.10
+	title = "colonial_revolt.EVTNAME10"
+	desc = "colonial_revolt.EVTDESC10"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		is_at_war = yes
+		capital_scope = {
+			province_group = brazilian_territory
+		}
+		NOT = {
+			any_country = {
+				has_country_flag = brazilianrevolutionleader
+			}
+		}
+		NOT = { has_country_flag = brazilianrevolutionleader }
+		NOT = { has_country_flag = refused_brazilian_leadership }
+		any_country = { # overlord
+			is_at_war = yes
+			defensive_war_with = ROOT
+			ROOT = {
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV
+			}
+			any_country = { 
+				alliance_with = ROOT
+				offensive_war_with = PREV
+				capital_scope = {
+					province_group = brazilian_territory
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT3" # lead the charge
+		set_country_flag = brazilianrevolutionleader
+		every_country = {
+			limit = {
+				has_country_flag = refused_brazilian_leadership
+			}
+			clr_country_flag = refused_brazilian_leadership
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = brazilian_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = brazilianrevolutionparticipant
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = brazilian_territory
+					}
+					is_at_war = yes
+					ai = no
+				}
+			}
+			modifier = {
+				factor = 0
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = brazilian_territory
+					}
+					ROOT = {
+						NOT = { num_of_cities = PREV }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT4" # do not lead
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = brazilian_territory
+				}
+				is_at_war = yes
+			}
+			ROOT = {
+				reverse_add_opinion = {
+					who = PREV
+					modifier = supported_independence
+				}
+				set_country_flag = refused_brazilian_leadership
+				set_country_flag = brazilianrevolutionparticipant
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 5
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = brazilian_territory
+					}
+					NOT = { num_of_cities = ROOT }
+					is_at_war = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT5" # only one left
+		trigger = {
+			NOT = {
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = brazilian_territory
+					}
+					is_at_war = yes
+					NOT = { has_country_flag = refused_brazilian_leadership }
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = brazilian_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = brazilianrevolutionleader
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = brazilian_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = brazilianrevolutionparticipant
+		}
+		every_country = {
+			limit = {
+				has_country_flag = refused_brazilian_leadership
+			}
+			clr_country_flag = refused_brazilian_leadership
+		}
+		ai_chance = {
+			factor = 10000
+		}
+	}
+}
+
+# Colonial Independence Victory- vassalization
+
+country_event = {
+	id = colonial_revolt.15
+	title = "colonial_revolt.EVTNAME15"
+	desc = "colonial_revolt.EVTDESC15"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		capital_scope = {
+			province_group = brazilian_territory
+		}
+		has_country_flag = brazilianrevolutionparticipant
+		is_at_war = yes
+		any_country = { # the leader
+			alliance_with = ROOT
+			has_country_flag = brazilianrevolutionleader
+			is_at_war = no
+			is_subject = no
+			any_country = { #overlord
+				defensive_war_with = ROOT
+				truce_with = PREV #truce with peaced-out colonial member
+				ROOT = {
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT11" # vassalize all the other revolution participants
+		every_country = {
+			limit = {
+				has_country_flag = brazilianrevolutionleader
+			}
+			vassalize = ROOT
+			set_country_flag = brazilianrevolutionsuccess
+		}
+		every_country = {
+			limit = {
+				war_with = ROOT
+			}
+			white_peace = ROOT
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT12" # pass, we're fine on our own
+		clr_country_flag = brazilianrevolutionparticipant
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+# Colonial Independence Victory - vassalize other states in the region that might have peaced out first
+# brazil
+
+country_event = {
+	id = colonial_revolt.20
+	title = "colonial_revolt.EVTNAME20"
+	desc = "colonial_revolt.EVTDESC20"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		ai = yes
+		is_subject = no
+		capital_scope = {
+			province_group = brazilian_territory
+		}
+		has_country_flag = brazilianrevolutionparticipant
+		any_country = { # the leader
+			alliance_with = ROOT
+			has_country_flag = brazilianrevolutionleader
+			is_at_war = no
+			is_subject = no
+			any_country = { #overlord
+				truce_with = ROOT
+				truce_with = PREV #truce with peaced-out colonial member
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT11" # vassalize all the other revolution participants
+		every_country = {
+			limit = {
+				has_country_flag = brazilianrevolutionleader
+			}
+			vassalize = ROOT
+			set_country_flag = brazilianrevolutionsuccess
+		}
+		every_country = {
+			limit = {
+				war_with = ROOT
+			}
+			white_peace = ROOT
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT12" # pass, we're fine on our own
+		clr_country_flag = brazilianrevolutionparticipant
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+# Ally with the leader if you're not already
+# brazil
+
+country_event = {
+	id = colonial_revolt.25
+	title = "colonial_revolt.EVTNAME25"
+	desc = "colonial_revolt.EVTDESC25"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		capital_scope = {
+			province_group = brazilian_territory
+		}
+		has_country_flag = brazilianrevolutionparticipant
+		NOT = { has_country_flag = brazilianrevolutionleader }
+		any_country = { #overlord
+			is_at_war = yes
+			defensive_war_with = ROOT
+			ROOT = {
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV
+			}
+			any_country = { #leader
+				has_country_flag = brazilianrevolutionleader #is the leader
+				NOT = { alliance_with = ROOT } #not already allies
+				offensive_war_with = PREV #shares the same colonial overlord
+				capital_scope = {
+					province_group = brazilian_territory
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 10
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT21" # ally with revolution leader
+		every_country = {
+			limit = {
+				has_country_flag = brazilianrevolutionleader
+			}
+			create_alliance = ROOT
+		}
+	}
+}
+
+# the war is over
+# brazil
+
+country_event = {
+	id = colonial_revolt.30
+	title = "colonial_revolt.EVTNAME30"
+	desc = "colonial_revolt.EVTDESC30"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		has_country_flag = brazilianrevolutionleader
+		has_country_flag = brazilianrevolutionsuccess
+		NOT = {
+			any_country = {
+				has_country_flag = brazilianrevolutionparticipant
+				NOT = {
+					vassal_of = ROOT
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 10
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT26" # the war is over
+		every_country = {
+			limit = {
+				has_country_flag = brazilianrevolutionleader
+			}
+			clr_country_flag = brazilianrevolutionleader
+		}
+		every_country = {
+			limit = {
+				has_country_flag = brazilianrevolutionparticipant
+			}
+			clr_country_flag = brazilianrevolutionparticipant
+		}
+	}
+}
+country_event = {
+	id = colonial_revolt.31
+	title = "colonial_revolt.EVTNAME31"
+	desc = "colonial_revolt.EVTDESC31"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_colonial_nation = yes
+		capital_scope = {
+			province_group = central_american_territory
+		}
+		overlord = {
+			NOT = { truce_with = ROOT }
+		}
+		any_country = {
+			is_at_war = yes
+			overlord_of = ROOT
+		}
+		any_country = {
+			is_at_war = yes
+			overlord_of = ROOT
+			any_country = { # the leader
+				is_at_war = yes
+				capital_scope = {
+					province_group = central_american_territory
+				}
+				is_subject = no
+				has_country_flag = centralamericanrevolutionleader
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV # at war with our overlord
+				NOT = {
+					has_opinion_modifier = {
+						modifier = not_support_independence_war
+						who = ROOT
+					}
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 15
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT1" # join the war
+		overlord = {
+			every_country = {
+				limit = {
+					is_at_war = yes
+					capital_scope = {
+						province_group = central_american_territory
+					}
+					is_subject = no
+					has_country_flag = centralamericanrevolutionleader
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+					offensive_war_with = PREV
+				}
+				white_peace = ROOT
+				create_alliance = ROOT
+			}
+			ROOT = {
+				declare_war_with_cb = {
+					who = PREV
+					casus_belli = cb_colonial_independance_war
+				}
+				set_country_flag = centralamericanrevolutionparticipant
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				NOT = { liberty_desire = 50 }
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT2" # side with parent country
+		every_country = {
+			limit = {
+				overlord_of = ROOT
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = honored_alliance
+			}
+		}
+		overlord = {
+			every_country = {
+				limit = {
+					is_at_war = yes
+					capital_scope = {
+						province_group = central_american_territory
+					}
+					is_subject = no
+					OR = {
+						has_country_flag = centralamericanrevolutionleader
+						has_country_flag = centralamericanianrevolutionparticipant
+					}
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+					offensive_war_with = PREV
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = not_support_independence_war
+				}
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				liberty_desire = 50
+			}
+		}
+	}
+}
+
+
+
+
+# choosing the war leader
+# brazil
+
+country_event = {
+	id = colonial_revolt.36
+	title = "colonial_revolt.EVTNAME36"
+	desc = "colonial_revolt.EVTDESC36"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		is_at_war = yes
+		capital_scope = {
+			province_group = central_american_territory
+		}
+		NOT = {
+			any_country = {
+				has_country_flag = centralamericanrevolutionleader
+			}
+		}
+		NOT = { has_country_flag = centralamericanrevolutionleader }
+		NOT = { has_country_flag = refused_centralamerican_leadership }
+		any_country = { # overlord
+			is_at_war = yes
+			defensive_war_with = ROOT
+			ROOT = {
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV
+			}
+			any_country = { 
+				alliance_with = ROOT
+				offensive_war_with = PREV
+				capital_scope = {
+					province_group = central_american_territory
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT3" # lead the charge
+		set_country_flag = centralamericanrevolutionleader
+		every_country = {
+			limit = {
+				has_country_flag = refused_centralamerican_leadership
+			}
+			clr_country_flag = refused_centralamerican_leadership
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = central_american_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = centralamericanrevolutionparticipant
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = central_american_territory
+					}
+					is_at_war = yes
+					ai = no
+				}
+			}
+			modifier = {
+				factor = 0
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = central_american_territory
+					}
+					ROOT = {
+						NOT = { num_of_cities = PREV }
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT4" # do not lead
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = central_american_territory
+				}
+				is_at_war = yes
+			}
+			ROOT = {
+				reverse_add_opinion = {
+					who = PREV
+					modifier = supported_independence
+				}
+				set_country_flag = refused_centralamerican_leadership
+				set_country_flag = centralamericanrevolutionparticipant
+			}
+		}
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 5
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = central_american_territory
+					}
+					NOT = { num_of_cities = ROOT }
+					is_at_war = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT5" # only one left
+		trigger = {
+			NOT = {
+				any_country = {
+					alliance_with = ROOT
+					capital_scope = {
+						province_group = central_american_territory
+					}
+					is_at_war = yes
+					NOT = { has_country_flag = refused_centralamerican_leadership }
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = central_american_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = centralamericanrevolutionleader
+		}
+		every_country = {
+			limit = {
+				alliance_with = ROOT
+				capital_scope = {
+					province_group = central_american_territory
+				}
+				is_at_war = yes
+			}
+			set_country_flag = centralamericanrevolutionparticipant
+		}
+		every_country = {
+			limit = {
+				has_country_flag = refused_centralamerican_leadership
+			}
+			clr_country_flag = refused_centralamerican_leadership
+		}
+		ai_chance = {
+			factor = 10000
+		}
+	}
+}
+
+# Colonial Independence Victory- vassalization
+
+country_event = {
+	id = colonial_revolt.40
+	title = "colonial_revolt.EVTNAME40"
+	desc = "colonial_revolt.EVTDESC40"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		capital_scope = {
+			province_group = central_american_territory
+		}
+		has_country_flag = centralamericanrevolutionparticipant
+		is_at_war = yes
+		any_country = { # the leader
+			alliance_with = ROOT
+			has_country_flag = centralamericanrevolutionleader
+			is_at_war = no
+			is_subject = no
+			any_country = { #overlord
+				defensive_war_with = ROOT
+				truce_with = PREV #truce with peaced-out colonial member
+				ROOT = {
+					has_casus_belli = {
+						type = cb_colonial_independance_war
+						target = PREV
+					}
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT11" # vassalize all the other revolution participants
+		every_country = {
+			limit = {
+				has_country_flag = centralamericanrevolutionleader
+			}
+			vassalize = ROOT
+			set_country_flag = centralamericanrevolutionsuccess
+		}
+		every_country = {
+			limit = {
+				war_with = ROOT
+			}
+			white_peace = ROOT
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT12" # pass, we're fine on our own
+		clr_country_flag = centralamericanrevolutionparticipant
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+# Colonial Independence Victory - vassalize other states in the region that might have peaced out first
+# brazil
+
+country_event = {
+	id = colonial_revolt.46
+	title = "colonial_revolt.EVTNAME46"
+	desc = "colonial_revolt.EVTDESC46"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		ai = yes
+		is_subject = no
+		capital_scope = {
+			province_group = central_american_territory
+		}
+		has_country_flag = centralamericanrevolutionparticipant
+		any_country = { # the leader
+			alliance_with = ROOT
+			has_country_flag = centralamericanrevolutionleader
+			is_at_war = no
+			is_subject = no
+			any_country = { #overlord
+				truce_with = ROOT
+				truce_with = PREV #truce with peaced-out colonial member
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 1
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT11" # vassalize all the other revolution participants
+		every_country = {
+			limit = {
+				has_country_flag = centralamericanrevolutionleader
+			}
+			vassalize = ROOT
+			set_country_flag = centralamericanrevolutionsuccess
+		}
+		every_country = {
+			limit = {
+				war_with = ROOT
+			}
+			white_peace = ROOT
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+	option = {
+		name = "colonial_revolt.EVTOPT12" # pass, we're fine on our own
+		clr_country_flag = centralamericanrevolutionparticipant
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+
+# Ally with the leader if you're not already
+# brazil
+
+country_event = {
+	id = colonial_revolt.50
+	title = "colonial_revolt.EVTNAME50"
+	desc = "colonial_revolt.EVTDESC50"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		capital_scope = {
+			province_group = central_american_territory
+		}
+		has_country_flag = centralamericanrevolutionparticipant
+		NOT = { has_country_flag = centralamericanrevolutionleader }
+		any_country = { #overlord
+			is_at_war = yes
+			defensive_war_with = ROOT
+			ROOT = {
+				has_casus_belli = {
+					type = cb_colonial_independance_war
+					target = PREV
+				}
+				offensive_war_with = PREV
+			}
+			any_country = { #leader
+				has_country_flag = centralamericanrevolutionleader #is the leader
+				NOT = { alliance_with = ROOT } #not already allies
+				offensive_war_with = PREV #shares the same colonial overlord
+				capital_scope = {
+					province_group = central_american_territory
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 10
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT21" # ally with revolution leader
+		every_country = {
+			limit = {
+				has_country_flag = centralamericanrevolutionleader
+			}
+			create_alliance = ROOT
+		}
+	}
+}
+
+# the war is over
+# brazil
+
+country_event = {
+	id = colonial_revolt.56
+	title = "colonial_revolt.EVTNAME56"
+	desc = "colonial_revolt.EVTDESC56"
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		is_subject = no
+		has_country_flag = centralamericanrevolutionleader
+		has_country_flag = centralamericanrevolutionsuccess
+		NOT = {
+			any_country = {
+				has_country_flag = centralamericanrevolutionparticipant
+				NOT = {
+					vassal_of = ROOT
+				}
+			}
+		}
+	}	
+	mean_time_to_happen = {
+		days = 10
+	}			
+	option = {
+		name = "colonial_revolt.EVTOPT26" # the war is over
+		every_country = {
+			limit = {
+				has_country_flag = centralamericanrevolutionleader
+			}
+			clr_country_flag = centralamericanrevolutionleader
+		}
+		every_country = {
+			limit = {
+				has_country_flag = centralamericanrevolutionparticipant
+			}
+			clr_country_flag = centralamericanrevolutionparticipant
+		}
+	}
+}
+

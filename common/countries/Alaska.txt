@@ -1,0 +1,78 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+colonial_parent = RUS
+random_nation_chance = 0
+
+color = { 15 32 75 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	bardiche_infantry
+	druzhina_cavalry
+	slavic_stradioti
+	eastern_militia
+	muscovite_musketeer
+	muscovite_caracolle
+	muscovite_soldaty
+	muscovite_cossack
+	russian_petrine
+	russian_lancer
+	russian_green_coat
+	russian_cuirassier
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	russian_mass
+}
+
+monarch_names = {
+	
+	"Ivan #0" = 30
+	"Fyodor #0" = 10
+	"Pyotr #0" = 20
+	"Vasiliy #0" = 10
+	"Aleksandr #0" = 30
+	"Alexei #0" = 10
+	"Boris #0" = 10
+	"Mikhail #0" = 20
+	"Pavel #0" = 10
+	"Ludwig #0" = 10
+	"Semyon #0" = 10
+	"Matvey #0" = 10
+	"Ferdinand #0" = 10
+	"Arvid #0" = 10
+	"Nikolay #0" = 10
+	"Stepan #0" = 10
+	"Dmitri #0" = 10
+	
+	"Yekaterina #0" = -1
+	"Anna #0" = -1
+	"Elizaveta #0" = -1
+}
+
+leader_names = {
+	Baranov "von Hagemeister" Yanovksy Muravyev Chistyakov "von Wrangel" Kupreianov
+	Etolin Tebenkov Rosenberg Rudakov Voyevodsky Furugelm Maksutov
+}
+
+ship_names = {
+	"Alexander Nevsky" "Aleksei Chevolek Bozhii" "Andrei Pervozvannyi" "Andrian i Natalia"
+	Avos Bering "Bori i Gleb" Chirikov Diana Dmitri Yekaterina Yelizaveta Yevdokim Yevpl
+	Finlyandiya Fish Gavril Georgy Ieremiya "Il'mena" Ioann Iulian Iunona Kadiak Kapiton
+	Kliment Konstantin Kutuvzov "Maria Magdalina" Mikhail Morekhod Nadezhda Natalia
+	Neva Nikolai Orel Otkrytie Pavel "Pyotr i Pavel" "Perkup i Zand" Phoenix
+	Prokofy Rostislav "Severny Orel" Sikurs Simeon Sitka Suvorov Vasily Vladimir
+	"Zosima i Savati"
+}

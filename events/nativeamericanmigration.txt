@@ -1,0 +1,2544 @@
+namespace = NAmoving
+
+country_event = { #CADDOAN
+	id = NAmoving.1
+	title = "NAmoving.EVTNAME1"
+	desc = "NAmoving.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		#tag = REB
+		any_province = {
+			##culture_group = caddoan
+			is_city = no
+			base_tax = 1
+			is_colony = no
+			any_neighbor_province = {
+				owner = {
+					technology_group = western
+				}
+				OR = {
+					is_core = CAD
+					is_core = PAW
+					is_core = WIC
+				}
+			}
+		}
+		OR = {
+			CAD = {
+				exists = no
+			}
+			PAW = {
+				exists = no
+			}
+			WIC = {
+				exists = no
+			}
+		}
+	}
+
+	option = {
+		name = "NAmoving.EVTOPT1"
+		random_province = {
+			limit = {
+				##culture_group = caddoan
+				is_city = no
+			base_tax = 1
+				is_colony = no
+				any_neighbor_province = {
+					owner = {
+						technology_group = western
+					}
+					OR = {
+						is_core = CAD
+						is_core = PAW
+						is_core = WIC
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = caddo
+					CAD = {
+						exists = no
+					}
+				}
+				cede_province = CAD
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CAD
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = pawnee
+					PAW = {
+						exists = no
+					}
+				}
+				cede_province = PAW
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = PAW
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = wichita
+					WIC = {
+						exists = no
+					}
+				}
+				cede_province = WIC
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = WIC
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					CAD = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = CAD
+					}
+				}
+				cede_province = CAD
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CAD
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					PAW = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = PAW
+					}
+				}
+				cede_province = PAW
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = PAW
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					WIC = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = WIC
+					}
+				}
+				cede_province = WIC
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = WIC
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					CAD = {
+						exists = no
+					}
+				}
+				cede_province = CAD
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CAD
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					PAW = {
+						exists = no
+					}
+				}
+				cede_province = PAW
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = PAW
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					WIC = {
+						exists = no
+					}
+				}
+				cede_province = WIC
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = WIC
+			}
+		}
+	}
+}
+
+
+country_event = { #CENTRAL ALGONQUIAN
+	id = NAmoving.2
+	title = "NAmoving.EVTNAME1"
+	desc = "NAmoving.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		#tag = REB
+		any_province = {
+			#culture_group = central_algonquian
+			is_city = no
+			base_tax = 1
+			is_colony = no
+			any_neighbor_province = {
+				owner = {
+					technology_group = western
+				}
+				OR = {
+					is_core = OJI
+					is_core = OTT
+					is_core = POT
+					is_core = WCR
+					is_core = ILL
+					is_core = MMI
+					is_core = SHA
+				}
+			}
+		}
+		OR = {
+			OJI = {
+				exists = no
+			}
+			OTT = {
+				exists = no
+			}
+			POT = {
+				exists = no
+			}
+			WCR = {
+				exists = no
+			}
+			ILL = {
+				exists = no
+			}
+			MMI = {
+				exists = no
+			}
+			SHA = {
+				exists = no
+			}
+		}
+	}
+
+	option = {
+		name = "NAmoving.EVTOPT1"
+		random_province = {
+			limit = {
+				#culture_group = central_algonquian
+				is_city = no
+			base_tax = 1
+				is_colony = no
+				any_neighbor_province = {
+					owner = {
+						technology_group = western
+					}
+					OR = {
+						is_core = OJI
+						is_core = OTT
+						is_core = POT
+						is_core = WCR
+						is_core = ILL
+						is_core = MMI
+						is_core = SHA
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = anishinabe
+					OJI = {
+						exists = no
+					}
+				}
+				cede_province = OJI
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = OJI
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = anishinabe
+					OTT = {
+						exists = no
+					}
+				}
+				cede_province = OTT
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = OTT
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = anishinabe
+					POT = {
+						exists = no
+					}
+				}
+				cede_province = POT
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = POT
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = cree
+					WCR = {
+						exists = no
+					}
+				}
+				cede_province = WCR
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = WCR
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = illini
+					ILL = {
+						exists = no
+					}
+				}
+				cede_province = ILL
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = ILL
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = illini
+					MMI = {
+						exists = no
+					}
+				}
+				cede_province = MMI
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = MMI
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = shawnee
+					SHA = {
+						exists = no
+					}
+				}
+				cede_province = SHA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SHA
+			}
+
+
+			#########################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					OJI = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = OJI
+					}
+				}
+				cede_province = OJI
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = OJI
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					WCR = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = WCR
+					}
+				}
+				cede_province = WCR
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = WCR
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					ILL = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = ILL
+					}
+				}
+				cede_province = ILL
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = ILL
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					SHA = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = SHA
+					}
+				}
+				cede_province = SHA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SHA
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					OTT = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = OTT
+					}
+				}
+				cede_province = OTT
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = OTT
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					MMI = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = MMI
+					}
+				}
+				cede_province = MMI
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = MMI
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					POT = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = POT
+					}
+				}
+				cede_province = POT
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = POT
+			}
+
+
+			##################################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					OJI = {
+						exists = no
+					}
+				}
+				cede_province = OJI
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = OJI
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					WCR = {
+						exists = no
+					}
+				}
+				cede_province = WCR
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = WCR
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					ILL = {
+						exists = no
+					}
+				}
+				cede_province = ILL
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = ILL
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					SHA = {
+						exists = no
+					}
+				}
+				cede_province = SHA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SHA
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					OTT = {
+						exists = no
+					}
+				}
+				cede_province = OTT
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = OTT
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					MMI = {
+						exists = no
+					}
+				}
+				cede_province = MMI
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = MMI
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					POT = {
+						exists = no
+					}
+				}
+				cede_province = POT
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = POT
+			}
+		}
+	}
+}
+
+
+country_event = { #EASTERN ALGONQUIAN
+	id = NAmoving.3
+	title = "NAmoving.EVTNAME1"
+	desc = "NAmoving.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		#tag = REB
+		any_province = {
+			#culture_group = eastern_algonquian
+			is_city = no
+			base_tax = 1
+			is_colony = no
+			any_neighbor_province = {
+				owner = {
+					technology_group = western
+				}
+				OR = {
+					is_core = ABE
+					is_core = LEN
+					is_core = MAH
+					is_core = MIK
+					is_core = PEQ
+					is_core = POW
+				}
+			}
+		}
+		OR = {
+			ABE = {
+				exists = no
+			}
+			LEN = {
+				exists = no
+			}
+			MAH = {
+				exists = no
+			}
+			MIK = {
+				exists = no
+			}
+			PEQ = {
+				exists = no
+			}
+			POW = {
+				exists = no
+			}
+		}
+	}
+
+	option = {
+		name = "NAmoving.EVTOPT1"
+		random_province = {
+			limit = {
+				#culture_group = eastern_algonquian
+				is_city = no
+			base_tax = 1
+				is_colony = no
+				any_neighbor_province = {
+					owner = {
+						technology_group = western
+					}
+					OR = {
+						is_core = ABE
+						is_core = LEN
+						is_core = MAH
+						is_core = MIK
+						is_core = PEQ
+						is_core = POW
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = abenaki
+					ABE = {
+						exists = no
+					}
+				}
+				cede_province = ABE
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = ABE
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = delaware
+					LEN = {
+						exists = no
+					}
+				}
+				cede_province = LEN
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = LEN
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = mahican
+					MAH = {
+						exists = no
+					}
+				}
+				cede_province = MAH
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = MAH
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = mikmaq
+					MIK = {
+						exists = no
+					}
+				}
+				cede_province = MIK
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = MIK
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = pequot
+					PEQ = {
+						exists = no
+					}
+				}
+				cede_province = PEQ
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = PEQ
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = powhatan
+					MMI = {
+						exists = no
+					}
+				}
+				cede_province = POW
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = POW
+			}
+
+
+			#########################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					ABE = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = ABE
+					}
+				}
+				cede_province = ABE
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = ABE
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					LEN = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = LEN
+					}
+				}
+				cede_province = LEN
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = LEN
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					MAH = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = MAH
+					}
+				}
+				cede_province = MAH
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = MAH
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					MIK = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = MIK
+					}
+				}
+				cede_province = MIK
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = MIK
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					PEQ = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = PEQ
+					}
+				}
+				cede_province = PEQ
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = PEQ
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					POW = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = POW
+					}
+				}
+				cede_province = POW
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = POW
+			}
+
+
+			##################################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					ABE = {
+						exists = no
+					}
+				}
+				cede_province = ABE
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = ABE
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					LEN = {
+						exists = no
+					}
+				}
+				cede_province = LEN
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = LEN
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					MAH = {
+						exists = no
+					}
+				}
+				cede_province = MAH
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = MAH
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					MIK = {
+						exists = no
+					}
+				}
+				cede_province = MIK
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = MIK
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					PEQ = {
+						exists = no
+					}
+				}
+				cede_province = PEQ
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = PEQ
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					POW = {
+						exists = no
+					}
+				}
+				cede_province = POW
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = POW
+			}
+		}
+	}
+}
+
+
+country_event = { #IROQUOIAN
+	id = NAmoving.4
+	title = "NAmoving.EVTNAME1"
+	desc = "NAmoving.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		#tag = REB
+		any_province = {
+			#culture_group = iroquoian
+			is_city = no
+			base_tax = 1
+			is_colony = no
+			any_neighbor_province = {
+				owner = {
+					technology_group = western
+				}
+				OR = {
+					is_core = CHE
+					is_core = HUR
+					is_core = IRO
+					is_core = SUS
+				}
+			}
+		}
+		OR = {
+			CHE = {
+				exists = no
+			}
+			HUR = {
+				exists = no
+			}
+			IRO = {
+				exists = no
+			}
+			SUS = {
+				exists = no
+			}
+		}
+	}
+
+	option = {
+		name = "NAmoving.EVTOPT1"
+		random_province = {
+			limit = {
+				#culture_group = iroquoian
+				is_city = no
+			base_tax = 1
+				is_colony = no
+				any_neighbor_province = {
+					owner = {
+						technology_group = western
+					}
+					OR = {
+						is_core = CHE
+						is_core = HUR
+						is_core = IRO
+						is_core = SUS
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = cherokee
+					CHE = {
+						exists = no
+					}
+				}
+				cede_province = CHE
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CHE
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = huron
+					HUR = {
+						exists = no
+					}
+				}
+				cede_province = HUR
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = HUR
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = iroquois
+					IRO = {
+						exists = no
+					}
+				}
+				cede_province = IRO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = IRO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = susquehannock
+					WCR = {
+						exists = no
+					}
+				}
+				cede_province = SUS
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SUS
+			}
+
+
+			#########################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					CHE = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = CHE
+					}
+				}
+				cede_province = CHE
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CHE
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					HUR = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = HUR
+					}
+				}
+				cede_province = HUR
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = HUR
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					IRO = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = IRO
+					}
+				}
+				cede_province = IRO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = IRO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					SUS = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = SUS
+					}
+				}
+				cede_province = SUS
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SUS
+			}
+
+
+			##################################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					CHE = {
+						exists = no
+					}
+				}
+				cede_province = CHE
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CHE
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					HUR = {
+						exists = no
+					}
+				}
+				cede_province = HUR
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = HUR
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					IRO = {
+						exists = no
+					}
+				}
+				cede_province = IRO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = IRO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					SUS = {
+						exists = no
+					}
+				}
+				cede_province = SUS
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SUS
+			}
+		}
+	}
+}
+
+
+country_event = { #MUSKOGEAN
+	id = NAmoving.5
+	title = "NAmoving.EVTNAME1"
+	desc = "NAmoving.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		#tag = REB
+		any_province = {
+			#culture_group = muskogean
+			is_city = no
+			base_tax = 1
+			is_colony = no
+			any_neighbor_province = {
+				owner = {
+					technology_group = western
+				}
+				OR = {
+					is_core = CHI
+					is_core = CHO
+					is_core = CRE
+				}
+			}
+		}
+		OR = {
+			CHI = {
+				exists = no
+			}
+			CHO = {
+				exists = no
+			}
+			CRE = {
+				exists = no
+			}
+		}
+	}
+
+	option = {
+		name = "NAmoving.EVTOPT1"
+		random_province = {
+			limit = {
+				#culture_group = muskogean
+				is_city = no
+			base_tax = 1
+				is_colony = no
+				any_neighbor_province = {
+					owner = {
+						technology_group = western
+					}
+					OR = {
+						is_core = CHI
+						is_core = CHO
+						is_core = CRE
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = chickasaw
+					CHI = {
+						exists = no
+					}
+				}
+				cede_province = CHI
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CHI
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = choctaw
+					CHO = {
+						exists = no
+					}
+				}
+				cede_province = CHO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CHO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = creek
+					POT = {
+						exists = no
+					}
+				}
+				cede_province = CRE
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CRE
+			}
+			
+
+			#########################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					CHI = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = CHI
+					}
+				}
+				cede_province = CHI
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CHI
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					CHO = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = CHO
+					}
+				}
+				cede_province = CHO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CHO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					CRE = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = CRE
+					}
+				}
+				cede_province = CRE
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CRE
+			}
+			
+
+			##################################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					CHI = {
+						exists = no
+					}
+				}
+				cede_province = CHI
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CHI
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					CHO = {
+						exists = no
+					}
+				}
+				cede_province = CHO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CHO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					CRE = {
+						exists = no
+					}
+				}
+				cede_province = CRE
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CRE
+			}
+		}
+	}
+}
+
+
+country_event = { #NA DENE
+	id = NAmoving.6
+	title = "NAmoving.EVTNAME1"
+	desc = "NAmoving.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		#tag = REB
+		any_province = {
+			#culture_group = na_dene
+			is_city = no
+			base_tax = 1
+			is_colony = no
+			any_neighbor_province = {
+				owner = {
+					technology_group = western
+				}
+				OR = {
+					is_core = APA
+					is_core = HDA
+					is_core = NAH
+				}
+			}
+		}
+		OR = {
+			APA = {
+				exists = no
+			}
+			HDA = {
+				exists = no
+			}
+			NAH = {
+				exists = no
+			}
+		}
+	}
+
+	option = {
+		name = "NAmoving.EVTOPT1"
+		random_province = {
+			limit = {
+				#culture_group = na_dene
+				is_city = no
+			base_tax = 1
+				is_colony = no
+				any_neighbor_province = {
+					owner = {
+						technology_group = western
+					}
+					OR = {
+						is_core = APA
+						is_core = HDA
+						is_core = NAH
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = apache
+					APA = {
+						exists = no
+					}
+				}
+				cede_province = APA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = APA
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = haida
+					HDA = {
+						exists = no
+					}
+				}
+				cede_province = HDA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = HDA
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = navajo
+					NAH = {
+						exists = no
+					}
+				}
+				cede_province = NAH
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = NAH
+			}
+
+
+			#########################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					APA = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = APA
+					}
+				}
+				cede_province = APA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = APA
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					HDA = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = HDA
+					}
+				}
+				cede_province = HDA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = HDA
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					NAH = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = NAH
+					}
+				}
+				cede_province = NAH
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = NAH
+			}
+
+
+			##################################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					APA = {
+						exists = no
+					}
+				}
+				cede_province = APA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = APA
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					HDA = {
+						exists = no
+					}
+				}
+				cede_province = HDA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = HDA
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					NAH = {
+						exists = no
+					}
+				}
+				cede_province = NAH
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = NAH
+			}
+		}
+	}
+}
+
+
+country_event = { #CENTRAL ALGONQUIAN
+	id = NAmoving.7
+	title = "NAmoving.EVTNAME1"
+	desc = "NAmoving.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		#tag = REB
+		any_province = {
+			#culture_group = penutian
+			is_city = no
+			base_tax = 1
+			is_colony = no
+			any_neighbor_province = {
+				owner = {
+					technology_group = western
+				}
+				OR = {
+					is_core = CNK
+					is_core = SAL
+				}
+			}
+		}
+		OR = {
+			CNK = {
+				exists = no
+			}
+			SAL = {
+				exists = no
+			}
+		}
+	}
+
+	option = {
+		name = "NAmoving.EVTOPT1"
+		random_province = {
+			limit = {
+				#culture_group = penutian
+				is_city = no
+			base_tax = 1
+				is_colony = no
+				any_neighbor_province = {
+					owner = {
+						technology_group = western
+					}
+					OR = {
+						is_core = CNK
+						is_core = SAL
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = chinook
+					CNK = {
+						exists = no
+					}
+				}
+				cede_province = CNK
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CNK
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = salish
+					SAL = {
+						exists = no
+					}
+				}
+				cede_province = SAL
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SAL
+			}
+
+
+			#########################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					CNK = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = CNK
+					}
+				}
+				cede_province = CNK
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CNK
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					SAL = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = SAL
+					}
+				}
+				cede_province = SAL
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SAL
+			}
+
+
+			##################################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					CNK = {
+						exists = no
+					}
+				}
+				cede_province = CNK
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CNK
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					SAL = {
+						exists = no
+					}
+				}
+				cede_province = SAL
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SAL
+			}
+		}
+	}
+}
+
+
+country_event = { #PLAINS ALGONQUIAN
+	id = NAmoving.8
+	title = "NAmoving.EVTNAME1"
+	desc = "NAmoving.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		#tag = REB
+		any_province = {
+			#culture_group = plains_algonquian
+			is_city = no
+			base_tax = 1
+			is_colony = no
+			any_neighbor_province = {
+				owner = {
+					technology_group = western
+				}
+				OR = {
+					is_core = ARP
+					is_core = BLA
+					is_core = CHY
+				}
+			}
+		}
+		OR = {
+			ARP = {
+				exists = no
+			}
+			BLA = {
+				exists = no
+			}
+			CHY = {
+				exists = no
+			}
+		}
+	}
+
+	option = {
+		name = "NAmoving.EVTOPT1"
+		random_province = {
+			limit = {
+				#culture_group = plains_algonquian
+				is_city = no
+			base_tax = 1
+				is_colony = no
+				any_neighbor_province = {
+					owner = {
+						technology_group = western
+					}
+					OR = {
+						is_core = ARP
+						is_core = BLA
+						is_core = CHY
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = arapaho
+					ARP = {
+						exists = no
+					}
+				}
+				cede_province = ARP
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = ARP
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = blackfoot
+					BLA = {
+						exists = no
+					}
+				}
+				cede_province = BLA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = BLA
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = cheyenne
+					CHY = {
+						exists = no
+					}
+				}
+				cede_province = CHY
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CHY
+			}
+
+
+			#########################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					ARP = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = ARP
+					}
+				}
+				cede_province = ARP
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = ARP
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					BLA = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = BLA
+					}
+				}
+				cede_province = BLA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = BLA
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					CHY = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = CHY
+					}
+				}
+				cede_province = CHY
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CHY
+			}
+
+
+			##################################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					ARP = {
+						exists = no
+					}
+				}
+				cede_province = ARP
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = ARP
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					BLA = {
+						exists = no
+					}
+				}
+				cede_province = BLA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = BLA
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					CHY = {
+						exists = no
+					}
+				}
+				cede_province = CHY
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = CHY
+			}
+		}
+	}
+}
+
+
+country_event = { #SIOUAN
+	id = NAmoving.9
+	title = "NAmoving.EVTNAME1"
+	desc = "NAmoving.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		#tag = REB
+		any_province = {
+			#culture_group = siouan
+			is_city = no
+			base_tax = 1
+			is_colony = no
+			any_neighbor_province = {
+				owner = {
+					technology_group = western
+				}
+				OR = {
+					is_core = FOX
+					is_core = SIO
+					is_core = ASI
+					is_core = OSA
+				}
+			}
+		}
+		OR = {
+			FOX = {
+				exists = no
+			}
+			SIO = {
+				exists = no
+			}
+			ASI = {
+				exists = no
+			}
+			OSA = {
+				exists = no
+			}
+		}
+	}
+
+	option = {
+		name = "NAmoving.EVTOPT1"
+		random_province = {
+			limit = {
+				#culture_group = siouan
+				is_city = no
+			base_tax = 1
+				is_colony = no
+				any_neighbor_province = {
+					owner = {
+						technology_group = western
+					}
+					OR = {
+						is_core = FOX
+						is_core = SIO
+						is_core = ASI
+						is_core = OSA
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = chiwere
+					FOX = {
+						exists = no
+					}
+				}
+				cede_province = FOX
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = FOX
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = dakota
+					SIO = {
+						exists = no
+					}
+				}
+				cede_province = SIO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SIO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = nakota
+					ASI = {
+						exists = no
+					}
+				}
+				cede_province = ASI
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = ASI
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = osage
+					OSA = {
+						exists = no
+					}
+				}
+				cede_province = OSA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = OSA
+			}
+			
+
+			#########################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					FOX = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = FOX
+					}
+				}
+				cede_province = FOX
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = FOX
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					SIO = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = SIO
+					}
+				}
+				cede_province = SIO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SIO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					ASI = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = ASI
+					}
+				}
+				cede_province = ASI
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = ASI
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					OSA = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = OSA
+					}
+				}
+				cede_province = OSA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = OSA
+			}
+			
+
+			##################################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					FOX = {
+						exists = no
+					}
+				}
+				cede_province = FOX
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = FOX
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					SIO = {
+						exists = no
+					}
+				}
+				cede_province = SIO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SIO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					ASI = {
+						exists = no
+					}
+				}
+				cede_province = ASI
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = ASI
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					OSA = {
+						exists = no
+					}
+				}
+				cede_province = OSA
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = OSA
+			}
+		}
+	}
+}
+
+
+country_event = { #SONORAN
+	id = NAmoving.10
+	title = "NAmoving.EVTNAME1"
+	desc = "NAmoving.EVTDESC1"
+	picture = BIG_BOOK_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		#tag = REB
+		any_province = {
+			#culture_group = sonoran
+			is_city = no
+			base_tax = 1
+			is_colony = no
+			any_neighbor_province = {
+				owner = {
+					technology_group = western
+				}
+				OR = {
+					is_core = KIO
+					is_core = PIM
+					is_core = PUE
+					is_core = COM
+					is_core = SHO
+				}
+			}
+		}
+		OR = {
+			KIO = {
+				exists = no
+			}
+			PIM = {
+				exists = no
+			}
+			PUE = {
+				exists = no
+			}
+			COM = {
+				exists = no
+			}
+			SHO = {
+				exists = no
+			}
+		}
+	}
+
+	option = {
+		name = "NAmoving.EVTOPT1"
+		random_province = {
+			limit = {
+				#culture_group = sonoran
+				is_city = no
+			base_tax = 1
+				is_colony = no
+				any_neighbor_province = {
+					owner = {
+						technology_group = western
+					}
+					OR = {
+						is_core = KIO
+						is_core = PIM
+						is_core = PUE
+						is_core = COM
+						is_core = SHO
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = kiowa
+					KIO = {
+						exists = no
+					}
+				}
+				cede_province = KIO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = KIO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = piman
+					PIM = {
+						exists = no
+					}
+				}
+				cede_province = PIM
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = PIM
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = pueblo
+					PUE = {
+						exists = no
+					}
+				}
+				cede_province = PUE
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = PUE
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = shoshone
+					SHO = {
+						exists = no
+					}
+				}
+				cede_province = SHO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SHO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					culture = shoshone
+					COM = {
+						exists = no
+					}
+				}
+				cede_province = COM
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = COM
+			}
+
+
+			#########################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					KIO = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = KIO
+					}
+				}
+				cede_province = KIO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = KIO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					PIM = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = PIM
+					}
+				}
+				cede_province = PIM
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = PIM
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					PUE = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = PUE
+					}
+				}
+				cede_province = PUE
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = PUE
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					SHO = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = SHO
+					}
+				}
+				cede_province = SHO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SHO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					COM = {
+						exists = no
+					}
+					any_neighbor_province = {
+						is_core = COM
+					}
+				}
+				cede_province = COM
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = COM
+			}
+			
+
+			##################################
+
+
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					KIO = {
+						exists = no
+					}
+				}
+				cede_province = KIO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = KIO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					PIM = {
+						exists = no
+					}
+				}
+				cede_province = PIM
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = PIM
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					PUE = {
+						exists = no
+					}
+				}
+				cede_province = PUE
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = PUE
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					SHO = {
+						exists = no
+					}
+				}
+				cede_province = SHO
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = SHO
+			}
+			if = {
+				limit = {
+					is_city = no
+			base_tax = 1
+					is_colony = no
+					COM = {
+						exists = no
+					}
+				}
+				cede_province = COM
+				province_event = { id = NAmoving.11 days = 1 }
+				add_core = COM
+			}
+		}
+	}
+}
+
+province_event = {
+	id = NAmoving.11
+	title = "NAmoving.EVTNAME2"
+	desc = "NAmoving.EVTDESC2"
+	picture = BIG_BOOK_eventPicture 
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = "NAmoving.EVTNAME2"
+		every_neighbor_province = {
+			owner = {
+				country_event = { id = NAmoving.12 }
+			}
+			if = {
+				limit = {
+					owner = {
+						is_colonial_nation = yes
+					}
+				}
+				owner = {
+					overlord = {
+						country_event = { id = NAmoving.12 }
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NAmoving.12
+	title = "NAmoving.EVTNAME3"
+	desc = "NAmoving.EVTDESC3"
+	picture = BIG_BOOK_eventPicture 
+
+	is_triggered_only = yes
+
+	option = {
+		name = "NAmoving.EVTNAME3"
+	}
+}

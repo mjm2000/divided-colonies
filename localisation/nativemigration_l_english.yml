@@ -1,0 +1,10 @@
+﻿l_english:
+ NAmoving.EVTNAME1: "Native American Migration"
+ NAmoving.EVTDESC1: "Native Americans are reappearing in unclaimed territories."
+ NAmoving.EVTOPT1: "Interesting."
+ NAmoving.EVTNAME2: "Alerting Neighbor Provinces"
+ NAmoving.EVTDESC2: "Alerting the neighboring provinces of a resurgent Native American group."
+ NAmoving.EVTOPT2: "Proceed."
+ NAmoving.EVTNAME3: "Native American Migration"
+ NAmoving.EVTDESC3: "Forced from their homes and villages by colonial powers, the [From.Owner.GetName] have made new homes elsewhere, in the land they call [From.GetName]."
+ NAmoving.EVTOPT3: "I see."

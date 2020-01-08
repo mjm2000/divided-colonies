@@ -1,0 +1,28 @@
+#### NEW ONES #####
+# New Zealand
+colonial_new_zealand = {
+	color = { 182 213 59 } # Kiwi
+
+	provinces = {
+		1106 1107 1108 2737 2739 1109 1246 2738
+	}
+	
+	# Specific
+	names = {
+		trigger = {
+			primary_culture = dutch
+		}
+		name = "COLONIAL_NEW_ZEELAND"
+	}
+	names = {
+		trigger = {
+			primary_culture = danish
+		}
+		name = "COLONIAL_NEW_ZEALAND_Danish"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_NEW_ZEALAND"
+	}
+}
+

@@ -1,0 +1,88 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+colonial_parent = GBR
+random_nation_chance = 0
+
+historical_score = 200
+
+color = { 255 122 47 }
+
+historical_idea_groups = {
+	plutocracy_ideas
+	trade_ideas
+	economic_ideas
+	defensive_ideas
+	maritime_ideas
+	administrative_ideas
+	offensive_ideas
+	quantity_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	chevauchee
+	western_longbow
+	gaelic_mercenary
+	gaelic_free_shooter
+	french_caracolle
+	irish_charge
+	anglofrench_line
+	french_dragoon
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Jefferson #0" = 10
+	"Alexander #0" = 10
+	"Robert #0" = 30
+	"Judah #0" = 30
+	"Christopher #0" = 10
+	"George #0" = 30
+	"Leroy Pope #0" = 10
+	"James #0" = 10
+	"John #0" = 30
+	"Stephen #0" = 10
+	"Thomas #0" = 20
+	"Elias #0" = 10
+	"Samuel Benton #0" = 10
+	"Burton Allen #0" = 10
+	"Robert McDonald #0" = 10
+	"Robert Woodward #0" = 10
+	"Thomas Stanhope #0" = 10
+	"Josiah Abigail #0" = 10
+	"Jesse #0" = 10
+	"Henry #0" = 10
+	"Asa #0" = 10
+	"Andrew #0" = 10
+	"Braxton #0" = 10
+	"Nathan Bedford #0" = 10
+	"Theophilus #0" = 10
+	"Fulwar #0" = 30
+	
+    "Deborah #0" = -1
+    "Sarah #0" = -1
+    "Anne #0" = -1
+}
+
+leader_names = {
+	Davis Stephens Toombs Hunter Benjamin Memminger Trenholm Reagan
+	Walker Randolph Seddon Breckinridge Mallory Benjamin Bragg Watts Cobb Barnwell
+	Bocock Campbell Boudinot Callahan Holder Jones Finley Jackson Biggs Magrath Ringo Jones
+	Moise Clayton Humphreys Devine Halyburton Brockenbrough Lee Beauregard Cooper Johnston
+	Smith Buckner Early Forrest Ewell Hood Longstreet Pemberton Polk Stewart Wheeler Taylor Anderson
+	Skipwith
+}
+
+ship_names = {
+	Biscayne Brevard Caloosahatchee Crestview Dade "De Soto" Florida Floridian Gadsden Hendry
+	Pensacola Lafayette Leon Lloyd Matanzas "San Carlos" Tortuga Suwannee Seminole Alabama
+	Mobile Biloxi "Mobile Bay" Tuscaloosa Mississippi Gulfport Kemper 
+}

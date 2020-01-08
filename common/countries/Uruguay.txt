@@ -1,0 +1,76 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+colonial_parent = SPA
+random_nation_chance = 0
+
+color = { 251 208 22 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	diplomatic_ideas
+	administrative_ideas
+	spy_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Fructuoso #0" = 10
+	"Carlos #0" = 10
+	"Manuel #0" = 10
+	"Gabriel Antonio #0" = 10
+	"Joaquín #0" = 10
+	"Bernardo #0" = 10
+	"Juan Francisco #0" = 10
+	"Venancio #0" = 10
+	"Juan Antonio #0" = 10
+	"Luis #0" = 10
+	"Manuel Basilio #0" = 10
+	"José María #0" = 10
+	"Atanasio #0" = 10
+	"Tomás #0" = 10
+	"Pedro #0" = 40
+	"Lorenzo #0" = 20
+	"Tomás Gomensoro #0" = 10
+	"José Eugenio #0" = 10
+	"Francisco Antonio #0" = 10
+	"Alberto #0" = 10
+	"Máximo #0" = 20
+	
+	"Eva #0" = -1
+	"Gloria #0" = -1
+	"Lucía #0" = -1
+}
+
+leader_names = {
+	Rivera Anaya Oribe Pereira Suárez Berro Giró Flores Lavalleja Lamas Bustamante
+	Plá Aguirre Villalba Varela "Batlle y Grau" Albín Ellauri Carve Latorre Vidal
+	Flangini Santos Tajes
+}
+
+ship_names = {
+	"República Oriental" Fortuna Valiente Temerario Intrépido "General Rivera" "General Artigas"
+	"Genearl Suárez" Maldonado Vanguardia "Dieciocho de Julio" Montevideo "Barón de Río Branco"
+	Uruguay Oriental Zapicán Colonia Paysandú Bonanza Sirius Oyarvide Audaz
+}
+	

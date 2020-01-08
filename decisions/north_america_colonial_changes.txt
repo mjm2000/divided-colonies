@@ -1,0 +1,254 @@
+country_decisions = {
+# north american colonial border changes
+
+# french canada
+french_canada = {
+	major = yes
+	potential = {
+		# has_country_flag = show_colonial_decisions
+		culture_group = french
+		is_random_new_world = no
+		any_country = {
+			is_colonial_nation_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_uppercanada
+			}
+		}	
+		any_country = {
+			is_colonial_nation_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_lowercanada
+			}
+		}
+		NOT = {
+			any_province = {
+				colonial_region = colonial_uppercanada
+				is_city = no
+				is_colony = no
+			}
+		}
+	}
+	allow = {
+		adm_tech = 10
+	}
+	effect = {
+		colonial_uppercanada = {
+			limit = {
+				owner = {
+					is_colonial_nation_of = ROOT
+				}
+			}
+			set_province_flag = integrating_uppercanada
+		}
+		every_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_lowercanada
+				}
+			}
+			country_event = {
+				id = colonialnorthamericaborders.6
+			}
+		}
+					
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			any_country = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_lowercanada
+				}
+				liberty_desire = 50
+			}
+		}
+		modifier = {
+			factor = 0
+			any_country = {
+				is_colonial_nation_of = ROOT
+				ai = no
+				capital_scope = {
+					colonial_region = colonial_uppercanada
+				}
+			}
+		}
+	}
+	ai_importance = 400
+}
+
+# malvinas
+malvinas_argentina = {
+	major = yes
+	potential = {
+		# has_country_flag = show_colonial_decisions
+		NOT = { tag = GBR }
+		NOT = { tag = ENG }
+		NOT = { tag = SCO }
+		is_random_new_world = no
+		any_country = {
+			is_colonial_nation_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_la_plata
+			}
+		}
+		owns = 1095	
+	}
+	allow = {
+		adm_tech = 10
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_la_plata
+				}
+			}
+			country_event = {
+				id = colonialnorthamericaborders.7
+			}
+		}			
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			any_country = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_la_plata
+				}
+				liberty_desire = 50
+			}
+		}
+	}
+	ai_importance = 400
+}
+
+# maine-massachusetts
+maine_massachusetts = {
+	major = yes
+	potential = {
+		# has_country_flag = show_colonial_decisions
+		culture_group = british
+		any_country = {
+			is_colonial_nation_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_massachusetts
+			}
+		}	
+		any_country = {
+			is_colonial_nation_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_maine
+			}
+		}
+		NOT = {
+			any_province = {
+				colonial_region = colonial_maine
+				is_city = no
+				is_colony = no
+			}
+		}
+	}
+	allow = {
+		adm_tech = 10
+	}
+	effect = {
+		colonial_maine = {
+			limit = {
+				owner = {
+					is_colonial_nation_of = ROOT
+				}
+			}
+			set_province_flag = integrating_maine
+		}
+		every_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_massachusetts
+				}
+			}
+			country_event = {
+				id = colonialnorthamericaborders.8
+			}
+		}
+					
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			any_country = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_massachusetts
+				}
+				liberty_desire = 50
+			}
+		}
+		modifier = {
+			factor = 0
+			any_country = {
+				is_colonial_nation_of = ROOT
+				ai = no
+				capital_scope = {
+					colonial_region = colonial_maine
+				}
+			}
+		}
+	}
+	ai_importance = 400
+}
+
+# galapagos
+galapagos_quito = {
+	major = yes
+	potential = {
+		# has_country_flag = show_colonial_decisions
+		is_random_new_world = no
+		any_country = {
+			is_colonial_nation_of = ROOT
+			capital_scope = {
+				colonial_region = colonial_quito
+			}
+		}
+		owns = 2002	
+	}
+	allow = {
+		adm_tech = 10
+	}
+	effect = {
+		every_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_quito
+				}
+			}
+			country_event = {
+				id = colonialnorthamericaborders.9
+			}
+		}			
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			any_country = {
+				is_colonial_nation_of = ROOT
+				capital_scope = {
+					colonial_region = colonial_quito
+				}
+				liberty_desire = 50
+			}
+		}
+	}
+	ai_importance = 400
+}
+
+}

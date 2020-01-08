@@ -1,0 +1,83 @@
+country_decisions = {
+
+	honduras_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			capital_scope = {
+				colonial_region = colonial_honduras
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			# is_subject = no can form under USCA
+			is_colonial_nation = no
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_honduras
+				is_core = ROOT
+			}
+			NOT = { exists = HND }
+		}
+		effect = {
+			colonial_honduras = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+			every_country = {
+				limit = {
+					vassal_of = ROOT
+					capital_scope = {
+						colonial_region = colonial_honduras
+					}
+				}
+				ROOT = {
+					inherit = PREV
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			change_tag = HND
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

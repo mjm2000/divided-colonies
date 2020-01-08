@@ -1,0 +1,5 @@
+government = republic
+technology_group = western
+primary_culture = french_american
+religion = catholic
+capital = 984	# Port Royal

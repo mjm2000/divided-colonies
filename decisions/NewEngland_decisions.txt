@@ -1,0 +1,20 @@
+country_decisions = {
+#Unite new england
+unite_new_england = {
+	potential = {
+	is_random_new_world = no
+	any_country = {
+		is_colonial_nation_of = root
+		capital_scope = {
+			colonial_region = colonial_massachusetts
+			}
+		}
+	any_country = {
+		is_colonial_nation_of = root
+		capital_scope = {
+			colonial_region = colonial_massachusetts
+			}
+		}
+	}
+}
+}

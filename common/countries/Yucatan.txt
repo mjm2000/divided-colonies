@@ -1,0 +1,86 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+colonial_parent = SPA
+random_nation_chance = 0
+
+color = { 10 104 71 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	administrative_ideas
+	economic_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Santiago #0" = 10
+	"Miguel #0" = 10
+	"Felipe #0" = 10
+	"José #0" = 10
+	"Domingo #0" = 10
+	"Diego Fernández #0" = 10
+	"Carlos #0" = 10
+	"Francisco Ramírez #0" = 10
+	"Arias #0" = 10
+	"Diego #0" = 10
+	"Juan #0" = 20
+	"Íñigo #0" = 10
+	"Fernando Centeno #0" = 10
+	"Jerónimo #0" = 10
+	"Andrés #0" = 10
+	"Diego Zapata #0" = 10
+	"Francisco Núñez #0" = 10
+	"Enrique Dávila #0" = 10
+	"Esteban #0" = 10
+	"García #0" = 10
+	"Martín #0" = 20
+	"Pedro Sáenz #0" = 10
+	"Francisco #0" = 10
+	"José Campero #0" = 10
+	"Juan Francisco #0" = 10
+	"Rodrigo Flores #0" = 10
+	"Fernando Francisco #0" = 10
+	"Miguel Franco #0" = 10
+	"Sancho Fernández #0" = 10
+	"Antonio #0" = 10
+	"Juan Bruno #0" = 10
+	"Roque #0" = 10
+	
+	"Laura #0" = -1
+	"Marciela #0" = -1
+	"Perla #0" = -1
+}
+
+leader_names = {
+	Méndez Barbachano Tiburcio Barret "de Velasco" "de Cárdenas" Machuca Maldonado "de Quero" Franco 
+	Melián Pacheco "de Azcárraga" Izquierdo "de Bazán" "de Sorredevilla" "de Aldana" Delgado
+	"de Escobedo" Sandoval "de Aréchiga" "de Guzmán" "de la Bárcena" Salcedo Molina Álvarez Peón 
+	Betancourt Vargas Serrano Aznar Ibarra Constante Pinel Peraza Guerra Iturralde Ancona Rosado
+	Palomino Manzano Traconis Machado Cantón Arístegui Suárez González
+}
+
+ship_names = {
+	Zamná Chaac "Kinich Ahau" "Ah Mun" "Ah Puch" "Ek Chuah" Acan "Ixchel" "Xaman Ek" Bacab Mérida Kukulkán "Vucub Caquix" Quetzalcoatl Netzahualcóyotl Huracan Tormenta Victoria
+}

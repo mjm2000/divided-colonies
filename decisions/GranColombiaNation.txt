@@ -1,0 +1,128 @@
+country_decisions = {
+
+	grancolombia_nation = {
+		major = yes
+		potential = {
+			OR = {
+				NOT = { has_country_flag = changed_from_colonial_nation }
+				tag = VNZ
+				tag = COL
+				tag = ECU
+			}
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			OR = {
+				capital_scope = {
+					colonial_region = colonial_colombia
+				}
+				capital_scope = {
+					colonial_region = colonial_quito
+				}
+				capital_scope = {
+					colonial_region = colonial_venezuela
+				}
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_subject = no
+			is_at_war = no
+			OR = {
+				capital_scope = {
+					colonial_region = colonial_colombia
+				}
+				capital_scope = {
+					colonial_region = colonial_quito
+				}
+				capital_scope = {
+					colonial_region = colonial_venezuela
+				}
+			}
+			colonial_colombia = {
+				country_or_vassal_holds = ROOT
+			}
+			colonial_quito = {
+				country_or_vassal_holds = ROOT
+			}
+			colonial_venezuela = {
+				country_or_vassal_holds = ROOT
+			}
+			NOT = { exists = GCL }
+		}
+		effect = {
+			colonial_colombia = {
+				limit = {
+					NOT = { country_or_vassal_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			colonial_quito = {
+				limit = {
+					NOT = { country_or_vassal_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			colonial_venezuela = {
+				limit = {
+					NOT = { country_or_vassal_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			venezuelan_guyana = {
+				limit = {
+					NOT = { country_or_vassal_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+			every_country = {
+				limit = {
+					vassal_of = ROOT
+					capital_scope = {
+						province_group = gran_colombian_territory
+					}
+				}
+				ROOT = {
+					inherit = PREV
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			change_tag = GCL
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
