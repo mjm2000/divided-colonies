@@ -1,4 +1,4 @@
-namespace = road_to_independence
+namespace = rti 
 
 country_event = {
     id = rti.1
@@ -7,8 +7,7 @@ country_event = {
     picture = place_holder
 
     trigger = {
-        continent = europe
-        CAPITAL = {
+        capital_scope = {
             NOT = {
                 controlled_by = ROOT
             }
@@ -20,12 +19,198 @@ country_event = {
     }
     option = {
     #create Juntas 
-        name = "capital_occupied.EVTNAME1"
+        name = "capital_occupied.EVTOPT1"
         every_subject_country = {
             limit = {
                 has_colonial_parent = ROOT 
             }
-        add_liberty_desire = 50
+            country_event = {
+                id = rti.2
+                days = 20
+            }
+        }
+    }
+    option = {
+    #flee
+        name = "capital_occupied.EVTOPT2"
+        random_subject_country = {
+            limit = {
+                has_colonial_parent = ROOT
+            }
+            grant_independence = yes
+            save_event_target_as = inheritor
+        }
+        every_subject_country = {
+            limit = {
+                has_colonial_parent = ROOT
+                NOT = {tag = event_target:inheritor}
+            }
+            event_target:inheritor = {
+                inherit = PREV
+            }                     
+        }    
+    }
+}
+country_event = {
+    id = rti.2
+    title = "capital_occupied.EVTNAME2"
+    desc = "capital_occupied.EVTDESC2"
+    picture = place_holder
+
+    is_triggered_only = yes 
+
+    option = {
+        name = "capital_occupied.EVTOPT3"
+        set_country_flag = loyalist_in_power
+        every_owned_province = {
+            random_list = {
+                50 = {
+                    add_permanent_province_modifier = {
+                        name = independence_support
+                        desc = independence_support_desc
+                    }     
+                }
+                50 = {
+                    add_permanent_province_modifier = {
+                        name = loyalist_support 
+                        desc = loyalist_support_desc
+                    }
+                }
+            }
+        }
+        set_country_flag = ICW
+    }
+}
+country_event = {
+    #exiled revolutionaries
+    id = rti.3
+    title = "capital_occupied.EVTNAME3"
+    desc = "capital_occupied.EVTDESC3"
+    picture = place_holder 
+    
+    is_triggered_only = yes
+
+    option = {
+        name = "capital_occupied.EVTOPT4"
+        random_owned_province = {
+            spawn_rebels = {
+                type = independence_rebels
+                size = 10
+            }
         }
     }
 }
+country_event = {
+    id = rti.4
+    title = "capital_occupied.EVTNAME4"
+    desc = "capital_occupied.EVTDESC4"
+    picture = place_holder
+
+    trigger = {
+        has_disaster = independence_civil_war
+        NOT = {
+            has_country_flag = FOR
+        }
+    }
+    mean_time_to_happen = {
+        months = 5 
+    }
+    option = {
+        name = "capital_occupied.EVTOPT5"
+        every_owned_province = {
+            limit = {
+                has_province_modifier = independence_support
+            }
+            spawn_rebels = {
+                type = independence_rebels
+                size = 3
+            }
+        }
+    }
+}
+country_event = {
+    id = rti.5
+    title = "capital_occupied.EVTNAME5"
+    desc = "capital_occupied.EVTDESC5"
+    picture = place_holder
+
+    trigger = {
+        any_province = {
+            has_province_flag = ocp_ind
+            owner = {
+                    has_country_flag = loyalist_in_power
+                }
+            has_province_modifier = loyalist_support 
+        }
+    }
+    mean_time_to_happen = {
+        months = 5
+    }
+    option = {
+        remove_province_modifier = loyalist_support 
+            
+        add_permanent_province_modifier = {
+                name = independence_support
+                desc = independence_support_desc
+        }
+     } 
+}
+country_event = {
+    id = rti.6
+    title = "capital_occupied.EVTNAME6"
+    desc = "capital_occupied.EVTDESC6"
+    picture = place_holder
+
+    trigger = {
+        any_province = {
+            has_province_flag = ocp_ind
+            owner = {
+                 has_country_flag = independence_in_power
+            }
+            has_province_modifier = independence_in_power_support 
+        }
+    }
+    mean_time_to_happen = {
+        months = 5
+    }
+    option = {
+        remove_province_modifier = independence_in_power_support
+        add_permanent_province_modifier = {
+             name = loyalist_rebel_support
+             desc = loyalist_support_desc
+        }
+    }
+}
+#swich to independent 
+country_event = {
+    id = rti.7
+    title = "capital_occupied.EVTNAME7"
+    desc = "capital_occupied.EVTDESC7"
+    picture = place_holder
+
+    trigger = {
+            capital_scope = {
+                has_province_modifier = independence_support 
+            } 
+            all_owned_province = {
+                OR = {
+                    AND = {
+                        has_province_modifier = independence_support       
+                        development = 10
+                    }
+                    development = 3
+            }
+        }
+   
+    }
+    option = {
+        
+    }
+}
+
+    
+
+
+
+
+

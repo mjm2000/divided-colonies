@@ -21,3 +21,15 @@ strategic_early_african_port = {
 	province_trade_power_value = -10
 	picture = "province_trade_power_value"
 }
+loyalist_support = {
+    garrison_growth = 0.01
+}
+loyalist_rebel_support = {
+    unrest = -1 
+}
+independence_support = {
+    unrest = -1
+}
+independence_inpower_support = {
+    garrison_growth = 0.01
+}
