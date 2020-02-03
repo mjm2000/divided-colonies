@@ -1,4 +1,4 @@
-independence_rebels = {
+loyalist_rebels = {
 
 	color = { 50 85 210 }
 
@@ -29,14 +29,6 @@ independence_rebels = {
 	
 	# The rebel type with the highest modifier for this province gets picked
 	spawn_chance = {
-		factor = 1
-		
-		modifier = {
-			factor = 5.0
-			owner = {
-				has_disaster = independence_civil_war 
-			}
-		}
 
 	}
  
@@ -93,7 +85,7 @@ independence_rebels = {
 	demands_enforced_effect = {
         country_event = {
             days = 1
-            id = rti.7
+            id = rti.8
         } 		
 	}
 }

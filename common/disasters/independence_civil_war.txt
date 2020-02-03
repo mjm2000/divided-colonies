@@ -1,36 +1,53 @@
 independence_civil_war = {
     potential = {
        has_country_flag = ICW 
-            
+       government = republic 
     }
+
+    can_start = {
+        has_country_flag = ICW
+        has_any_disaster = no
+    }
+    can_stop = {
+        ROOT = {
+            is_subject = no 
+        } 
+    }
+
     progress = {
         modifier = {
-            factor = 1 
+            factor = 3 
             colonial_parent = {
-                is_at_war = true
+                is_at_war = yes 
             }
         }
         modifier = {
-            factor = 2 
+            factor = 4 
             colonial_parent = {
                 OR = {
                     war_exhaustion = 5
-                    war_score = 50
+                    war_score = -10
                 }
             }
         }
         modifier =  {
-            factor = 3 
+            factor = 5 
             colonial_parent = {
                 OR = {
                     war_exhaustion = 10
-                    war_score = 50 
+                    war_score = -25 
                 } 
             }
         }
     }
-    on_start = rti.2
+    
     can_end = {
         has_country_flag = ecw
     }
+    modifier = {
+        unrest = 1 
+    }
+
+    on_start = rti.3
+    on_end = rti.3
 }
