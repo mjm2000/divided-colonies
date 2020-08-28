@@ -16,27 +16,33 @@ independence_civil_war = {
 
     progress = {
         modifier = {
-            factor = 3 
+            factor = 1 
             colonial_parent = {
                 is_at_war = yes 
             }
         }
         modifier = {
-            factor = 4 
-            colonial_parent = {
-                OR = {
-                    war_exhaustion = 5
-                    war_score = -10
+            factor = 2 
+            AND = { 
+                colonial_parent = {
+                    OR = {
+                        war_exhaustion = 5
+                        war_score = -10
+                    }
                 }
+                liberty_desire = 40 
             }
         }
         modifier =  {
-            factor = 5 
-            colonial_parent = {
-                OR = {
-                    war_exhaustion = 10
-                    war_score = -25 
-                } 
+            factor = 3 
+            AND = {
+                colonial_parent = {
+                    OR = {
+                        war_exhaustion = 10
+                        war_score = -25 
+                    } 
+                }
+                liberty_desire = 50
             }
         }
     }
@@ -45,9 +51,13 @@ independence_civil_war = {
         has_country_flag = ecw
     }
     modifier = {
-        unrest = 1 
+         
     }
-
+    on_monthly ={
+        events {
+            rti.4
+        }
+    }
     on_start = rti.3
-    on_end = rti.3
+    on_end = rti.7
 }

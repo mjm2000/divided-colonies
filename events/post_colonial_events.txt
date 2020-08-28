@@ -187,16 +187,4 @@ country_event = {
         }
     }
 }
-country_event = {
-    id = event.x
-        title = "t.EVTNAMEx"
-        desc = "d.EVTDESCx"
-        trigger = {
 
-        }
-    mean_time_to_happen = {
-    }
-    option = {
-
-    }
-}

@@ -118,6 +118,7 @@ province_event = {
     title = "capital_occupied.EVTNAME4"
     desc = "capital_occupied.EVTDESC4"
     picture = place_holder
+    hidden = yes
     #fix event  
     trigger = {
         owner = {
@@ -127,7 +128,7 @@ province_event = {
         has_province_modifier = independence_support 
     }
     mean_time_to_happen = {
-        year = 1 
+        year = 2 
     }
     option = {
         name = "capital_occupied.EVTOPT5"
@@ -145,7 +146,7 @@ province_event = {
     title = "capital_occupied.EVTNAME5"
     desc = "capital_occupied.EVTDESC5"
     picture = place_holder
-
+    hidden = yes
     trigger = {
         has_province_flag = ocp_ind
         owner = {
@@ -173,6 +174,8 @@ province_event = {
     title = "capital_occupied.EVTNAME6"
     desc = "capital_occupied.EVTDESC6"
     picture = place_holder
+    hidden = yes 
+
 
     trigger = {
           has_province_flag = ocp_ind
@@ -210,6 +213,10 @@ country_event = {
         desc = "capital_occupied.EVTDESC8" 
         set_country_flag = independence_in_power 
         clr_country_flag = loyalist_in_power
+        country_event = {
+            id = rti.9
+            months = 1
+        }
         every_owned_province = {
             if = {
                 limit = {
@@ -245,8 +252,8 @@ country_event = {
     is_triggered_only = yes 
 
     option = {
-        name = "capital_occupied.EVTOPT8"
-        desc = "capital_occupied.EVTDESC8" 
+        name = "capital_occupied.EVTOPT9"
+        desc = "capital_occupied.EVTDESC9" 
         set_country_flag = loyalist_in_power
         clr_country_flag = independence_in_power
         
@@ -276,4 +283,80 @@ country_event = {
         }
         
     }
+}
+#declare independence
+country_event = {
+    id = rti.9
+    title = "capital_occupied.EVTNAME9"
+    desc = "capital_occupied.EVTDESC9"
+    picture = place_holder
+    
+    is_triggered_only = yes 
+    option = {
+        name ="EVTNAME10"
+        desc = "EVTDESC10"
+        declare_war_with_cb	= {
+            who =  colonial_parent
+            casus_belli = cb_independence_war
+        }
+        set_country_flag = independence_war
+    }
+}
+ country_event = {
+    id = rti.9
+    title = "capital_occupied.EVTNAME9"
+    desc = "capital_occupied.EVTDESC9"
+    picture = place_holder
+    
+    trigger = {
+        any_country = {
+            capital_scope = {
+                controlled_by = ROOT  
+            } 
+            is_colonial_nation = yes 
+        }
+        has_country_flag = independence_war
+    } 
+    option = {
+        name ="EVTNAME11"
+        desc = "EVTDESC11"
+#join them 
+        every_country = {
+            limit = {
+                capital_scope = {
+                    controlled_by = ROOT  
+                } 
+                is_colonial_nation = yes    
+            } 
+            white_peace = ROOT
+            declare_war_with_cb = {
+                who = colonial_parent
+                casus_belli = cb_independence_war
+            }
+            create_alliance	= ROOT 
+        }
+    }
+}
+#moderate liberals revolt
+country_event  = {
+    id = rti.10
+    title = "capital_occupied.EVTNAME10"
+    desc = "capital_occupied.EVTDESC10"
+    picture = place_holder
+
+    trigger = {
+        any_country ={
+            is_in_war = {
+                casus_belli = cb_independence_war
+                defender_leader = ROOT
+                attacker_leader = ROOT
+            }
+        }
+    }
+    option = {
+        name = "EVTNAME12"
+        desc = "EVTDESC12"
+         
+    }
+
 }

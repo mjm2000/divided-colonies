@@ -1,0 +1,10 @@
+﻿l_english: 
+ merge_colony_choose_victim_title:"Merge Colonial Government"
+ merge_colony_choose_victim_desc:"[From.GetName] Should merge with another already existing colonial government. Complete this plan by using the Consolidate Colonial Governments diplomatic action in the beneficiary Colonial Nation. "
+ merge_colony_choose_victim_tooltip:"This action will mark this Colonial Nation for merging with another."
+ merge_colony_give_to_winner_title:"Consolidate Colonial Governments"
+ merge_colony_give_to_winner_desc:"Strenghten this Colonial Nation by giving it another Colonial Nation, selected by the Merge Colonial Government diplomatic action."
+ merge_colony_give_to_winner_tooltip:"Consolidate Colonial Governments by gifting this nation another."
+ cancel_colony_merge_title:"Cancel Colony Merge"
+ cancel_colony_merge_desc:"Cancel the current plans to merge colonial administrations."
+ cancel_colony_merge_tooltip:"Cancel Colonial Merge plans."
